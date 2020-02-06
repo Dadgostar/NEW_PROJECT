@@ -18,7 +18,7 @@ namespace AP_PROJECT.View
     /// </summary>
     public partial class Professor_Information : Window
     {
-        public Professor_Information()
+        public Professor_Information(ProjectAP.Teacher teacher)
         {
             InitializeComponent();
         }

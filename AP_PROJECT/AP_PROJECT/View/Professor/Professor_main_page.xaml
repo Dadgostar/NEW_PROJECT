@@ -7,12 +7,11 @@
        mc:Ignorable="d"
         Title="Student_main_page" Height="300" Width="300">
     <Grid x:Name="term_list_button">
-        <Button x:Name="personal_infor_button" Content="Personal information" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Width="81" FontSize="8"/>
-        <Button x:Name="schedule_button" Content="Weekly schedule" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8"/>
-        <Button x:Name="Exceptoin_button" Content="Exception form" HorizontalAlignment="Left" Margin="10,63,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" RenderTransformOrigin="0.487,-0.923"/>
-        <Button x:Name="registering_mark_button" Content="Mark registration" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8"/>
-        <Button x:Name="objection_response_button" Content="Objection response" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8"/>
-        <Button x:Name="Exception_response_button" Content="Exception response" HorizontalAlignment="Left" Margin="10,117,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8"/>
+        <Button x:Name="personal_infor_button" Content="Personal information" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Width="81" FontSize="8" Click="personal_infor_button_Click"/>
+        <Button x:Name="schedule_button" Content="Weekly schedule" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" Click="schedule_button_Click"/>
+        <Button x:Name="registering_mark_button" Content="Mark registration" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" Click="registering_mark_button_Click"/>
+        <Button x:Name="objection_response_button" Content="Objection response" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" Click="objection_response_button_Click"/>
+        <Button x:Name="Exception_response_button" Content="Exception response" HorizontalAlignment="Left" Margin="10,117,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" Click="Exception_response_button_Click"/>
 
     </Grid>
 </Window>

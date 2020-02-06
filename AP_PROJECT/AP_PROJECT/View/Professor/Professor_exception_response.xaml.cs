@@ -18,7 +18,7 @@ namespace AP_PROJECT.View
     /// </summary>
     public partial class Professor_exception_response : Window
     {
-        public Professor_exception_response()
+        public Professor_exception_response(ProjectAP.Teacher teacher)
         {
             InitializeComponent();
         }
