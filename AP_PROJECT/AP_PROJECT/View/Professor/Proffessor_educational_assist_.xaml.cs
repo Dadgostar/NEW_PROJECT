@@ -22,5 +22,25 @@ namespace AP_PROJECT.View.Professor
         {
             InitializeComponent();
         }
+
+        private void personal_infor_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void schedule_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void objection_response_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Exception_response_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

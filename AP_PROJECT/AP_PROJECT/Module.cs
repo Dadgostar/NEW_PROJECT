@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using AP_PROJECT.View;
 
 namespace AP_PROJECT
 {
@@ -15,6 +16,11 @@ namespace AP_PROJECT
         public static List<TermCourseStudent> termCourseStudentTable = new List<TermCourseStudent>();
         public static List<PreQuisite> preQuisiteTable = new List<PreQuisite>();
         public static List<Term> TermTable = new List<Term>();
+
+        internal static Professor_courses.Data[] GetProfessorCoursesData(Teacher teacher)
+        {
+            throw new NotImplementedException();
+        }
 
         public static bool EditPassword(Person user , string newPassword, string oldPassword, string confirm, Person person)
         {

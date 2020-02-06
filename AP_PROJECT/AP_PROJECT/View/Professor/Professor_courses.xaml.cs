@@ -19,17 +19,16 @@ namespace AP_PROJECT.View
     /// </summary>
     public partial class Professor_courses : Window
     {
+        Data[] coursesData;
+
         public Professor_courses(Teacher teacher)
         {
             InitializeComponent();
+            coursesData = Module.GetProfessorCoursesData(teacher);
+            this.courses_list.DataContext = coursesData;
         }
 
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-
-        }
-
+       
         public class Data
         {
             string course_name { set; get; }
