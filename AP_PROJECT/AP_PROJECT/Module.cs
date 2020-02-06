@@ -19,6 +19,13 @@ namespace ProjectAP
             
             
         }
+
+
+        public static Person Login(string userName, string passWord)
+        {
+            throw new NotImplementedException();
+        }
+
         public static List<Tuple<Term,double,double>> GetTermAvgGrade(Student student)
         {
             var TermList = termCourseStudentTable.Select(x => x).Where(x => x.Student == student && x.Status=="passed").Select(x => x.TermCourse.Term).OrderBy(x=>x.TermNum).Distinct();

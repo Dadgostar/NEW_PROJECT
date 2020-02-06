@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectAP;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,7 +26,7 @@ namespace AP_PROJECT.View
 
         private void LoginBtnClicked(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("yyy");
+            var result = Module.Login(username_txt.Text, password_txt.Text);
 
         }
     }
