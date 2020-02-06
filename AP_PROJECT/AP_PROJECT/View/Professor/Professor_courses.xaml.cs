@@ -31,16 +31,19 @@ namespace AP_PROJECT.View
        
         public class Data
         {
-            string course_name { set; get; }
-            string course_id { set; get; }
-            bool type { set; get; }
-            int units { set; get; }
-            int students { set; get; }
+            public string course_name { set; get; }
+            public string course_id { set; get; }
+            public string type { set; get; }
+            public int units { set; get; }
+            public int students { set; get; }
+            public string time { set; get; }
         }
 
         private void DataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             DataGridRow row = sender as DataGridRow;
+            var s = row..ToString();
+            int courseId = int.Parse(row.Item.ToString());
             ////////////////////////////////////////
 
         }
