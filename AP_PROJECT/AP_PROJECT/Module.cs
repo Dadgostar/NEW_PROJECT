@@ -29,6 +29,11 @@ namespace AP_PROJECT
             return results;
         }
 
+        internal static List_of_terms.Data[] GetListOfTerms(Student student)
+        {
+            throw new NotImplementedException();
+        }
+
         internal static Course_students.Data[] GetStudentsMark(int cours_id, Teacher teacher)
         {
             throw new NotImplementedException();
