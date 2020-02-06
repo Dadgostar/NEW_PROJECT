@@ -6,6 +6,8 @@ namespace ProjectAP
 {
     public class Module
     {
+        public static List<Student> StudentTable = new List<Student>();
+        public static List<Teacher> TeacherTable = new List<Teacher>();
         public static List<TermCourse> termCourseTable = new List<TermCourse>();
         public static List<TermCourseStudent> termCourseStudentTable = new List<TermCourseStudent>();
         public static bool EditPassword(Person user , string newPassword, string oldPassword, string confirm, Person person)
