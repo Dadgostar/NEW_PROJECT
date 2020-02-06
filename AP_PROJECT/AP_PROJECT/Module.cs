@@ -86,12 +86,12 @@ namespace ProjectAP
             while((line = teacherFile.ReadLine()) != null)
             {
                 var items = line.Split('\t');
-                teacherFile.Add(new Teacher(){Id =int.Parse(items[0]),FirstName = items[1],LastName = items[3],Password = items[3]});
+                TeacherTable.Add(new Teacher(){Id =int.Parse(items[0]),FirstName = items[1],LastName = items[3],Password = items[3]});
             }
             while((line = courseFile.ReadLine()) != null)
             {
                 var items = line.Split('\t');
-                courseFile.Add(new Course(){Id =int.Parse(items[0]),ECT = int.Parse(items[1]), Name = items[2],type = items[3]});
+                CourseTable.Add(new Course(){Id =int.Parse(items[0]),ECT = int.Parse(items[1]), Name = items[2],type = items[3]});
             }
         }
     }
