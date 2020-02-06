@@ -61,6 +61,9 @@
     <Compile Include="View\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Student_professor_evaluation.xaml.cs">
+      <DependentUpon>Student_professor_evaluation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Student_user_pass_change.xaml.cs">
       <DependentUpon>Student_user_pass_change.xaml</DependentUpon>
     </Compile>
@@ -82,6 +85,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Student_professor_evaluation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
