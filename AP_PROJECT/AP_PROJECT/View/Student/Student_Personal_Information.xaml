@@ -6,26 +6,22 @@
         xmlns:local="clr-namespace:AP_PROJECT.View"
        mc:Ignorable="d"
         Title="MainWindow" Height="358.354" Width="483.659">
-    <Grid x:Name="entranceyear">
-        <Label x:Name="labelname" Content="Name &#xD;&#xA;" HorizontalAlignment="Left" Margin="12,114,0,0" VerticalAlignment="Top" Height="25" Width="81"/>
-        <Label x:Name="labelfamily" Content="Family Name" HorizontalAlignment="Left" Margin="12,144,0,0" VerticalAlignment="Top" Width="81"/>
-        <Label x:Name="labelid" Content="ID" HorizontalAlignment="Left" Margin="12,175,0,0" VerticalAlignment="Top" Width="81"/>
-        <Label x:Name="labelmajor" Content="Major" HorizontalAlignment="Left" Margin="12,212,0,0" VerticalAlignment="Top" Width="81"/>
-        <Label x:Name="name" Content="Label" HorizontalAlignment="Left" Margin="98,121,0,0" VerticalAlignment="Top" Width="108"/>
-        <Label x:Name="family" Content="Label" HorizontalAlignment="Left" Margin="98,144,0,0" VerticalAlignment="Top" Width="108"/>
-        <Label x:Name="id" Content="Label" HorizontalAlignment="Left" Margin="98,175,0,0" VerticalAlignment="Top" Width="108"/>
-        <Label x:Name="major" Content="Label" HorizontalAlignment="Left" Margin="98,212,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.208,0.419" Width="108"/>
-        <Label x:Name="lebelenterance" Content="Enterance y" HorizontalAlignment="Left" Margin="12,243,0,0" VerticalAlignment="Top" Width="81"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="98,243,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.016,0.694" Width="108"/>
-        <Label x:Name="labelsex" Content="Sex" Margin="0,88,425.4,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="81"/>
-        <Label x:Name="sex" Content="Label" HorizontalAlignment="Left" Margin="98,90,0,0" VerticalAlignment="Top" Width="108"/>
-        <Label x:Name="labeluser" Content="User Name" HorizontalAlignment="Left" Margin="12,20,0,0" VerticalAlignment="Top" Width="69" Height="24"/>
-        <Label x:Name="labelpass" Content="Password" HorizontalAlignment="Left" Margin="12,44,0,0" VerticalAlignment="Top" Width="77"/>
-        <Label x:Name="username" Content="Label" HorizontalAlignment="Left" Margin="98,18,0,0" VerticalAlignment="Top" Width="108"/>
-        <Label x:Name="password" Content="Label" HorizontalAlignment="Left" Margin="98,44,0,0" VerticalAlignment="Top" Width="109"/>
-        <Button x:Name="change_userpass" Content="Change " HorizontalAlignment="Left" Margin="329,25,0,0" VerticalAlignment="Top" Width="115"/>
-        <Label x:Name="paymentlabel" Content="Payment" HorizontalAlignment="Left" Margin="12,274,0,0" VerticalAlignment="Top" Width="69"/>
-        <Label x:Name="payment" Content="Label" HorizontalAlignment="Left" Margin="98,274,0,0" VerticalAlignment="Top" Width="108"/>
+    <Grid x:Name="entranceyear" Margin="0,0,-22.5,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="305*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="labelname" Content="Name &#xD;&#xA;" HorizontalAlignment="Left" Margin="12,88.015,0,0" VerticalAlignment="Top" Height="25" Width="108" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Grid.Row="1"/>
+        <Label x:Name="labelfamily" Content="Family Name" HorizontalAlignment="Left" Margin="12,118.015,0,0" VerticalAlignment="Top" Width="108" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Grid.Row="1"/>
+        <Label x:Name="name" Content="Label" HorizontalAlignment="Left" Margin="172,87.015,0,0" VerticalAlignment="Top" Width="108" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Grid.Row="1"/>
+        <Label x:Name="family" Content="Label" HorizontalAlignment="Left" Margin="172,118.015,0,0" VerticalAlignment="Top" Width="108" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Grid.Row="1"/>
+        <Label x:Name="lebelenterance" Content="Enterance year" HorizontalAlignment="Left" Margin="12,217.015,0,0" VerticalAlignment="Top" Width="108" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Grid.Row="1"/>
+        <Label x:Name="EntranceYear" Content="Label" HorizontalAlignment="Left" Margin="172,217.015,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.016,0.694" Width="108" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Grid.Row="1"/>
+        <Label x:Name="labeluser" Content="User ID" HorizontalAlignment="Left" Margin="12,15,0,0" VerticalAlignment="Top" Width="108" Height="24" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Grid.RowSpan="2"/>
+        <Label x:Name="labelpass" Content="Password" HorizontalAlignment="Left" Margin="12,18.015,0,0" VerticalAlignment="Top" Width="108" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Grid.Row="1"/>
+        <Label x:Name="username" Content="Label" HorizontalAlignment="Left" Margin="172,13,0,0" VerticalAlignment="Top" Width="108" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Grid.RowSpan="2"/>
+        <Label x:Name="password" Content="Label" HorizontalAlignment="Left" Margin="172,18.015,0,0" VerticalAlignment="Top" Width="109" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Grid.Row="1"/>
+        <Button x:Name="change_userpass" Content="Change " HorizontalAlignment="Left" Margin="329,25,0,0" VerticalAlignment="Top" Width="115" Grid.RowSpan="2"/>
 
     </Grid>
 </Window>

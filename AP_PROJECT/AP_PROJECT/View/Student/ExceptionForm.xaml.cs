@@ -22,5 +22,21 @@ namespace AP_PROJECT.View
         {
             InitializeComponent();
         }
+
+        bool hasBeenClicked = false;
+        private void explanation_txt_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!hasBeenClicked)
+            {
+                TextBox box = sender as TextBox;
+                box.Text = String.Empty;
+                hasBeenClicked = true;
+            }
+        }
+
+        private void SaveChangesClicked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

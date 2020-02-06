@@ -16,11 +16,25 @@ namespace AP_PROJECT.View
     /// <summary>
     /// Interaction logic for Student_Personal_Information.xaml
     /// </summary>
+    /// 
     public partial class Student_Personal_Information : Window
     {
+        private Class.Student student;
+
         public Student_Personal_Information()
         {
             InitializeComponent();
+            username.Content = student.Id;
+            password.Content = student.Password;
+            name.Content = student.FirstName;
+            family.Content = student.LastName;
+            EntranceYear.Content = student.EntranceYear;
         }
+
+        public Student_Personal_Information(Class.Student student)
+        {
+            this.student = student;
+        }
+        
     }
 }

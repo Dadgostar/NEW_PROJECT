@@ -7,7 +7,7 @@
        mc:Ignorable="d"
         Title="Student_main_page" Height="300" Width="300">
     <Grid x:Name="term_list_button">
-        <Button x:Name="infor_button" Content="Personal information" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Width="81" FontSize="8" Click="PersonalInformationClicked"/>
+        <Button x:Name="PersonalInfo" Content="Personal information" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Width="81" FontSize="8" Click="PersonalInformationClicked" IsMouseCapturedChanged="PersonalInfoClicked"/>
         <Button x:Name="terms_button" Content="List of terms" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" Click="ListOfTermClicked"/>
         <Button x:Name="Register_button" Content="Registeration" HorizontalAlignment="Left" Margin="10,63,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" Click="RegClicked"/>
         <Button x:Name="schedule_button" Content="Weekly schedule" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" Click="WeeklyScheduleClicked"/>
