@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AP_PROJECT.Class;
+using AP_PROJECT.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +24,10 @@ namespace AP_PROJECT
         public MainWindow()
         {
             InitializeComponent();
-            Module.loadData();
+            //Module.loadData();
+            Professor_courses prof_courses = new Professor_courses(new Teacher()
+            { Id = 1111, FirstName = "GHOLI", LastName = "Gholizadeh", Password = "1234",});
+            prof_courses.Show();
         }
     }
 }
