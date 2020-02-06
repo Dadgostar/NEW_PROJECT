@@ -1,0 +1,18 @@
+﻿<Window x:Class="AP_PROJECT.View.WeekSchedual"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AP_PROJECT.View"
+        mc:Ignorable="d"
+        Title="WeekSchedual" Height="300" Width="300">
+    <DataGrid HorizontalAlignment="Left" Height="170" Margin="10,25,0,0" VerticalAlignment="Top" Width="271">
+        <DataGrid.Columns>
+            <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Day"/>
+            <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="8 - 9:30"/>
+            <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="9:30 - 11"/>
+            <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="11 - 12:30"/>
+            <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="13:30 - 16"/>
+        </DataGrid.Columns>
+    </DataGrid>
+</Window>
