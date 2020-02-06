@@ -17,9 +17,15 @@ namespace AP_PROJECT
         public static List<PreQuisite> preQuisiteTable = new List<PreQuisite>();
         public static List<Term> TermTable = new List<Term>();
 
-        internal static Professor_courses.Data[] GetProfessorCoursesData(Teacher teacher)
+        public static Professor_courses.Data[] GetProfessorCoursesData(Teacher teacher)
         {
-            throw new NotImplementedException();
+            Professor_courses.Data[] results = new Professor_courses.Data[5];
+            results[0] = new Professor_courses.Data() { course_id = "1", course_name = "name1", students = 5, type = "takhasosi", units = 3 };
+            results[1] = new Professor_courses.Data() { course_id = "2", course_name = "name2", students = 4, type = "takhasosi", units = 2 };
+            results[2] = new Professor_courses.Data() { course_id = "3", course_name = "name3", students = 23, type = "takhasosi", units = 4 };
+            results[3] = new Professor_courses.Data() { course_id = "4", course_name = "name4", students = 53, type = "omommi", units = 3 };
+            results[4] = new Professor_courses.Data() { course_id = "5", course_name = "name5", students = 10, type = "takhasosi", units = 1 };
+            return results;
         }
 
         public static bool EditPassword(Person user , string newPassword, string oldPassword, string confirm, Person person)
