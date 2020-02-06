@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace ProjectAP
 {
     public class Module
     {
+        public static List<Student> StudentTable = new List<Student>();
+        public static List<Teacher> TeacherTable = new List<Teacher>();
         public static List<TermCourse> termCourseTable = new List<TermCourse>();
         public static List<TermCourseStudent> termCourseStudentTable = new List<TermCourseStudent>();
         public static bool EditPassword(Person user , string newPassword, string oldPassword, string confirm, Person person)
@@ -16,9 +19,26 @@ namespace ProjectAP
                 return false;
             user.Password = newPassword;
             return true;
-            
-            
         }
+
+
+        public static Person Login(string userName, string passWord)
+        {
+            int Id = int.Parse(userName);
+            var temp1 = StudentTable.Select(x => x).Where(x => x.Id == Id && x.Password == passWord);// checking if the username is a student
+            if(temp1.Count()>0)
+            {
+                return temp1.ToList()[0];
+            }
+            
+            var temp2 = TeacherTable.Select(x => x).Where(x => x.Id == Id && x.Password == passWord);
+            if (temp2.Count() > 0)
+            {
+                return temp2.ToList()[0];
+            }
+            return null;
+        }
+
         public static List<Tuple<Term,double,double>> GetTermAvgGrade(Student student)
         {
             var TermList = termCourseStudentTable.Select(x => x).Where(x => x.Student == student && x.Status=="passed").Select(x => x.TermCourse.Term).OrderBy(x=>x.TermNum).Distinct();
@@ -44,12 +64,22 @@ namespace ProjectAP
         {
             return true;
         }
+
         public Module()
         {
 
         }
 
-
+        public static void loadData()
+        {
+            StreamReader studentFile = new StreamReader("student.txt");
+            string line = "";
+            while((line = studentFile.ReadLine()) != null)
+            {
+                var items = line.Split('\t');
+                StudentTable.Add(new Student(){Id=int.Parse(items[0]), FirstName = items[1], LastName = items[2], Password = items[3]});
+            }
+        }
     }
    
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectAP;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace AP_PROJECT
         public MainWindow()
         {
             InitializeComponent();
+            Module.loadData();
         }
     }
 }
