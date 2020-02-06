@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace ProjectAP
@@ -18,8 +19,6 @@ namespace ProjectAP
                 return false;
             user.Password = newPassword;
             return true;
-            
-            
         }
 
 
@@ -58,7 +57,16 @@ namespace ProjectAP
 
         }
 
-
+        public static void loadData()
+        {
+            StreamReader studentFile = new StreamReader("student.txt");
+            string line = "";
+            while((line = studentFile.ReadLine()) != null)
+            {
+                var items = line.Split('\t');
+                StudentTable.Add(new Student(){Id=int.Parse(items[0]), FirstName = items[1], LastName = items[2], Password = items[3]});
+            }
+        }
     }
    
 }
