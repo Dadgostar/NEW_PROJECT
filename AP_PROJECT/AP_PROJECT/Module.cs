@@ -19,7 +19,8 @@ namespace AP_PROJECT
 
         internal static Professor_courses.Data[] GetProfessorCoursesData(Teacher teacher)
         {
-            throw new NotImplementedException();
+   //         throw new NotImplementedException();
+
         }
 
         public static bool EditPassword(Person user , string newPassword, string oldPassword, string confirm, Person person)

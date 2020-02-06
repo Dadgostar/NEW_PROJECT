@@ -31,7 +31,7 @@ namespace AP_PROJECT.View
 
         private void PersonalInformationClicked(object sender, RoutedEventArgs e)
         {
-            Student_Personal_Information Personal_Information_Page = new Student_Personal_Information();
+            Student_Personal_Information Personal_Information_Page = new Student_Personal_Information(this.student);
             Personal_Information_Page.Show();
 
 
@@ -77,6 +77,11 @@ namespace AP_PROJECT.View
         {
             double payment = Module.GetPayment(this.student);
                 
+        }
+
+        private void PersonalInfoClicked(object sender, DependencyPropertyChangedEventArgs e)
+        {
+
         }
     }
 }
