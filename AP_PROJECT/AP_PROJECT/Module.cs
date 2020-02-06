@@ -60,7 +60,6 @@ namespace AP_PROJECT
 
         public static double GetPayment(Student student)
         {
-
             return 1001;
         }
 
@@ -83,8 +82,9 @@ namespace AP_PROJECT
 
         public static void loadData()
         {
-            StreamReader studentFile = new StreamReader("student.txt");
             string line = "";
+
+            StreamReader studentFile = new StreamReader("student.txt");
             while((line = studentFile.ReadLine()) != null)
             {
                 var items = line.Split('\t');
@@ -127,6 +127,7 @@ namespace AP_PROJECT
                 });
             }
 
+            
 
         }
     }
