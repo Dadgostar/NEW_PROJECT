@@ -73,6 +73,9 @@
     <Compile Include="View\Professor\Course_students.xaml.cs">
       <DependentUpon>Course_students.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Professor\Educationalassist_registration_list.xaml.cs">
+      <DependentUpon>Educationalassist_registration_list.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Professor\Proffessor_educational_assist_.xaml.cs">
       <DependentUpon>Proffessor_educational_assist_.xaml</DependentUpon>
     </Compile>
@@ -167,6 +170,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Professor\Course_students.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Professor\Educationalassist_registration_list.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
