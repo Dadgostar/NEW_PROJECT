@@ -19,7 +19,7 @@ namespace AP_PROJECT.View
     /// </summary>
     public partial class Professor_mark_register : Window
     {
-        public Professor_mark_register(Teacher teacher)
+        public Professor_mark_register(int student_id, Teacher teacher, int cours_id)
         {
             InitializeComponent();
         }

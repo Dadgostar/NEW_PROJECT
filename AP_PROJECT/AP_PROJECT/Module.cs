@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using AP_PROJECT.View;
+using AP_PROJECT.View.Professor;
 
 namespace AP_PROJECT
 {
@@ -26,6 +27,11 @@ namespace AP_PROJECT
             results[3] = new Professor_courses.Data() { course_id = "4", course_name = "name4", students = 53, type = "omommi", units = 3 };
             results[4] = new Professor_courses.Data() { course_id = "5", course_name = "name5", students = 10, type = "takhasosi", units = 1 };
             return results;
+        }
+
+        internal static Course_students.Data[] GetStudentsMark(int cours_id, Teacher teacher)
+        {
+            throw new NotImplementedException();
         }
 
         public static bool EditPassword(Person user , string newPassword, string oldPassword, string confirm, Person person)
