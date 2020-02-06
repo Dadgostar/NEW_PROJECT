@@ -9,6 +9,7 @@ namespace ProjectAP
     {
         public static List<Student> StudentTable = new List<Student>();
         public static List<Teacher> TeacherTable = new List<Teacher>();
+        public static List<Course>  CourseTable = new List<Course>();
         public static List<TermCourse> termCourseTable = new List<TermCourse>();
         public static List<TermCourseStudent> termCourseStudentTable = new List<TermCourseStudent>();
         public static bool EditPassword(Person user , string newPassword, string oldPassword, string confirm, Person person)
@@ -73,11 +74,24 @@ namespace ProjectAP
         public static void loadData()
         {
             StreamReader studentFile = new StreamReader("student.txt");
+            StreamReader teacherFile = new StreamReader("teacher.txt");
+            StreamReader courseFile = new StreamReader("course.txt");
             string line = "";
             while((line = studentFile.ReadLine()) != null)
             {
                 var items = line.Split('\t');
                 StudentTable.Add(new Student(){Id=int.Parse(items[0]), FirstName = items[1], LastName = items[2], Password = items[3]});
+
+            }
+            while((line = teacherFile.ReadLine()) != null)
+            {
+                var items = line.Split('\t');
+                teacherFile.Add(new Teacher(){Id =int.Parse(items[0]),FirstName = items[1],LastName = items[3],Password = items[3]});
+            }
+            while((line = courseFile.ReadLine()) != null)
+            {
+                var items = line.Split('\t');
+                courseFile.Add(new Course(){Id =int.Parse(items[0]),ECT = int.Parse(items[1]), Name = items[2],type = items[3]});
             }
         }
     }
