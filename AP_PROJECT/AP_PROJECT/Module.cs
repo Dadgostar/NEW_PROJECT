@@ -24,7 +24,19 @@ namespace ProjectAP
 
         public static Person Login(string userName, string passWord)
         {
-            throw new NotImplementedException();
+            int Id = int.Parse(userName);
+            var temp1 = StudentTable.Select(x => x).Where(x => x.Id == Id && x.Password == passWord);// checking if the username is a student
+            if(temp1.Count()>0)
+            {
+                return temp1.ToList()[0];
+            }
+            
+            var temp2 = TeacherTable.Select(x => x).Where(x => x.Id == Id && x.Password == passWord);
+            if (temp2.Count() > 0)
+            {
+                return temp2.ToList()[0];
+            }
+            return null;
         }
 
         public static List<Tuple<Term,double,double>> GetTermAvgGrade(Student student)
@@ -52,6 +64,7 @@ namespace ProjectAP
         {
             return true;
         }
+
         public Module()
         {
 
