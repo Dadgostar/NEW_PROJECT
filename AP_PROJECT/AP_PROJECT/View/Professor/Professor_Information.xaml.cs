@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ProjectAP;
 
 namespace AP_PROJECT.View
 {
@@ -18,9 +19,19 @@ namespace AP_PROJECT.View
     /// </summary>
     public partial class Professor_Information : Window
     {
+        private Teacher teacher;
+
         public Professor_Information(ProjectAP.Teacher teacher)
         {
             InitializeComponent();
+            this.teacher = teacher;
+        }
+
+        private void prof_userpass_change_button_Click(object sender, RoutedEventArgs e)
+        {
+            Professor_change_userpass change_userpass = new Professor_change_userpass(this.teacher);
+            change_userpass.Show();
+            //this.Close();
         }
     }
 }
