@@ -15,7 +15,7 @@
         <Label x:Name="student_idtxt" Content="Label" HorizontalAlignment="Left" Margin="118,50,0,0" VerticalAlignment="Top" Width="109"/>
         <Label x:Name="coursetxt" Content="Label" HorizontalAlignment="Left" Margin="118,81,0,0" VerticalAlignment="Top" Width="109"/>
         <TextBox x:Name="student_marktxt" HorizontalAlignment="Left" Height="26" Margin="118,136,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="register_button" Content="Register" HorizontalAlignment="Left" Margin="188,219,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="register_button" Content="Register" HorizontalAlignment="Left" Margin="188,219,0,0" VerticalAlignment="Top" Width="75" Click="register_button_Click"/>
 
     </Grid>
 </Window>
