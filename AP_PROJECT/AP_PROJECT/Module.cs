@@ -61,7 +61,7 @@ namespace AP_PROJECT
         public static double GetPayment(Student student)
         {
 
-            return 1000;
+            return 1001;
         }
 
         public static double GetAvgGrade(Student student)
