@@ -26,8 +26,23 @@ namespace AP_PROJECT.View
 
         private void LoginBtnClicked(object sender, RoutedEventArgs e)
         {
-            var result = Module.Login(username_txt.Text, password_txt.Text);
-
+            var person = Module.Login(username_txt.Text, password_txt.Text);
+            if(person == null)
+            {
+                MessageBox.Show("username or password is invalid");
+            }
+            if(person is Teacher)
+            {
+                Professor_main_page window = new Professor_main_page(person);
+                window.Show();
+                this.Close();
+            }
+            if(person is Student)
+            {
+                Student_main_page window = new Student_main_page(pers);
+                window.Show();
+                this.Close();
+            }
         }
     }
 }
