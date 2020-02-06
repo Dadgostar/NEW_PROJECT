@@ -58,6 +58,12 @@ namespace AP_PROJECT
             return result;
         }
 
+        public static double GetPayment(Student student)
+        {
+
+            return 1001;
+        }
+
         public static double GetAvgGrade(Student student)
         {
             var temp = GetTermAvgGrade(student);
@@ -83,7 +89,6 @@ namespace AP_PROJECT
             {
                 var items = line.Split('\t');
                 StudentTable.Add(new Student(){Id=int.Parse(items[0]), FirstName = items[1], LastName = items[2], Password = items[3]});
-
             }
             
             StreamReader teacherFile = new StreamReader("teacher.txt");
