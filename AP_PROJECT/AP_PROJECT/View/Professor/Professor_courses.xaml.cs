@@ -36,6 +36,7 @@ namespace AP_PROJECT.View
             bool type { set; get; }
             int units { set; get; }
             int students { set; get; }
+            string time { set; get; }
         }
 
         private void DataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
