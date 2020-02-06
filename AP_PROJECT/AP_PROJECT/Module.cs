@@ -83,7 +83,6 @@ namespace AP_PROJECT
             {
                 var items = line.Split('\t');
                 StudentTable.Add(new Student(){Id=int.Parse(items[0]), FirstName = items[1], LastName = items[2], Password = items[3]});
-
             }
             
             StreamReader teacherFile = new StreamReader("teacher.txt");
