@@ -41,11 +41,7 @@ namespace AP_PROJECT.View
 
         private void DataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            DataGridRow row = sender as DataGridRow;
-            var s = row..ToString();
-            int courseId = int.Parse(row.Item.ToString());
-            ////////////////////////////////////////
-
+            
         }
     }
 }
