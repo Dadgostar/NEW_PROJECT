@@ -58,8 +58,62 @@
     <Compile Include="Class\Term.cs" />
     <Compile Include="Class\TermCourse.cs" />
     <Compile Include="Class\TermCourseStudent.cs" />
+    <Compile Include="View\Clerk_deactivate_preq_overlap.xaml.cs">
+      <DependentUpon>Clerk_deactivate_preq_overlap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Clerk_Information.xaml.cs">
+      <DependentUpon>Clerk_Information.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Clerk_student_list.xaml.cs">
+      <DependentUpon>Clerk_student_list.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Clerk_userpass_change.xaml.cs">
+      <DependentUpon>Clerk_userpass_change.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ExceptionForm.xaml.cs">
+      <DependentUpon>ExceptionForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\List_of_terms.xaml.cs">
+      <DependentUpon>List_of_terms.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Objection_to_grade.xaml.cs">
+      <DependentUpon>Objection_to_grade.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Professor_change_userpass.xaml.cs">
+      <DependentUpon>Professor_change_userpass.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Professor_courses.xaml.cs">
+      <DependentUpon>Professor_courses.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Professor_educationalassist_registrationform.xaml.cs">
+      <DependentUpon>Professor_educationalassist_registrationform.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Professor_exception_response.xaml.cs">
+      <DependentUpon>Professor_exception_response.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Professor_head_evaluation_show.xaml.cs">
+      <DependentUpon>Professor_head_evaluation_show.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Professor_Information.xaml.cs">
+      <DependentUpon>Professor_Information.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Professor_mark_register.xaml.cs">
+      <DependentUpon>Professor_mark_register.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Professor_objection_response.xaml.cs">
+      <DependentUpon>Professor_objection_response.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Professor_students.xaml.cs">
+      <DependentUpon>Professor_students.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Student_main_page.xaml.cs">
+      <DependentUpon>Student_main_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Student_Personal_Information.xaml.cs">
+      <DependentUpon>Student_Personal_Information.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Student_professor_evaluation.xaml.cs">
       <DependentUpon>Student_professor_evaluation.xaml</DependentUpon>
@@ -84,7 +138,79 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Clerk_deactivate_preq_overlap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Clerk_Information.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Clerk_student_list.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Clerk_userpass_change.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ExceptionForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\List_of_terms.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Objection_to_grade.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Professor_change_userpass.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Professor_courses.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Professor_educationalassist_registrationform.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Professor_exception_response.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Professor_head_evaluation_show.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Professor_Information.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Professor_mark_register.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Professor_objection_response.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Professor_students.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Student_main_page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Student_Personal_Information.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

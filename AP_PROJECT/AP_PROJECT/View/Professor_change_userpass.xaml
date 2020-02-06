@@ -1,0 +1,24 @@
+﻿<Window x:Class="AP_PROJECT.View.Professor_change_userpass"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AP_PROJECT.View"
+        mc:Ignorable="d"
+        Title="Professor_change_userpass" Height="300" Width="300">
+    <Grid>
+        <Label x:Name="prof_olduser_label" Content="Old username" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Width="80" FontSize="10"/>
+        <Label x:Name="prof_newuser_label" Content="New username" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" Width="80" FontSize="10"/>
+        <Label x:Name="prof_oldpass_label" Content="Old password" HorizontalAlignment="Left" Margin="10,113,0,0" VerticalAlignment="Top" Width="80" FontSize="10"/>
+        <Label x:Name="prof_newpass_label" Content="New password" HorizontalAlignment="Left" Margin="10,144,0,0" VerticalAlignment="Top" Width="80" FontSize="10"/>
+        <Label x:Name="prof_passconfirm_label" Content="Confirm" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" Width="80" FontSize="10"/>
+        <Button x:Name="prof_userpass_apply_button" Content="Apply" HorizontalAlignment="Left" Margin="171,211,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="prof_olduser_txt" HorizontalAlignment="Left" Height="23" Margin="95,25,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="prof_newuser_txt" HorizontalAlignment="Left" Height="23" Margin="95,53,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="prof_oldpass_txt" HorizontalAlignment="Left" Height="23" Margin="95,115,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="prof_newpass_txt" HorizontalAlignment="Left" Height="23" Margin="95,143,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="prof_passconfirm_txt" HorizontalAlignment="Left" Height="23" Margin="95,175,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
+

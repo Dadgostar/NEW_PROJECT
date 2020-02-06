@@ -1,0 +1,22 @@
+﻿<Window x:Class="AP_PROJECT.View.Professor_exception_response"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AP_PROJECT.View"
+        mc:Ignorable="d"
+        Title="Professor_exception_response" Height="300" Width="300">
+    <Grid>
+        <Label x:Name="student_name_label" Content="Sudent name" HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top" Width="81" FontSize="10"/>
+        <Label x:Name="student_id_label" Content="Student ID" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" Width="81" FontSize="10"/>
+        <Label x:Name="student_nametxt" Content="Label" HorizontalAlignment="Left" Margin="121,22,0,0" VerticalAlignment="Top" Width="138"/>
+        <Label x:Name="student_idtxt" Content="Label" HorizontalAlignment="Left" Margin="121,53,0,0" VerticalAlignment="Top" Width="138"/>
+        <Label x:Name="exception_type_label" Content="Exception type" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Width="81" FontSize="10"/>
+        <Label x:Name="exception_typetxt" Content="Label" HorizontalAlignment="Left" Margin="121,94,0,0" VerticalAlignment="Top" Width="85"/>
+        <RadioButton x:Name="accept_radiobutt" Content="Accept" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="reject_radiobutt" Content="Reject" HorizontalAlignment="Left" Margin="121,125,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="explanation_txtblock" HorizontalAlignment="Left" Margin="10,160,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="0.238,0.4" Height="66" Width="265"/>
+        <Button x:Name="register_button" Content="Register" HorizontalAlignment="Left" Margin="200,231,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>

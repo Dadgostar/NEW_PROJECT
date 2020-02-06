@@ -1,0 +1,17 @@
+﻿<Window x:Class="AP_PROJECT.View.Objection_to_grade"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AP_PROJECT.View"
+        mc:Ignorable="d"
+        Title="Objection_to_grade" Height="300" Width="300">
+    <Grid>
+        <TextBox x:Name="objection_textbox" HorizontalAlignment="Left" Height="110" Margin="38,88,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="221"/>
+        <Label x:Name="proflabel" Content="Professor name" HorizontalAlignment="Left" Margin="38,10,0,0" VerticalAlignment="Top" Width="73" Height="22" FontSize="8"/>
+        <Label x:Name="courselabel" Content="Course" HorizontalAlignment="Left" Margin="38,37,0,0" VerticalAlignment="Top" Height="22" Width="73" FontSize="8"/>
+        <TextBox x:Name="prof_textbox" HorizontalAlignment="Left" Height="23" Margin="116,9,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="course_textbox" HorizontalAlignment="Left" Height="23" Margin="116,37,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

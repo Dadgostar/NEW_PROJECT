@@ -1,0 +1,21 @@
+﻿<Window x:Class="AP_PROJECT.View.Professor_mark_register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AP_PROJECT.View"
+        mc:Ignorable="d"
+        Title="Professor_mark_register" Height="300" Width="300">
+    <Grid>
+        <Label x:Name="student_name_label" Content="Student name" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top" Width="84" FontSize="10"/>
+        <Label x:Name="student_id_label" Content="Student ID" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="84" FontSize="10"/>
+        <Label x:Name="course_label" Content="Course" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top" Width="84" FontSize="10"/>
+        <Label x:Name="student_mark_label" Content="Mark" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" Width="84"/>
+        <Label x:Name="student_nametxt" Content="Label" HorizontalAlignment="Left" Margin="118,19,0,0" VerticalAlignment="Top" Width="109"/>
+        <Label x:Name="student_idtxt" Content="Label" HorizontalAlignment="Left" Margin="118,50,0,0" VerticalAlignment="Top" Width="109"/>
+        <Label x:Name="coursetxt" Content="Label" HorizontalAlignment="Left" Margin="118,81,0,0" VerticalAlignment="Top" Width="109"/>
+        <TextBox x:Name="student_marktxt" HorizontalAlignment="Left" Height="26" Margin="118,136,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="register_button" Content="Register" HorizontalAlignment="Left" Margin="188,219,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>
