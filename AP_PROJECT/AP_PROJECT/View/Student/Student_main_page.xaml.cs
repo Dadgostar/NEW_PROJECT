@@ -18,7 +18,7 @@ namespace AP_PROJECT.View
     /// </summary>
     public partial class Student_main_page : Window
     {
-        public Student_main_page()
+        public Student_main_page(ProjectAP.Student person)
         {
             InitializeComponent();
         }

@@ -33,13 +33,13 @@ namespace AP_PROJECT.View
             }
             if(person is Teacher)
             {
-                Professor_main_page window = new Professor_main_page(person);
+                Professor_main_page window = new Professor_main_page((Teacher)person);
                 window.Show();
                 this.Close();
             }
             if(person is Student)
             {
-                Student_main_page window = new Student_main_page(pers);
+                Student_main_page window = new Student_main_page((Student)person);
                 window.Show();
                 this.Close();
             }

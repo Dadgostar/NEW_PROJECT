@@ -11,7 +11,7 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="DG" HorizontalAlignment="Left" Height="186" Margin="37,26,0,0" VerticalAlignment="Top" Width="226" SelectionChanged="DataGrid_SelectionChanged" ItemsSource="{Binding}">
+        <DataGrid x:Name="DG" HorizontalAlignment="Left" Height="186" Margin="37,26,0,0" VerticalAlignment="Top" Width="226" ItemsSource="{Binding}">
             <DataGrid.Columns>
                 <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Term"/>
                 <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Total units"/>
@@ -19,7 +19,7 @@
                 <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Fail"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="55,236,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="55,236,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
