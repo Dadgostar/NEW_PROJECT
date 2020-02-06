@@ -100,6 +100,9 @@
     <Compile Include="View\Professor_Information.xaml.cs">
       <DependentUpon>Professor_Information.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Professor_main_page.xaml.cs">
+      <DependentUpon>Professor_main_page.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Professor_mark_register.xaml.cs">
       <DependentUpon>Professor_mark_register.xaml</DependentUpon>
     </Compile>
@@ -191,6 +194,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Professor_Information.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Professor_main_page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

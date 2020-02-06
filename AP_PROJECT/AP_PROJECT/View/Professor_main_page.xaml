@@ -1,0 +1,16 @@
+﻿<Window x:Class="AP_PROJECT.View.Professor_main_page"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AP_PROJECT.View"
+       mc:Ignorable="d"
+        Title="Student_main_page" Height="300" Width="300">
+    <Grid x:Name="term_list_button">
+        <Button x:Name="personal_infor_button" Content="Personal information" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Width="81" FontSize="8"/>
+        <Button x:Name="schedule_button" Content="Weekly schedule" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8"/>
+        <Button x:Name="Exceptoin_button" Content="Exception form" HorizontalAlignment="Left" Margin="10,63,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" RenderTransformOrigin="0.487,-0.923"/>
+        <Button x:Name="registering_mark_button" Content="Mark registration" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8"/>
+
+    </Grid>
+</Window>
