@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AP_PROJECT.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using ProjectAP;
 
 namespace AP_PROJECT.View
 {
@@ -21,7 +21,7 @@ namespace AP_PROJECT.View
     {
         private Teacher teacher;
 
-        public Professor_Information(ProjectAP.Teacher teacher)
+        public Professor_Information(Teacher teacher)
         {
             InitializeComponent();
             this.teacher = teacher;

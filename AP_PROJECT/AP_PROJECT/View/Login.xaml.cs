@@ -1,4 +1,4 @@
-﻿using ProjectAP;
+﻿using AP_PROJECT.Class;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,9 +37,9 @@ namespace AP_PROJECT.View
                 window.Show();
                 this.Close();
             }
-            if(person is Student)
+            if(person is AP_PROJECT.Class.Student)
             {
-                Student_main_page window = new Student_main_page((Student)person);
+                Student_main_page window = new Student_main_page((AP_PROJECT.Class.Student)person);
                 window.Show();
                 this.Close();
             }
