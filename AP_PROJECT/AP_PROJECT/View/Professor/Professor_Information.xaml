@@ -19,7 +19,7 @@
         <Label x:Name="prof_familytext_label" Content="Label" HorizontalAlignment="Left" Margin="87,86,0,0" VerticalAlignment="Top" Width="98"/>
         <Label x:Name="prof_idtext_label" Content="Label" HorizontalAlignment="Left" Margin="87,112,0,0" VerticalAlignment="Top" Width="98"/>
         <Label x:Name="prof_studfieldtext_label" Content="Label" HorizontalAlignment="Left" Margin="87,137,0,0" VerticalAlignment="Top" Width="98"/>
-        <Button x:Name="prof_userpass_change_button" Content="Change" HorizontalAlignment="Left" Margin="10,219,0,0" VerticalAlignment="Top" Width="75" Click="prof_userpass_change_button_Click"/>
+        <Button x:Name="prof_userpass_change_button" Content="Change" HorizontalAlignment="Left" Margin="10,219,0,0" VerticalAlignment="Top" Width="75"/>
         <Label x:Name="prof_grade_label" Content="Grade" HorizontalAlignment="Left" Margin="10,168,0,0" VerticalAlignment="Top" Height="24" Width="75" FontSize="10"/>
         <Label x:Name="prof_grade_labeltxt" Content="Label" HorizontalAlignment="Left" Margin="87,166,0,0" VerticalAlignment="Top" Width="98"/>
     </Grid>

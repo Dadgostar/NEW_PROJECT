@@ -1,5 +1,5 @@
 ﻿using System;
-namespace ProjectAP
+namespace AP_PROJECT.Class
 {
    
     public class Student: Person

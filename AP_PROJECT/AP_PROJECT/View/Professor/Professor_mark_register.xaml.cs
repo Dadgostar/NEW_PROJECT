@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AP_PROJECT.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,7 @@ namespace AP_PROJECT.View
     /// </summary>
     public partial class Professor_mark_register : Window
     {
-        public Professor_mark_register(ProjectAP.Teacher teacher)
+        public Professor_mark_register(Teacher teacher)
         {
             InitializeComponent();
         }
