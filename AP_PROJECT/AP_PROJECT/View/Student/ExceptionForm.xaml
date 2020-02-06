@@ -10,14 +10,15 @@
         <RadioButton x:Name="examoverlapradiobutton" Content="Exam overlap" HorizontalAlignment="Left" Margin="170,141,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="overlapradiobutton" Content="Overlap" HorizontalAlignment="Left" Margin="170,125,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="prerequisiteradiobutton" Content="Prerequisite" HorizontalAlignment="Left" Margin="170,157,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="classvolumeradiobutton" Content="Class volum" HorizontalAlignment="Left" Margin="170,173,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
-        <TextBox x:Name="explanation_txt" HorizontalAlignment="Left" Height="103" Margin="10,123,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="155"/>
-        <Label x:Name="profnamelabel" Content="Professor name" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top" Width="75" FontSize="9"/>
-        <Label x:Name="courselabel" Content="Course" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Width="75" FontSize="9"/>
-        <Label x:Name="termlabe" Content="Term" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Width="75" FontSize="9"/>
-        <Label x:Name="professor" Content="Label" HorizontalAlignment="Left" Margin="90,14,0,0" VerticalAlignment="Top" Width="86"/>
-        <Label x:Name="course" Content="Label" HorizontalAlignment="Left" Margin="90,45,0,0" VerticalAlignment="Top" Width="86"/>
-        <Label x:Name="term" Content="Label" HorizontalAlignment="Left" Margin="90,76,0,0" VerticalAlignment="Top" Width="86"/>
+        <RadioButton x:Name="classvolumeradiobutton" Content="Class capacity" HorizontalAlignment="Left" Margin="170,173,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox x:Name="explanation_txt" HorizontalAlignment="Left" Height="103" Margin="10,123,0,0" TextWrapping="Wrap" Text="Enter the detail of your request!" VerticalAlignment="Top" Width="155" TextChanged="explanation_txt_TextChanged"/>
+        <Label x:Name="profnamelabel" Content="Professor name" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top" Width="75" FontSize="9" Background="#FFE6E6E6"/>
+        <Label x:Name="courselabel" Content="Course" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Width="75" FontSize="9" Background="#FFE4E4E4"/>
+        <Label x:Name="termlabe" Content="Term" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Width="75" FontSize="9" Background="#FFE6E6E6"/>
+        <TextBlock x:Name="professor" HorizontalAlignment="Left" Margin="90,19,0,0" VerticalAlignment="Top" Width="86" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}"/>
+        <TextBlock x:Name="course" HorizontalAlignment="Left" Margin="90,45,0,0" VerticalAlignment="Top" Width="86" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}"/>
+        <TextBlock x:Name="term" HorizontalAlignment="Left" Margin="90,76,0,0" VerticalAlignment="Top" Width="86" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}"/>
+        <Button x:Name="SaveChangesBtn" Content="Save changes" HorizontalAlignment="Left" Margin="183,231,0,0" VerticalAlignment="Top" Width="90" Click="SaveChangesClicked"/>
 
     </Grid>
 </Window>

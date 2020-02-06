@@ -41,14 +41,6 @@ namespace AP_PROJECT.View
             //this.Close();
         }
 
-       
-
-        private void registering_mark_button_Click(object sender, RoutedEventArgs e)
-        {
-            Professor_mark_register mark_register = new Professor_mark_register(this.teacher);
-            mark_register.Show();
-            //this.Close();
-        }
 
         private void objection_response_button_Click(object sender, RoutedEventArgs e)
         {

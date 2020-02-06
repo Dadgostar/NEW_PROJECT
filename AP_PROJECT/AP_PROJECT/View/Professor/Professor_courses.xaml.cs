@@ -1,4 +1,5 @@
 ﻿using AP_PROJECT.Class;
+using AP_PROJECT.View.Professor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,11 +20,13 @@ namespace AP_PROJECT.View
     /// </summary>
     public partial class Professor_courses : Window
     {
+        private Teacher teacher;
         Data[] coursesData;
 
         public Professor_courses(Teacher teacher)
         {
             InitializeComponent();
+            this.teacher = teacher;
             coursesData = Module.GetProfessorCoursesData(teacher);
             this.courses_list.DataContext = coursesData;
         }
@@ -41,7 +44,13 @@ namespace AP_PROJECT.View
 
         private void DataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            
+            DataGridRow row = sender as DataGridRow;
+
+            int courseId = int.Parse((row.Item as Data).course_id);
+
+            Course_students course_stud = new Course_students(courseId, teacher);
+            course_stud.Show();
+
         }
     }
 }

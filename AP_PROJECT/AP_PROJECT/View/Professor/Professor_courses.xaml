@@ -14,12 +14,12 @@
                 </Style>
             </DataGrid.Resources>
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding course_name}" Header="Course Name"/>
-                <DataGridTextColumn Binding="{Binding course_id}" Header="Course ID"/>
-                <DataGridTextColumn Binding="{Binding type}" Header="Type"/>
-                <DataGridTextColumn Binding="{Binding units}" Header="Units"/>
-                <DataGridTextColumn Binding="{Binding students}" Header="Students"/>
-                <DataGridTextColumn Binding="{Binding time}" Header="Time"/>
+                <DataGridTextColumn Binding="{Binding course_name}" Header="Course Name" IsReadOnly="true"/>
+                <DataGridTextColumn Binding="{Binding course_id}" Header="Course ID" IsReadOnly="true"/>
+                <DataGridTextColumn Binding="{Binding type}" Header="Type" IsReadOnly="true"/>
+                <DataGridTextColumn Binding="{Binding units}" Header="Units" IsReadOnly="true"/>
+                <DataGridTextColumn Binding="{Binding students}" Header="Students" IsReadOnly="true"/>
+                <DataGridTextColumn Binding="{Binding time}" Header="Time" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
 
