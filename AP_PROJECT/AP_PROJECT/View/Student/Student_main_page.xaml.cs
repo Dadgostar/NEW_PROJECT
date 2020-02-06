@@ -39,7 +39,7 @@ namespace AP_PROJECT.View
 
         private void ListOfTermClicked(object sender, RoutedEventArgs e)
         {
-            List_of_terms list_Of_Terms = new List_of_terms();
+            List_of_terms list_Of_Terms = new List_of_terms(this.student);
             list_Of_Terms.Show();
         }
 

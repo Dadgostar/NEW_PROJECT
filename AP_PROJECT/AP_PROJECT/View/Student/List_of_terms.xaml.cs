@@ -18,9 +18,25 @@ namespace AP_PROJECT.View
     /// </summary>
     public partial class List_of_terms : Window
     {
-        public List_of_terms()
+        Data[] datas;
+        private Class.Student student;
+
+        public List_of_terms(Class.Student student)
         {
             InitializeComponent();
+            this.student = student;
+            this.datas = Module.GetListOfTerms(this.student);
+            DG.DataContext = this.datas;
+
         }
+
+
+        public class Data
+        {
+            public int Term { set; get; }
+            public int Total_Units { set; get; }
+            public int Status { set; get; }
+        }
+        
     }
 }

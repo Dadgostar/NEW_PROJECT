@@ -11,12 +11,11 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="DG" HorizontalAlignment="Left" Height="186" Margin="37,26,0,0" VerticalAlignment="Top" Width="226" ItemsSource="{Binding}">
+        <DataGrid x:Name="DG" HorizontalAlignment="Left" Height="186" Margin="37,26,0,0" VerticalAlignment="Top" Width="226" ItemsSource="{Binding}" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Term"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Total units"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Pass"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Fail"/>
+                <DataGridTextColumn Binding="{Binding Term}" Header="Term" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Total_Units}" Header="Total units" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Status}" Header="Status" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button Content="Button" HorizontalAlignment="Left" Margin="55,236,0,0" VerticalAlignment="Top" Width="75"/>

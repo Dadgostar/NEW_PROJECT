@@ -5,7 +5,7 @@ namespace AP_PROJECT.Class
     public class TermCourse
 
     {
-        
+        public int Id { get; set; }
         public Course Course { get;set; }
         public Term Term { set; get; }
         public Teacher Teacher { get; set; }

@@ -1,0 +1,9 @@
+9881	9899	prerequisite
+9881	9890	prerequisite
+9881	9888	prerequisite
+9882	9886	prerequisite
+9882	9891	prerequisite
+9883	9897	prerequisite
+9884	9886	prerequisite
+9885	9890	prerequisite
+9887	9895	prerequisite

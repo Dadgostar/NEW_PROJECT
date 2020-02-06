@@ -7,21 +7,27 @@
        mc:Ignorable="d"
         Title="MainWindow" Height="358.354" Width="483.659">
     <Grid x:Name="entranceyear" Margin="0,0,-22.5,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="311*"/>
+            <ColumnDefinition Width="179*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="26*"/>
             <RowDefinition Height="305*"/>
         </Grid.RowDefinitions>
-        <Label x:Name="labelname" Content="Name &#xD;&#xA;" HorizontalAlignment="Left" Margin="12,88.015,0,0" VerticalAlignment="Top" Height="25" Width="108" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Grid.Row="1"/>
-        <Label x:Name="labelfamily" Content="Family Name" HorizontalAlignment="Left" Margin="12,118.015,0,0" VerticalAlignment="Top" Width="108" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Grid.Row="1"/>
-        <Label x:Name="name" Content="Label" HorizontalAlignment="Left" Margin="172,87.015,0,0" VerticalAlignment="Top" Width="108" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Grid.Row="1"/>
-        <Label x:Name="family" Content="Label" HorizontalAlignment="Left" Margin="172,118.015,0,0" VerticalAlignment="Top" Width="108" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Grid.Row="1"/>
-        <Label x:Name="lebelenterance" Content="Enterance year" HorizontalAlignment="Left" Margin="12,217.015,0,0" VerticalAlignment="Top" Width="108" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Grid.Row="1"/>
-        <Label x:Name="EntranceYear" Content="Label" HorizontalAlignment="Left" Margin="172,217.015,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.016,0.694" Width="108" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Grid.Row="1"/>
-        <Label x:Name="labeluser" Content="User ID" HorizontalAlignment="Left" Margin="12,15,0,0" VerticalAlignment="Top" Width="108" Height="24" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Grid.RowSpan="2"/>
-        <Label x:Name="labelpass" Content="Password" HorizontalAlignment="Left" Margin="12,18.015,0,0" VerticalAlignment="Top" Width="108" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Grid.Row="1"/>
-        <Label x:Name="username" Content="Label" HorizontalAlignment="Left" Margin="172,13,0,0" VerticalAlignment="Top" Width="108" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Grid.RowSpan="2"/>
-        <Label x:Name="password" Content="Label" HorizontalAlignment="Left" Margin="172,18.015,0,0" VerticalAlignment="Top" Width="109" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Grid.Row="1"/>
-        <Button x:Name="change_userpass" Content="Change " HorizontalAlignment="Left" Margin="329,25,0,0" VerticalAlignment="Top" Width="115" Grid.RowSpan="2"/>
+        <Label x:Name="labelname" Content="Name &#xD;&#xA;" HorizontalAlignment="Left" Margin="1.389,88,0,0" VerticalAlignment="Top" Height="25" Width="108" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Grid.Row="1" Grid.Column="1"/>
+        <Label x:Name="labelfamily" Content="Family Name" HorizontalAlignment="Left" Margin="1,118,0,0" VerticalAlignment="Top" Width="108" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Grid.Row="1" Grid.Column="1"/>
+        <Label x:Name="name" Content="Label" HorizontalAlignment="Left" Margin="161.389,87,0,0" VerticalAlignment="Top" Width="108" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Grid.Row="1" Grid.Column="1"/>
+        <Label x:Name="family" Content="Label" HorizontalAlignment="Left" Margin="161.389,118,0,0" VerticalAlignment="Top" Width="108" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Grid.Row="1" Grid.Column="1"/>
+        <Label x:Name="lebelenterance" Content="Enterance year" HorizontalAlignment="Left" Margin="1.389,217,0,0" VerticalAlignment="Top" Width="108" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Grid.Row="1" Grid.Column="1"/>
+        <Label x:Name="EntranceYear" Content="Label" HorizontalAlignment="Left" Margin="161.389,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.016,0.694" Width="108" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Grid.Row="1" Grid.Column="1"/>
+        <Label x:Name="labeluser" Content="User ID" HorizontalAlignment="Left" Margin="1.389,15,0,0" VerticalAlignment="Top" Width="108" Height="24" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Grid.RowSpan="2" Grid.Column="1"/>
+        <Label x:Name="labelpass" Content="Password" HorizontalAlignment="Left" Margin="1.389,18,0,0" VerticalAlignment="Top" Width="108" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Grid.Row="1" Grid.Column="1"/>
+        <Label x:Name="username" Content="Label" HorizontalAlignment="Left" Margin="161.389,13,0,0" VerticalAlignment="Top" Width="108" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Grid.RowSpan="2" Grid.Column="1"/>
+        <Label x:Name="password" Content="Label" HorizontalAlignment="Left" Margin="161.389,18,0,0" VerticalAlignment="Top" Width="109" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Grid.Row="1" Grid.Column="1"/>
+        <Label x:Name="AvgGradeLabel" Content="Average Grade" HorizontalAlignment="Left" Margin="1,167,0,0" VerticalAlignment="Top" Width="108" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Grid.Row="1" Grid.Column="1"/>
+        <Label x:Name="AvgGrade" Content="Label" HorizontalAlignment="Left" Margin="162,167,0,0" VerticalAlignment="Top" Width="108" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Grid.Row="1" Grid.Column="1"/>
 
     </Grid>
 </Window>

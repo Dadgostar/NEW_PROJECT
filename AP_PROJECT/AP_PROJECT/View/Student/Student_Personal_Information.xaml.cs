@@ -28,7 +28,8 @@ namespace AP_PROJECT.View
             password.Content = student.Password;
             name.Content = student.FirstName;
             family.Content = student.LastName;
-            EntranceYear.Content = student.EntranceYear;
+            EntranceYear.Content = student.EntranceYear;          
+            AvgGrade.Content = "" + Module.GetAvgGrade(student);
         }
 
         public Student_Personal_Information(Class.Student student)
