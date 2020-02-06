@@ -11,14 +11,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace AP_PROJECT.View
+namespace AP_PROJECT.View.Student
 {
     /// <summary>
-    /// Interaction logic for Professor_change_userpass.xaml
+    /// Interaction logic for Student_offeredCourses.xaml
     /// </summary>
-    public partial class Professor_change_userpass : Window
+    public partial class Student_offeredCourses : Window
     {
-        public Professor_change_userpass(ProjectAP.Teacher teacher)
+        public Student_offeredCourses()
         {
             InitializeComponent();
         }
