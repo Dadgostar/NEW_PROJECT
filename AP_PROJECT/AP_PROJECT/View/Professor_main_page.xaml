@@ -11,6 +11,8 @@
         <Button x:Name="schedule_button" Content="Weekly schedule" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8"/>
         <Button x:Name="Exceptoin_button" Content="Exception form" HorizontalAlignment="Left" Margin="10,63,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" RenderTransformOrigin="0.487,-0.923"/>
         <Button x:Name="registering_mark_button" Content="Mark registration" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8"/>
+        <Button x:Name="objection_response_button" Content="Objection response" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8"/>
+        <Button x:Name="Exception_response_button" Content="Exception response" HorizontalAlignment="Left" Margin="10,117,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8"/>
 
     </Grid>
 </Window>
