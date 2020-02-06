@@ -1,6 +1,5 @@
 ﻿using AP_PROJECT.View.Student;
-using AP_PROJECT.Class;
-using ProjectAP;
+using AP_PROJECT;
 using System;
 using System.Collections.Generic;
 using System.Linq;
