@@ -14,12 +14,12 @@
                 </Style>
             </DataGrid.Resources>
             <DataGrid.Columns>
-                <DataGridCheckBoxColumn Binding="{Binding course_name}" Header="Course Name"/>
-                <DataGridCheckBoxColumn Binding="{Binding course_id}" Header="Course ID"/>
-                <DataGridCheckBoxColumn Binding="{Binding type}" Header="Type"/>
-                <DataGridCheckBoxColumn Binding="{Binding units}" Header="Units"/>
-                <DataGridCheckBoxColumn Binding="{Binding students}" Header="Students"/>
-                <DataGridCheckBoxColumn Binding="{Binding time}" Header="Time"/>
+                <DataGridTextColumn Binding="{Binding course_name}" Header="Course Name"/>
+                <DataGridTextColumn Binding="{Binding course_id}" Header="Course ID"/>
+                <DataGridTextColumn Binding="{Binding type}" Header="Type"/>
+                <DataGridTextColumn Binding="{Binding units}" Header="Units"/>
+                <DataGridTextColumn Binding="{Binding students}" Header="Students"/>
+                <DataGridTextColumn Binding="{Binding time}" Header="Time"/>
             </DataGrid.Columns>
         </DataGrid>
 
