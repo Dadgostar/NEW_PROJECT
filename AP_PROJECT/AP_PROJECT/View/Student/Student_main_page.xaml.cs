@@ -75,7 +75,8 @@ namespace AP_PROJECT.View
 
         private void PaymentClicked(object sender, RoutedEventArgs e)
         {
-           // Module.GetPayment()
+            double payment = Module.GetPayment(this.student);
+                
         }
     }
 }

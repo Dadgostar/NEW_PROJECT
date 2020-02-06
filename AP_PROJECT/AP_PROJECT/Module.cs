@@ -58,6 +58,12 @@ namespace AP_PROJECT
             return result;
         }
 
+        public static double GetPayment(Student student)
+        {
+
+            return 1001;
+        }
+
         public static double GetAvgGrade(Student student)
         {
             var temp = GetTermAvgGrade(student);
