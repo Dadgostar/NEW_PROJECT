@@ -70,6 +70,12 @@
     <Compile Include="View\Clerk_userpass_change.xaml.cs">
       <DependentUpon>Clerk_userpass_change.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Professor\Course_students.xaml.cs">
+      <DependentUpon>Course_students.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Professor\Proffessor_educational_assist_.xaml.cs">
+      <DependentUpon>Proffessor_educational_assist_.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Student\ExceptionForm.xaml.cs">
       <DependentUpon>ExceptionForm.xaml</DependentUpon>
     </Compile>
@@ -157,6 +163,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Clerk_userpass_change.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Professor\Course_students.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Professor\Proffessor_educational_assist_.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

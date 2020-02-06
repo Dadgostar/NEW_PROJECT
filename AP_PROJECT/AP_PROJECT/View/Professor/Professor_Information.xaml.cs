@@ -25,6 +25,13 @@ namespace AP_PROJECT.View
         {
             InitializeComponent();
             this.teacher = teacher;
+            prof_usertext_label.Content = teacher.Id;
+            prof_passtext_label.Content = teacher.Password;
+            prof_nametext_label.Content = teacher.FirstName;
+            prof_familytext_label.Content = teacher.LastName;
+            prof_idtext_label.Content = teacher.Id;
+            //prof_studfieldtext_label.Content = teacher.
+            //prof_grade_label.Content = teacher.
         }
 
         private void prof_userpass_change_button_Click(object sender, RoutedEventArgs e)

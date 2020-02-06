@@ -22,5 +22,27 @@ namespace AP_PROJECT.View
         {
             InitializeComponent();
         }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+
+        }
+
+        public class Data
+        {
+            string course_name { set; get; }
+            string course_id { set; get; }
+            bool type { set; get; }
+            int units { set; get; }
+            int students { set; get; }
+        }
+
+        private void DataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            DataGridRow row = sender as DataGridRow;
+            ////////////////////////////////////////
+
+        }
     }
 }
