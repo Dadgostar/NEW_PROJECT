@@ -150,8 +150,42 @@ namespace AP_PROJECT
                 });
             }
 
-            
+            StreamReader termCourseFile = new StreamReader("termcourse.txt");
+            while ((line = termCourseFile.ReadLine()) != null)
+            {
+                var items = line.Split('\t');
+                termCourseTable.Add(new TermCourse()
+                {
+                    Id = int.Parse(items[0]),
+                    Course = (CourseTable.Select(x => x).Where(x => x.Id == int.Parse(items[1])).ToArray())[0],
+                    Term = (TermTable.Select(x => x).Where(x => x.TermNum == int.Parse(items[2])).ToArray())[0],
+                    Teacher = (TeacherTable.Select(x => x).Where(x => x.Id == int.Parse(items[3])).ToArray())[0],
+                    Time = int.Parse(items[4]),
+                    Place = items[5],
+                    Capacity = int.Parse(items[6])
+                });
+                ;
+            }
 
+            StreamReader termCourseStudentFile = new StreamReader("termcoursestudent.txt");
+            while ((line = termCourseStudentFile.ReadLine()) != null)
+            {
+                var items = line.Split('\t');
+                termCourseStudentTable.Add(new TermCourseStudent()
+                {
+                    Mark = int.Parse(items[0])
+                    ,
+                    ObjectionToMark = items[1]
+                    ,
+                    AnswerToObjection = items[2]
+                    ,
+                    TermCourse = (termCourseTable.Select(x => x).Where(x => x.Id == int.Parse(items[3])).ToArray())[0]
+                    ,
+                    Student = (StudentTable.Select(x => x).Where(x => x.Id == int.Parse(items[4])).ToArray())[0]
+                    ,
+                    Status = items[5]
+                }) ;
+            }
         }
     }
    
