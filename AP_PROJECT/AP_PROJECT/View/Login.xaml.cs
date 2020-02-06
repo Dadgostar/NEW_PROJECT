@@ -25,6 +25,7 @@ namespace AP_PROJECT.View
 
         private void LoginBtnClicked(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show("yyy");
 
         }
     }
