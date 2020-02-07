@@ -35,7 +35,7 @@ namespace AP_PROJECT.View
         {
             public int Term { set; get; }
             public int Total_Units { set; get; }
-            public int Status { set; get; }
+            public string Status { set; get; }
         }
         
     }

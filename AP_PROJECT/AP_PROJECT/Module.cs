@@ -40,6 +40,7 @@ namespace AP_PROJECT
                 termCourseStudentTable.Select(x => x).Where(
                     x => x.Student.Id == student_id && x.TermCourse.Teacher.Id == teacher.Id && x.TermCourse.Id == course_id)
                     .ToArray()[0].Mark = mark;
+                saveData(termCourseStudentTable);
             }catch(Exception e)
             {
                 return false;
@@ -47,14 +48,31 @@ namespace AP_PROJECT
             return true;
         }
 
-        internal static Course GetCourse(int cours_id)
+        public static Course GetCourse(int cours_id)
         {
-            return null;
+            var result=termCourseTable.Select(x => x.Course).Where(x => x.Id == cours_id).ToArray();
+            if (result.Length == 0)
+                return null;
+            return result[0];
         }
         internal static List_of_terms.Data[] GetListOfTerms(Student student)
         {
-            throw new NotImplementedException();
+            List<List_of_terms.Data> datas = new List<List_of_terms.Data>();
+            var termAvg = GetTermAvgGrade(student);
+            foreach (var term in termAvg)
+            {
+                datas.Add(new List_of_terms.Data()
+                {
+                    Term = term.Item1.TermNum
+                    ,
+                    Total_Units = (int)term.Item2
+                    ,
+                    Status = term.Item3>12?"passed":"failed"
+                });
+            }
+            return datas.ToArray();
         }
+        
 
         internal static Course_students.Data[] GetStudentsMark(int cours_id, Teacher teacher)
         {
@@ -91,7 +109,7 @@ namespace AP_PROJECT
 
         public static List<Tuple<Term,double,double>> GetTermAvgGrade(Student student)
         {
-            var TermList = termCourseStudentTable.Select(x => x).Where(x => x.Student == student && x.Status=="passed").Select(x => x.TermCourse.Term).OrderBy(x=>x.TermNum).Distinct();
+            var TermList = termCourseStudentTable.Select(x => x).Where(x => x.Student == student && x.Status == "passed").Select(x => x.TermCourse.Term).OrderBy(x=>x.TermNum).Distinct();
             List<Tuple<Term, double,double>> result = new List<Tuple<Term, double,double>>();
             foreach (var term in TermList)
             {
@@ -135,20 +153,23 @@ namespace AP_PROJECT
                 var items = line.Split('\t');
                 StudentTable.Add(new Student(){Id=int.Parse(items[0]), FirstName = items[1], LastName = items[2], Password = items[3]});
             }
-            
+            studentFile.Close();
+
             StreamReader teacherFile = new StreamReader("teacher.txt");
             while ((line = teacherFile.ReadLine()) != null)
             {
                 var items = line.Split('\t');
                 TeacherTable.Add(new Teacher(){Id =int.Parse(items[0]),FirstName = items[1],LastName = items[3],Password = items[3]});
             }
-            
+            teacherFile.Close();
+
             StreamReader courseFile = new StreamReader("course.txt");
             while ((line = courseFile.ReadLine()) != null)
             {
                 var items = line.Split('\t');
                 CourseTable.Add(new Course(){Id =int.Parse(items[0]),ECT = int.Parse(items[1]), Name = items[2],type = items[3]});
             }
+            courseFile.Close();
 
             StreamReader termFile = new StreamReader("term.txt");
             while ((line = termFile.ReadLine()) != null)
@@ -159,6 +180,7 @@ namespace AP_PROJECT
                     ,TermName = items[1]
                     });
             }
+            termFile.Close();
 
             StreamReader prereQuisiteFile = new StreamReader("prerequisite.txt");
             while ((line = prereQuisiteFile.ReadLine()) != null)
@@ -171,6 +193,7 @@ namespace AP_PROJECT
                     ,Status = items[2]
                 });
             }
+            prereQuisiteFile.Close();
 
             StreamReader termCourseFile = new StreamReader("termcourse.txt");
             while ((line = termCourseFile.ReadLine()) != null)
@@ -188,6 +211,7 @@ namespace AP_PROJECT
                 });
                 ;
             }
+            termCourseFile.Close();
 
             StreamReader termCourseStudentFile = new StreamReader("termcoursestudent.txt");
             while ((line = termCourseStudentFile.ReadLine()) != null)
@@ -208,6 +232,18 @@ namespace AP_PROJECT
                     Status = items[5]
                 }) ;
             }
+            termCourseStudentFile.Close();
+        }
+        private static void saveData(List<TermCourseStudent> termCourseStudentTable)
+        {
+            StreamWriter termCourseStudentFile = new StreamWriter("termcoursestudent.txt");
+            foreach(var item in termCourseStudentTable)
+            {
+                termCourseStudentFile.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}",
+                    item.Mark,item.ObjectionToMark,item.AnswerToObjection,item.TermCourse.Id,item.Student.Id,item.Status
+                    );
+            }
+            termCourseStudentFile.Close();
         }
     }
    
