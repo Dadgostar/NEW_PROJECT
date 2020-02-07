@@ -19,9 +19,38 @@ namespace AP_PROJECT.View
     /// </summary>
     public partial class Professor_objection_response : Window
     {
-        public Professor_objection_response(Teacher teacher)
+        // chetor teacher ro besh begim in teacher?
+        private Teacher teacher;
+        private int courseId;
+        private int studentId;
+
+    
+        public Professor_objection_response(int courseId, int studentId)
         {
-            InitializeComponent();
+            this.courseId = courseId;
+            this.studentId = studentId;
+
+            AP_PROJECT.Class.Student student = Module.GetStudent(studentId);
+
+            student_nametxt.DataContext = student.FirstName + student.FirstName;
+            student_idtxt.DataContext = student.Id;
+
+            AP_PROJECT.Class.Course course = Module.GetCourse(courseId);
+
+            course_nametxt.DataContext = course.Name;
+        }
+
+        // Radio buttons funtionallity?!!
+        private void register_button_Click(object sender, RoutedEventArgs e)
+        {
+            // storing teachers explanation to student's objection
+            string explanation = explanationtxt.Text;
+            bool b = Module.SetObjection(courseId, studentId, teacher);
+
+            if (b)
+                this.Close();
+            else
+                MessageBox.Show("Permission Denied!!!");
         }
     }
 }

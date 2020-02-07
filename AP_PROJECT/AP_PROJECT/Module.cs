@@ -18,9 +18,14 @@ namespace AP_PROJECT
         public static List<PreQuisite> preQuisiteTable = new List<PreQuisite>();
         public static List<Term> TermTable = new List<Term>();
 
-        public static Student GetStudent(int student_id)
+        internal static Student GetStudent(int student_id)
         {
-            return StudentTable.Select(x => x).Where(x => x.Id == student_id).ToArray()[0];
+            throw new NotImplementedException();
+        }
+
+        internal static Professor_listof_objections.Data[] GetObjectionListData(Teacher teacher)
+        {
+            throw new NotImplementedException();
         }
 
         public static Professor_courses.Data[] GetProfessorCoursesData(Teacher teacher)
@@ -34,8 +39,9 @@ namespace AP_PROJECT
             return results;
         }
 
-        public static bool SetMark(int course_id, int student_id, Teacher teacher, int mark)
+        internal static bool SetObjection(int courseId, int studentId, Teacher teacher)
         {
+<<<<<<< HEAD
             try {
                 termCourseStudentTable.Select(x => x).Where(
                     x => x.Student.Id == student_id && x.TermCourse.Teacher.Id == teacher.Id && x.TermCourse.Id == course_id)
@@ -54,8 +60,21 @@ namespace AP_PROJECT
             if (result.Length == 0)
                 return null;
             return result[0];
+=======
+            throw new NotImplementedException();
         }
+
+<<<<<<< HEAD
+        internal static bool SetMark(int course_id, int student_id, Teacher teacher, int mark)
+        {
+            throw new NotImplementedException();
+>>>>>>> 622408072cd029940305b9eeafcc181a36c9ec5d
+        }
+
+        internal static Course GetCourse(int cours_id)
+=======
         internal static List_of_terms.Data[] GetListOfTerms(Student student)
+>>>>>>> a034f168ba27477af3c99e5858f0d19e855055c5
         {
             List<List_of_terms.Data> datas = new List<List_of_terms.Data>();
             var termAvg = GetTermAvgGrade(student);

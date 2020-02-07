@@ -1,0 +1,26 @@
+﻿<Window x:Class="AP_PROJECT.View.Professor.Professor_listof_objections"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AP_PROJECT.View.Professor"
+        mc:Ignorable="d"
+        Title="Professor_listof_objections" Height="300" Width="300">
+    <Grid>
+        <DataGrid x:Name="list_of_objections" HorizontalAlignment="Left" Height="219" Margin="10,10,0,0" VerticalAlignment="Top" Width="274" ItemsSource="{Binding}" AutoGenerateColumns="False" >
+            <DataGrid.Resources>
+                <Style TargetType="DataGridRow">
+                    <EventSetter Event="MouseDoubleClick" Handler="DataGridRow_MouseDoubleClick"></EventSetter>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding student_name}" Header="Student Name" IsReadOnly="true"/>
+                <DataGridTextColumn Binding="{Binding student_id}" Header="Student ID" IsReadOnly="true"/>
+                <DataGridTextColumn Binding="{Binding course_name}" Header="Course Name" IsReadOnly="true"/>
+                <DataGridTextColumn Binding="{Binding course_id}" Header="Course ID" IsReadOnly="true"/>
+                
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

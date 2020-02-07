@@ -1,4 +1,5 @@
 ﻿using AP_PROJECT.Class;
+using AP_PROJECT.View.Professor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,8 +45,9 @@ namespace AP_PROJECT.View
 
         private void objection_response_button_Click(object sender, RoutedEventArgs e)
         {
-            Professor_objection_response object_response = new Professor_objection_response(this.teacher);
-            object_response.Show();
+            // Is it fine to pass just teachr to go to the Professor_listof_objections ?!!!
+            Professor_listof_objections objection_list = new Professor_listof_objections(this.teacher);
+            objection_list.Show();
             //this.Close();
         }
 
