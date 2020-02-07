@@ -18,9 +18,9 @@ namespace AP_PROJECT
         public static List<PreQuisite> preQuisiteTable = new List<PreQuisite>();
         public static List<Term> TermTable = new List<Term>();
 
-        internal static Student GetStudent(int student_id)
+        public static Student GetStudent(int student_id)
         {
-            throw new NotImplementedException();
+            return StudentTable.Select(x => x).Where(x => x.Id == student_id).ToArray()[0];
         }
 
         internal static Professor_listof_objections.Data[] GetObjectionListData(Teacher teacher)
@@ -41,40 +41,34 @@ namespace AP_PROJECT
 
         internal static bool SetObjection(int courseId, int studentId, Teacher teacher)
         {
-<<<<<<< HEAD
-            try {
+            return true;
+        }
+
+        public static Course GetCourse(int course_id)
+        {
+            var result=termCourseTable.Select(x => x.Course).Where(x => x.Id == course_id).ToArray();
+            if (result.Length == 0)
+                return null;
+            return result[0];
+        }
+
+        public static bool SetMark(int course_id, int student_id, Teacher teacher, int mark)
+        {
+            try
+            {
                 termCourseStudentTable.Select(x => x).Where(
                     x => x.Student.Id == student_id && x.TermCourse.Teacher.Id == teacher.Id && x.TermCourse.Id == course_id)
                     .ToArray()[0].Mark = mark;
                 saveData(termCourseStudentTable);
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
                 return false;
             }
             return true;
         }
 
-        public static Course GetCourse(int cours_id)
-        {
-            var result=termCourseTable.Select(x => x.Course).Where(x => x.Id == cours_id).ToArray();
-            if (result.Length == 0)
-                return null;
-            return result[0];
-=======
-            throw new NotImplementedException();
-        }
-
-<<<<<<< HEAD
-        internal static bool SetMark(int course_id, int student_id, Teacher teacher, int mark)
-        {
-            throw new NotImplementedException();
->>>>>>> 622408072cd029940305b9eeafcc181a36c9ec5d
-        }
-
-        internal static Course GetCourse(int cours_id)
-=======
-        internal static List_of_terms.Data[] GetListOfTerms(Student student)
->>>>>>> a034f168ba27477af3c99e5858f0d19e855055c5
+        public static List_of_terms.Data[] GetListOfTerms(Student student)
         {
             List<List_of_terms.Data> datas = new List<List_of_terms.Data>();
             var termAvg = GetTermAvgGrade(student);
