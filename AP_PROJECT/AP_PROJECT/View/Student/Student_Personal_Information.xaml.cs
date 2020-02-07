@@ -21,21 +21,16 @@ namespace AP_PROJECT.View
     {
         private Class.Student student;
 
-        public Student_Personal_Information()
+        public Student_Personal_Information(Class.Student student)
         {
             InitializeComponent();
+            this.student = student; 
             username.Content = student.Id;
             password.Content = student.Password;
             name.Content = student.FirstName;
             family.Content = student.LastName;
             EntranceYear.Content = student.EntranceYear;          
             AvgGrade.Content = "" + Module.GetAvgGrade(student);
-        }
-
-        public Student_Personal_Information(Class.Student student)
-        {
-            this.student = student;
-        }
-        
+        }        
     }
 }
