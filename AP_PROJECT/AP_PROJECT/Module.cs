@@ -16,11 +16,22 @@ namespace AP_PROJECT
         public static List<TermCourse> termCourseTable = new List<TermCourse>();
         public static List<TermCourseStudent> termCourseStudentTable = new List<TermCourseStudent>();
         public static List<PreQuisite> preQuisiteTable = new List<PreQuisite>();
+
+        internal static Professor_exception_list.Data[] GetExceptionListData(Teacher teacher)
+        {
+            throw new NotImplementedException();
+        }
+
         public static List<Term> TermTable = new List<Term>();
 
         public static Student GetStudent(int student_id)
         {
             return StudentTable.Select(x => x).Where(x => x.Id == student_id).ToArray()[0];
+        }
+
+        internal static WeekSchedule.Data[] GetStudentSchedule(TermCourseStudent termCourseStudent)
+        {
+            throw new NotImplementedException();
         }
 
         internal static Professor_listof_objections.Data[] GetObjectionListData(Teacher teacher)

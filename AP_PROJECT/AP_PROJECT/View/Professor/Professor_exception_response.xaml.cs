@@ -19,9 +19,18 @@ namespace AP_PROJECT.View
     /// </summary>
     public partial class Professor_exception_response : Window
     {
+        private int studentName;
+        private int studentId;
+
         public Professor_exception_response(Teacher teacher)
         {
             InitializeComponent();
+        }
+
+        public Professor_exception_response(int studentName, int studentId)
+        {
+            this.studentName = studentName;
+            this.studentId = studentId;
         }
     }
 }
