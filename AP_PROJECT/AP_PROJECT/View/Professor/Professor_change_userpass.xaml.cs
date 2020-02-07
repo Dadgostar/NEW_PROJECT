@@ -19,9 +19,19 @@ namespace AP_PROJECT.View
     /// </summary>
     public partial class Professor_change_userpass : Window
     {
+        private Teacher teacher;
         public Professor_change_userpass(Teacher teacher)
         {
             InitializeComponent();
+            this.teacher = teacher;
+        }
+
+        private void prof_userpass_apply_button_Click(object sender, RoutedEventArgs e)
+        {
+            if (Module.EditPassword(this.teacher, prof_newpass_txt.Text, prof_oldpass_txt.Text, prof_passconfirm_txt.Text, this.teacher))
+                isPassChanged.Content = "Pass Changed";
+            else 
+                 isPassChanged.Content = "Pass is not Changed!";
         }
     }
 }
