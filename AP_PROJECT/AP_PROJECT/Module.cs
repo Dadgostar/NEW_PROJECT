@@ -34,9 +34,17 @@ namespace AP_PROJECT
             return results;
         }
 
-        internal static bool SetMark(int course_id, int student_id, Teacher teacher, int mark)
+        public static bool SetMark(int course_id, int student_id, Teacher teacher, int mark)
         {
-            throw new NotImplementedException();
+            try {
+                termCourseStudentTable.Select(x => x).Where(
+                    x => x.Student.Id == student_id && x.TermCourse.Teacher.Id == teacher.Id && x.TermCourse.Id == course_id)
+                    .ToArray()[0].Mark = mark;
+            }catch(Exception e)
+            {
+                return false;
+            }
+            return true;
         }
 
         internal static Course GetCourse(int cours_id)
