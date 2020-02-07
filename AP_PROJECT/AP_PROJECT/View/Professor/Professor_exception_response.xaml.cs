@@ -27,10 +27,19 @@ namespace AP_PROJECT.View
             InitializeComponent();
         }
 
-        public Professor_exception_response(int studentName, int studentId)
+        public Professor_exception_response(int studentName, int studentId, int courseId)
         {
             this.studentName = studentName;
             this.studentId = studentId;
+
+            AP_PROJECT.Class.Student student = Module.GetStudent(studentId);
+
+            student_nametxt.DataContext = student.FirstName + student.FirstName;
+            student_idtxt.DataContext = student.Id;
+
+            AP_PROJECT.Class.PreQuisite preRequisite = Module.GetRequisite(courseId);
+
+            exception_typetxt.DataContext = preRequisite;
         }
     }
 }

@@ -34,6 +34,11 @@ namespace AP_PROJECT
             throw new NotImplementedException();
         }
 
+        internal static PreQuisite GetRequisite(int courseId)
+        {
+            throw new NotImplementedException();
+        }
+
         internal static Professor_listof_objections.Data[] GetObjectionListData(Teacher teacher)
         {
             List<Professor_listof_objections.Data> datas = new List<Professor_listof_objections.Data>();

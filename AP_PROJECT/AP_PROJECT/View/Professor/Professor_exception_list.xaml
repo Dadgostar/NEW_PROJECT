@@ -16,8 +16,10 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding student_name}" Header="Student Name" IsReadOnly="true"/>
                 <DataGridTextColumn Binding="{Binding student_id}" Header="Student ID" IsReadOnly="true"/>
-                <DataGridTextColumn Binding="{Binding student_id}" Header="Professor Name" IsReadOnly="true"/>
-                <DataGridTextColumn Binding="{Binding student_id}" Header="Professor ID" IsReadOnly="true"/>
+                <DataGridTextColumn Binding="{Binding teacher_name}" Header="Professor Name" IsReadOnly="true"/>
+                <DataGridTextColumn Binding="{Binding teacher_id}" Header="Professor ID" IsReadOnly="true"/>
+                <DataGridTextColumn Binding="{Binding course_name}" Header="Course Name" IsReadOnly="true"/>
+                <DataGridTextColumn Binding="{Binding course_id}" Header="Course ID" IsReadOnly="true"/>
             </DataGrid.Columns>
         </DataGrid>
 

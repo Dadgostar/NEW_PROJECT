@@ -34,6 +34,8 @@ namespace AP_PROJECT.View.Professor
             public string student_id { set; get; }
             public string teacher_name { set; get; }
             public string teacher_id { set; get; }
+            public string course_id { set; get; }
+            public string coursr_name { set; get; }
 
         }
 
@@ -43,8 +45,9 @@ namespace AP_PROJECT.View.Professor
 
             int studentName = int.Parse((row.Item as Data).student_name);
             int studentId = int.Parse((row.Item as Data).student_id);
+            int courseId = int.Parse((row.Item as Data).course_id);
 
-            Professor_exception_response exception_resp_page = new Professor_exception_response(studentName, studentId);
+            Professor_exception_response exception_resp_page = new Professor_exception_response(studentName, studentId, courseId);
             exception_resp_page.Show();
 
         }
