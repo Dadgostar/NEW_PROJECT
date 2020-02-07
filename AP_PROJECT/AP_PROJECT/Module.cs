@@ -10,15 +10,20 @@ namespace AP_PROJECT
 {
     public class Module
     {
-        private static List<Student> StudentTable = new List<Student>();
-        private static List<Teacher> TeacherTable = new List<Teacher>();
-        private static List<Course>  CourseTable = new List<Course>();
-        private static List<TermCourse> termCourseTable = new List<TermCourse>();
-        private static List<TermCourseStudent> termCourseStudentTable = new List<TermCourseStudent>();
-        private static List<PreQuisite> preQuisiteTable = new List<PreQuisite>();
-        private static List<Term> TermTable = new List<Term>();
-        
-        public static Professor_exception_list.Data[] GetExceptionListData(Teacher teacher)
+        public static List<Student> StudentTable = new List<Student>();
+        public static List<Teacher> TeacherTable = new List<Teacher>();
+        public static List<Course>  CourseTable = new List<Course>();
+        public static List<TermCourse> termCourseTable = new List<TermCourse>();
+        public static List<TermCourseStudent> termCourseStudentTable = new List<TermCourseStudent>();
+        public static List<PreQuisite> preQuisiteTable = new List<PreQuisite>();
+        public static List<Term> TermTable = new List<Term>();
+
+        internal static Registeration_offered__courses_educAssist.Data[] GetOfferedCoursesData()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static Professor_exception_list.Data[] GetExceptionListData(Teacher teacher)
         {
             throw new NotImplementedException();
         }
@@ -28,47 +33,12 @@ namespace AP_PROJECT
             return StudentTable.Select(x => x).Where(x => x.Id == student_id).ToArray()[0];
         }
 
-        public static WeekSchedule.Data[] GetStudentSchedule(Student student)
+        internal static WeekSchedule.Data[] GetStudentSchedule(Student student)
         {
-            WeekSchedule.Data[] datas = new WeekSchedule.Data[4];
-            for (int i = 0; i < 4; i++)
-                datas[i] = new WeekSchedule.Data() { Day="day_"+i};
-            int lastTermNum = termCourseStudentTable.Select(x => x).Where(x => x.Student.Id == student.Id).Select(x => x.TermCourse.Term.TermNum).Max();
-            var result = termCourseStudentTable.Select(x => x).Where(x => x.Student.Id == student.Id && x.TermCourse.Term.TermNum == lastTermNum).Select(x=>x.TermCourse);
-            foreach (var course in result)
-            {
-                switch (course.Time)
-                {
-                    case 0:
-                        datas[0].CourseNameTime1 = datas[2].CourseNameTime1 = course.Course.Name;
-                        break;
-                    case 1:
-                        datas[0].CourseNameTime2 = datas[2].CourseNameTime2 = course.Course.Name;
-                        break;
-                    case 2:
-                        datas[0].CourseNameTime3 = datas[2].CourseNameTime3 = course.Course.Name;
-                        break;
-                    case 3:
-                        datas[0].CourseNameTime4 = datas[2].CourseNameTime4 = course.Course.Name;
-                        break;
-                    case 4:
-                        datas[1].CourseNameTime1 = datas[3].CourseNameTime1 = course.Course.Name;
-                        break;
-                    case 5:
-                        datas[1].CourseNameTime2 = datas[3].CourseNameTime2 = course.Course.Name;
-                        break;
-                    case 6:
-                        datas[1].CourseNameTime3 = datas[3].CourseNameTime3 = course.Course.Name;
-                        break;
-                    case 7:
-                        datas[1].CourseNameTime4 = datas[3].CourseNameTime4 = course.Course.Name;
-                        break;
-                }
-            }
-            return datas;
+            throw new NotImplementedException();
         }
 
-        public static PreQuisite GetRequisite(int courseId)
+        internal static PreQuisite GetRequisite(int courseId)
         {
             throw new NotImplementedException();
         }
@@ -87,6 +57,11 @@ namespace AP_PROJECT
                 });
             }
             return datas.ToArray();
+        }
+
+        internal static Registeration_offered__courses_educAssist.Data[] GetAddedCourse_byEduAssist(string courseId, string profId, string time_ofCourse, string volume_ofCourse)
+        {
+            throw new NotImplementedException();
         }
 
         public static Professor_courses.Data[] GetProfessorCoursesData(Teacher teacher)
@@ -113,7 +88,7 @@ namespace AP_PROJECT
             return datas.ToArray();
         }
 
-        public static bool SetObjection(int courseId, int studentId, Teacher teacher)
+        internal static bool SetObjection(int courseId, int studentId, Teacher teacher)
         {
             return true;
         }
@@ -186,8 +161,7 @@ namespace AP_PROJECT
 
         public static Person Login(string userName, string passWord)
         {
-            int Id = -1;
-            int.TryParse(userName,out Id);
+            int Id = int.Parse(userName);
             var temp1 = StudentTable.Select(x => x).Where(x => x.Id == Id && x.Password == passWord);// checking if the username is a student
             if(temp1.Count()>0)
             {

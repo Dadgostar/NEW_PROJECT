@@ -12,7 +12,7 @@
         <Button x:Name="objection_response_button" Content="Objection response" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" Click="objection_response_button_Click"/>
         <Button x:Name="Exception_response_button" Content="Exception response" HorizontalAlignment="Left" Margin="10,117,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" Click="Exception_response_button_Click"/>
         <Label Content="Label" HorizontalAlignment="Left" Margin="844,-166,-631.4,0" VerticalAlignment="Top" Height="13" Width="81"/>
-        <Button Content="Registeration List" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="81" Height="16" FontSize="10"/>
+        <Button x:Name="register_list" Content="Registeration List" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="81" Height="16" FontSize="10" Click="register_list_Click" />
 
     </Grid>
 </Window>

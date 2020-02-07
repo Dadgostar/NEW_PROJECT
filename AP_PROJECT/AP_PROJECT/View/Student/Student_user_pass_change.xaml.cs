@@ -18,9 +18,14 @@ namespace AP_PROJECT.View
     /// </summary>
     public partial class Student_user_pass_change : Window
     {
-        public Student_user_pass_change()
+        public Student_user_pass_change(Class.Student student)
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
