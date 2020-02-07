@@ -25,7 +25,18 @@ namespace AP_PROJECT
 
         internal static Professor_listof_objections.Data[] GetObjectionListData(Teacher teacher)
         {
-            throw new NotImplementedException();
+            List<Professor_listof_objections.Data> datas = new List<Professor_listof_objections.Data>();
+            var objectionList = termCourseStudentTable.Select(x => x).Where(x => x.ObjectionToMark != "null" && x.AnswerToObjection == "null" && x.TermCourse.Teacher.Id == teacher.Id).ToArray();
+            foreach (var objection in objectionList)
+            {
+                datas.Add(new Professor_listof_objections.Data() { 
+                 course_id = "" + objection.TermCourse.Course.Id
+                 , course_name = "" + objection.TermCourse.Course.Name
+                 , student_id = "" + objection.Student.Id
+                 , student_name = "" + objection.Student.FirstName + " " +objection.Student.LastName
+                });
+            }
+            return datas.ToArray();
         }
 
         public static Professor_courses.Data[] GetProfessorCoursesData(Teacher teacher)
