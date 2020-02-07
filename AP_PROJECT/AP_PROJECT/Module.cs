@@ -111,7 +111,7 @@ namespace AP_PROJECT
         }
         
 
-        internal static Course_students.Data[] GetStudentsMark(int cours_id, Teacher teacher)
+        public static Course_students.Data[] GetStudentsMark(int cours_id, Teacher teacher)
         {
             return termCourseStudentTable.Select(x => x)
                 .Where(x => x.TermCourse.Course.Id == cours_id && x.TermCourse.Teacher.Id == teacher.Id)
