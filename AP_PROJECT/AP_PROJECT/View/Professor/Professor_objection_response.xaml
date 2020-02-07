@@ -10,12 +10,12 @@
         <Label x:Name="student_name_label" Content="Student name" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top" Width="81" Height="19" FontSize="9"/>
         <Label x:Name="student_id" Content="Student ID" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Width="81" Height="19" FontSize="9"/>
         <Label x:Name="course_label" Content="Course" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Width="81" Height="19" FontSize="9"/>
-        <Label x:Name="student_nametxt" Content="Label" HorizontalAlignment="Left" Margin="139,19,0,0" VerticalAlignment="Top" Height="19" Width="122"/>
-        <Label x:Name="student_idtxt" Content="Label" HorizontalAlignment="Left" Margin="139,43,0,0" VerticalAlignment="Top" Height="19" Width="122"/>
-        <Label x:Name="course_nametxt" Content="Label" HorizontalAlignment="Left" Margin="139,67,0,0" VerticalAlignment="Top" Height="19" Width="122"/>
+        <Label x:Name="student_nametxt" Content="Label" HorizontalAlignment="Left" Margin="96,19,0,0" VerticalAlignment="Top" Height="19" Width="165"/>
+        <Label x:Name="student_idtxt" Content="Label" HorizontalAlignment="Left" Margin="96,43,0,0" VerticalAlignment="Top" Height="19" Width="165"/>
+        <Label x:Name="course_nametxt" Content="Label" HorizontalAlignment="Left" Margin="96,67,0,0" VerticalAlignment="Top" Height="19" Width="165"/>
         <RadioButton x:Name="accept_rariobutton" Content="Accept" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="reject_radiobutton" Content="Reject" HorizontalAlignment="Left" Margin="139,106,0,0" VerticalAlignment="Top"/>
         <TextBlock x:Name="explanationtxt" HorizontalAlignment="Left" Height="71" Margin="20,147,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="241"/>
-        <Button x:Name="register_button" Content="Register" HorizontalAlignment="Left" Margin="209,231,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="register_button" Content="Register" HorizontalAlignment="Left" Margin="209,231,0,0" VerticalAlignment="Top" Width="75" Click="register_button_Click"/>
     </Grid>
 </Window>

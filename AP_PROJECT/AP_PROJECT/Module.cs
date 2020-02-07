@@ -23,6 +23,11 @@ namespace AP_PROJECT
             throw new NotImplementedException();
         }
 
+        internal static Professor_listof_objections.Data[] GetObjectionListData(Teacher teacher)
+        {
+            throw new NotImplementedException();
+        }
+
         public static Professor_courses.Data[] GetProfessorCoursesData(Teacher teacher)
         {
             Professor_courses.Data[] results = new Professor_courses.Data[5];
@@ -32,6 +37,11 @@ namespace AP_PROJECT
             results[3] = new Professor_courses.Data() { course_id = "4", course_name = "name4", students = 53, type = "omommi", units = 3 };
             results[4] = new Professor_courses.Data() { course_id = "5", course_name = "name5", students = 10, type = "takhasosi", units = 1 };
             return results;
+        }
+
+        internal static bool SetObjection(int courseId, int studentId, Teacher teacher)
+        {
+            throw new NotImplementedException();
         }
 
 <<<<<<< HEAD
