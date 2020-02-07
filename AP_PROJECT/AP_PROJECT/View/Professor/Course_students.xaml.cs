@@ -28,7 +28,6 @@ namespace AP_PROJECT.View.Professor
             InitializeComponent();
             this.teacher = teacher;
             this.cours_id = courseId;
-            MessageBox.Show(""+courseId);
             studentsData = Module.GetStudentsMark(cours_id, teacher);
             this.course_student_list.DataContext = studentsData;
         }

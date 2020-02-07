@@ -16,20 +16,19 @@ namespace AP_PROJECT
         public static List<TermCourse> termCourseTable = new List<TermCourse>();
         public static List<TermCourseStudent> termCourseStudentTable = new List<TermCourseStudent>();
         public static List<PreQuisite> preQuisiteTable = new List<PreQuisite>();
-
+        public static List<Term> TermTable = new List<Term>();
+        
         internal static Professor_exception_list.Data[] GetExceptionListData(Teacher teacher)
         {
             throw new NotImplementedException();
         }
-
-        public static List<Term> TermTable = new List<Term>();
 
         public static Student GetStudent(int student_id)
         {
             return StudentTable.Select(x => x).Where(x => x.Id == student_id).ToArray()[0];
         }
 
-        internal static WeekSchedule.Data[] GetStudentSchedule(TermCourseStudent termCourseStudent)
+        internal static WeekSchedule.Data[] GetStudentSchedule(Student student)
         {
             throw new NotImplementedException();
         }
@@ -127,9 +126,16 @@ namespace AP_PROJECT
         }
         
 
-        internal static Course_students.Data[] GetStudentsMark(int cours_id, Teacher teacher)
+        public static Course_students.Data[] GetStudentsMark(int cours_id, Teacher teacher)
         {
-            throw new NotImplementedException();
+            return termCourseStudentTable.Select(x => x)
+                .Where(x => x.TermCourse.Course.Id == cours_id && x.TermCourse.Teacher.Id == teacher.Id)
+                .Select(x => new Course_students.Data()
+                {
+                    mark = "" + x.Mark,
+                    student_id = "" + x.Student.Id,
+                    student_name = x.Student.FirstName + " " + x.Student.LastName
+                }).ToArray();
         }
 
         public static bool EditPassword(Person user , string newPassword, string oldPassword, string confirm, Person person)
