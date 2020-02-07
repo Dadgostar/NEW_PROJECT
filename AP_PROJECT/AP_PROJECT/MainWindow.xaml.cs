@@ -24,7 +24,9 @@ namespace AP_PROJECT
         public MainWindow()
         {
             InitializeComponent();
-            //Module.loadData();
+            Login page = new Login();
+            page.Show();
+            this.Close();
             //Professor_courses prof_courses = new Professor_courses(new Teacher()
             //{ Id = 1111, FirstName = "GHOLI", LastName = "Gholizadeh", Password = "1234",});
             //prof_courses.Show();

@@ -51,8 +51,8 @@ namespace AP_PROJECT.View
 
         private void WeeklyScheduleClicked(object sender, RoutedEventArgs e)
         {
-            WeekSchedule weekschedule = new WeekSchedule(student);
-            weekschedule.Show();
+            WeekSchedule weekSchedual = new WeekSchedule(this.student);
+            weekSchedual.Show();
         }
 
         private void ExcepForm(object sender, RoutedEventArgs e)
@@ -76,7 +76,6 @@ namespace AP_PROJECT.View
         private void PaymentClicked(object sender, RoutedEventArgs e)
         {
             double payment = Module.GetPayment(this.student);
-            PaymentLable.Content =  "" + payment ;
                 
         }
 
