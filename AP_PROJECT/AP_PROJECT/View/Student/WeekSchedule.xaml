@@ -6,13 +6,13 @@
         xmlns:local="clr-namespace:AP_PROJECT.View"
         mc:Ignorable="d"
         Title="WeekSchedual" Height="300" Width="300">
-    <DataGrid HorizontalAlignment="Left" Height="170" Margin="10,25,0,0" VerticalAlignment="Top" Width="271">
+    <DataGrid x:Name="WeekSchedule" HorizontalAlignment="Left" Height="170" Margin="10,25,0,0" VerticalAlignment="Top" Width="271" RenderTransformOrigin="0.542,0.498" ItemsSource="{Binding}" AutoGenerateColumns="False">
         <DataGrid.Columns>
-            <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Day"/>
-            <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="8 - 9:30"/>
-            <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="9:30 - 11"/>
-            <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="11 - 12:30"/>
-            <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="13:30 - 16"/>
+            <DataGridTextColumn Binding="{Binding Day}"   Header="Day"/>
+            <DataGridTextColumn Binding="{Binding Time1}"  Header="8 - 9:30"/>
+            <DataGridTextColumn Binding="{Binding Time2}"  Header="9:30 - 11"/>
+            <DataGridTextColumn Binding="{Binding Time3}"  Header="11 - 12:30"/>
+            <DataGridTextColumn Binding="{Binding Time4}"  Header="13:30 - 16"/>
         </DataGrid.Columns>
     </DataGrid>
 </Window>

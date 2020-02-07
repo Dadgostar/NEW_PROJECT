@@ -23,6 +23,6 @@ namespace AP_PROJECT.View
             InitializeComponent();
         }
 
-        
+        public 
     }
 }
