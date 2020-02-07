@@ -18,11 +18,19 @@ namespace AP_PROJECT.View
     /// </summary>
     public partial class WeekSchedule : Window
     {
-        public WeekSchedule()
+        Data[] datas;
+        private Class.TermCourseStudent termCourseStudent;
+        public WeekSchedule(Class.TermCourseStudent termCourseStudent)
         {
             InitializeComponent();
+            this.termCourseStudent = termCourseStudent;
+            this.datas = Module.GetStudentSchedule(this.termCourseStudent);
         }
 
-        public 
+        public class Data
+        {
+
+            public String Day { set; get; }
+            public String CourseNameTime { set; get; }
     }
 }
