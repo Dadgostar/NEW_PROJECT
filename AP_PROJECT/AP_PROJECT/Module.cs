@@ -10,15 +10,15 @@ namespace AP_PROJECT
 {
     public class Module
     {
-        public static List<Student> StudentTable = new List<Student>();
-        public static List<Teacher> TeacherTable = new List<Teacher>();
-        public static List<Course>  CourseTable = new List<Course>();
-        public static List<TermCourse> termCourseTable = new List<TermCourse>();
-        public static List<TermCourseStudent> termCourseStudentTable = new List<TermCourseStudent>();
-        public static List<PreQuisite> preQuisiteTable = new List<PreQuisite>();
-        public static List<Term> TermTable = new List<Term>();
+        private static List<Student> StudentTable = new List<Student>();
+        private static List<Teacher> TeacherTable = new List<Teacher>();
+        private static List<Course>  CourseTable = new List<Course>();
+        private static List<TermCourse> termCourseTable = new List<TermCourse>();
+        private static List<TermCourseStudent> termCourseStudentTable = new List<TermCourseStudent>();
+        private static List<PreQuisite> preQuisiteTable = new List<PreQuisite>();
+        private static List<Term> TermTable = new List<Term>();
         
-        internal static Professor_exception_list.Data[] GetExceptionListData(Teacher teacher)
+        public static Professor_exception_list.Data[] GetExceptionListData(Teacher teacher)
         {
             throw new NotImplementedException();
         }
@@ -68,7 +68,7 @@ namespace AP_PROJECT
             return datas;
         }
 
-        internal static PreQuisite GetRequisite(int courseId)
+        public static PreQuisite GetRequisite(int courseId)
         {
             throw new NotImplementedException();
         }
@@ -113,7 +113,7 @@ namespace AP_PROJECT
             return datas.ToArray();
         }
 
-        internal static bool SetObjection(int courseId, int studentId, Teacher teacher)
+        public static bool SetObjection(int courseId, int studentId, Teacher teacher)
         {
             return true;
         }
@@ -186,7 +186,8 @@ namespace AP_PROJECT
 
         public static Person Login(string userName, string passWord)
         {
-            int Id = int.Parse(userName);
+            int Id = -1;
+            int.TryParse(userName,out Id);
             var temp1 = StudentTable.Select(x => x).Where(x => x.Id == Id && x.Password == passWord);// checking if the username is a student
             if(temp1.Count()>0)
             {

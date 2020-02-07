@@ -51,7 +51,7 @@ namespace AP_PROJECT.View
 
         private void WeeklyScheduleClicked(object sender, RoutedEventArgs e)
         {
-            WeekSchedule weekSchedual = new WeekSchedule();
+            WeekSchedule weekSchedual = new WeekSchedule(this.student);
             weekSchedual.Show();
         }
 

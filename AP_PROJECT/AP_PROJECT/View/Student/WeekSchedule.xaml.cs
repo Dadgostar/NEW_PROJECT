@@ -25,7 +25,7 @@ namespace AP_PROJECT.View
             InitializeComponent();
             this.student = student;
             this.datas = Module.GetStudentSchedule(this.student);
-            WeekSchedule.DataContext = this.datas;
+            WeekScheduleDG.DataContext = this.datas;
         }
 
         public class Data

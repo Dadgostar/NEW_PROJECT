@@ -23,10 +23,15 @@ namespace AP_PROJECT.View
         {
             InitializeComponent();
         }
+        
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Module.loadData();
+        }
 
         private void LoginBtnClicked(object sender, RoutedEventArgs e)
         {
-            var person = Module.Login(username_txt.Text, password_txt.Text);
+            var person = Module.Login(username_txt.Text, password_txt.Password);
             if(person == null)
             {
                 MessageBox.Show("username or password is invalid");
