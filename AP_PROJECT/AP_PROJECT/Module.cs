@@ -23,6 +23,11 @@ namespace AP_PROJECT
             return StudentTable.Select(x => x).Where(x => x.Id == student_id).ToArray()[0];
         }
 
+        internal static WeekSchedule.Data[] GetStudentSchedule(TermCourseStudent termCourseStudent)
+        {
+            throw new NotImplementedException();
+        }
+
         internal static Professor_listof_objections.Data[] GetObjectionListData(Teacher teacher)
         {
             List<Professor_listof_objections.Data> datas = new List<Professor_listof_objections.Data>();

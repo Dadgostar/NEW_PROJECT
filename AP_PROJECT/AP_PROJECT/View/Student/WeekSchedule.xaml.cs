@@ -32,5 +32,6 @@ namespace AP_PROJECT.View
 
             public String Day { set; get; }
             public String CourseNameTime { set; get; }
+        }
     }
 }
