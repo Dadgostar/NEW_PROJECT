@@ -29,7 +29,7 @@ namespace AP_PROJECT
             return StudentTable.Select(x => x).Where(x => x.Id == student_id).ToArray()[0];
         }
 
-        internal static WeekSchedule.Data[] GetStudentSchedule(TermCourseStudent termCourseStudent)
+        internal static WeekSchedule.Data[] GetStudentSchedule(Student student)
         {
             throw new NotImplementedException();
         }
