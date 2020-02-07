@@ -18,7 +18,6 @@
                 <DataGridTextColumn Binding="{Binding Status}" Header="Status" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="55,236,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>

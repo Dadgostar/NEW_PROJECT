@@ -14,13 +14,15 @@ using System.Windows.Shapes;
 namespace AP_PROJECT.View
 {
     /// <summary>
-    /// Interaction logic for WeekSchedual.xaml
+    /// Interaction logic for WeekSchedule.xaml
     /// </summary>
-    public partial class WeekSchedual : Window
+    public partial class WeekSchedule : Window
     {
-        public WeekSchedual()
+        public WeekSchedule()
         {
             InitializeComponent();
         }
+
+        
     }
 }
