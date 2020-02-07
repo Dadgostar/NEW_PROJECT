@@ -7,14 +7,14 @@
         mc:Ignorable="d"
         Title="Student_offeredCourses" Height="300" Width="300">
     <Grid>
-        <DataGrid HorizontalAlignment="Left" Height="217" Margin="10,10,0,0" VerticalAlignment="Top" Width="274">
+        <DataGrid Name ="OfferedCourses" HorizontalAlignment="Left" Height="217" Margin="10,10,0,0" VerticalAlignment="Top" Width="274">
             <DataGrid.Columns>
-                <DataGridCheckBoxColumn Binding="{Binding }"  Header="Name"/>
-                <DataGridCheckBoxColumn Binding="{Binding }"  Header="ID"/>
-                <DataGridCheckBoxColumn Binding="{Binding }"  Header="Units"/>
-                <DataGridCheckBoxColumn Binding="{Binding }"  Header="Prof"/>
-                <DataGridCheckBoxColumn Binding="{Binding }"  Header="Time"/>
-                <DataGridCheckBoxColumn Binding="{Binding }"  Header="M/G"/>
+                <DataGridCheckBoxColumn Binding="{Binding Name}"  Header="Name" IsReadOnly="True"/>
+                <DataGridCheckBoxColumn Binding="{Binding ID}"  Header="ID" IsReadOnly="True"/>
+                <DataGridCheckBoxColumn Binding="{Binding Units}"  Header="Units" IsReadOnly="True"/>
+                <DataGridCheckBoxColumn Binding="{Binding Professor}"  Header="Prof" IsReadOnly="True"/>
+                <DataGridCheckBoxColumn Binding="{Binding Time}"  Header="Time" IsReadOnly="True"/>
+                <DataGridCheckBoxColumn Binding="{Binding M_or_O}"  Header="M/G" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
 

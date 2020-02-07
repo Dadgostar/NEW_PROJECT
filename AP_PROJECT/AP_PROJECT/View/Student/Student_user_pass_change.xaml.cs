@@ -18,13 +18,22 @@ namespace AP_PROJECT.View
     /// </summary>
     public partial class Student_user_pass_change : Window
     {
+        private Class.Student student;// aya bayad private bashe ya na?????
+        
+
         public Student_user_pass_change(Class.Student student)
         {
             InitializeComponent();
+            this.student = student;
+            
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ChangePasswordClicked(object sender, RoutedEventArgs e)
         {
+            if (Module.EditPassword(this.student, newpass_txt.Text, oldpass_txt.Text, confirm_txt.Text, this.student))
+                CheckPassChange.Content = "Password changed";
+            else
+                CheckPassChange.Content = "Password not changed yet";
 
         }
     }

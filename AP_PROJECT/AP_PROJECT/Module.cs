@@ -23,6 +23,11 @@ namespace AP_PROJECT
             throw new NotImplementedException();
         }
 
+        internal static object GetStudentOfferedCoursesData(Student student, int term)
+        {
+            throw new NotImplementedException();
+        }
+
         internal static Professor_exception_list.Data[] GetExceptionListData(Teacher teacher)
         {
             throw new NotImplementedException();
