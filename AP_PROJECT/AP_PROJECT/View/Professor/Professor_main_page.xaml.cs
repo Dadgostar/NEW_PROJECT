@@ -32,7 +32,6 @@ namespace AP_PROJECT.View
         {
             Professor_Information information = new Professor_Information(this.teacher);
             information.Show();
-            //this.Close();
         }
 
         private void schedule_button_Click(object sender, RoutedEventArgs e)

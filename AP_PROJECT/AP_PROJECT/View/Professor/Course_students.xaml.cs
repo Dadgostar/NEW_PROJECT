@@ -45,9 +45,13 @@ namespace AP_PROJECT.View.Professor
 
             int student_id = int.Parse((row.Item as Data).student_id);
 
-            Professor_mark_register mark_reg = new Professor_mark_register(student_id, teacher, cours_id);
+            Professor_mark_register mark_reg = new Professor_mark_register(student_id, teacher, cours_id,this);
             mark_reg.Show();
-
+        }
+        public void update()
+        {
+            studentsData = Module.GetStudentsMark(cours_id, teacher);
+            this.course_student_list.DataContext = studentsData;
         }
 
        
