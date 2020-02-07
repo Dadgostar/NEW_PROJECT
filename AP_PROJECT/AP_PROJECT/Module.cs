@@ -68,6 +68,13 @@ namespace AP_PROJECT
             return datas;
         }
 
+        public static double GetStudentMark(int student_id, int teacher_id, int cours_id)
+        {
+            return termCourseStudentTable.Select(x => x)
+                .Where(x => x.Student.Id == student_id && x.TermCourse.Teacher.Id == teacher_id && x.TermCourse.Course.Id == cours_id)
+                .Select(x => x.Mark).ToArray()[0];
+        }
+
         public static PreQuisite GetRequisite(int courseId)
         {
             throw new NotImplementedException();
@@ -130,9 +137,8 @@ namespace AP_PROJECT
         {
             try
             {
-                termCourseStudentTable.Select(x => x).Where(
-                    x => x.Student.Id == student_id && x.TermCourse.Teacher.Id == teacher.Id && x.TermCourse.Id == course_id)
-                    .ToArray()[0].Mark = mark;
+                termCourseStudentTable.Select(x => x).Where(x => x.Student.Id == student_id && x.TermCourse.Teacher.Id == teacher.Id && x.TermCourse.Course.Id == course_id)
+                .ToArray()[0].Mark = mark;
                 saveData(termCourseStudentTable);
             }
             catch (Exception e)
