@@ -25,18 +25,42 @@ namespace AP_PROJECT
 
         internal static Professor_listof_objections.Data[] GetObjectionListData(Teacher teacher)
         {
-            throw new NotImplementedException();
+            List<Professor_listof_objections.Data> datas = new List<Professor_listof_objections.Data>();
+            var objectionList = termCourseStudentTable.Select(x => x).Where(x => x.ObjectionToMark != "null" && x.AnswerToObjection == "null" && x.TermCourse.Teacher.Id == teacher.Id).ToArray();
+            foreach (var objection in objectionList)
+            {
+                datas.Add(new Professor_listof_objections.Data() { 
+                 course_id = "" + objection.TermCourse.Course.Id
+                 , course_name = "" + objection.TermCourse.Course.Name
+                 , student_id = "" + objection.Student.Id
+                 , student_name = "" + objection.Student.FirstName + " " +objection.Student.LastName
+                });
+            }
+            return datas.ToArray();
         }
 
         public static Professor_courses.Data[] GetProfessorCoursesData(Teacher teacher)
         {
-            Professor_courses.Data[] results = new Professor_courses.Data[5];
-            results[0] = new Professor_courses.Data() { course_id = "1", course_name = "name1", students = 5, type = "takhasosi", units = 3 };
-            results[1] = new Professor_courses.Data() { course_id = "2", course_name = "name2", students = 4, type = "takhasosi", units = 2 };
-            results[2] = new Professor_courses.Data() { course_id = "3", course_name = "name3", students = 23, type = "takhasosi", units = 4 };
-            results[3] = new Professor_courses.Data() { course_id = "4", course_name = "name4", students = 53, type = "omommi", units = 3 };
-            results[4] = new Professor_courses.Data() { course_id = "5", course_name = "name5", students = 10, type = "takhasosi", units = 1 };
-            return results;
+            List<Professor_courses.Data> datas = new List<Professor_courses.Data>();
+            var courses = termCourseTable.Select(x => x).Where(x => x.Teacher.Id == teacher.Id).ToList();
+            foreach (var course in courses)
+            {
+                datas.Add(new Professor_courses.Data()
+                {
+                    course_id = "" + course.Course.Id
+                 ,
+                    course_name = course.Course.Name
+                 ,
+                    type = course.Course.type
+                 ,
+                    time = "" + course.Time
+                 ,
+                    units = course.Course.ECT
+                 ,
+                    students = termCourseStudentTable.Select(x => x).Where(x => x.TermCourse.Id == course.Id).Count()
+                });
+            }
+            return datas.ToArray();
         }
 
         internal static bool SetObjection(int courseId, int studentId, Teacher teacher)
