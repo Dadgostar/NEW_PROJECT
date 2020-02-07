@@ -45,13 +45,13 @@ namespace AP_PROJECT.View
 
         private void RegClicked(object sender, RoutedEventArgs e)
         {
-            Student_offeredCourses student_OfferedCourses = new Student_offeredCourses();
-            student_OfferedCourses.Show();          
+            //Student_offeredCourses student_OfferedCourses = new Student_offeredCourses();
+            //student_OfferedCourses.Show();          
         }
 
         private void WeeklyScheduleClicked(object sender, RoutedEventArgs e)
         {
-            WeekSchedule weekSchedual = new WeekSchedule();
+            WeekSchedule weekSchedual = new WeekSchedule(this.student);
             weekSchedual.Show();
         }
 
@@ -69,7 +69,7 @@ namespace AP_PROJECT.View
 
         private void ChangePassClicked(object sender, RoutedEventArgs e)
         {
-            Student_user_pass_change student_User_Pass_Change = new Student_user_pass_change();
+            Student_user_pass_change student_User_Pass_Change = new Student_user_pass_change(this.student);
             student_User_Pass_Change.Show();
         }
 

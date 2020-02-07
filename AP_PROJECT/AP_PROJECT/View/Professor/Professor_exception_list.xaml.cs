@@ -36,7 +36,6 @@ namespace AP_PROJECT.View.Professor
             public string teacher_id { set; get; }
             public string course_id { set; get; }
             public string coursr_name { set; get; }
-
         }
 
         private void DataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
