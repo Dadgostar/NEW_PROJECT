@@ -28,9 +28,44 @@ namespace AP_PROJECT
             return StudentTable.Select(x => x).Where(x => x.Id == student_id).ToArray()[0];
         }
 
-        internal static WeekSchedule.Data[] GetStudentSchedule(Student student)
+        public static WeekSchedule.Data[] GetStudentSchedule(Student student)
         {
-            throw new NotImplementedException();
+            WeekSchedule.Data[] datas = new WeekSchedule.Data[4];
+            for (int i = 0; i < 4; i++)
+                datas[i] = new WeekSchedule.Data() { Day="day_"+i};
+            int lastTermNum = termCourseStudentTable.Select(x => x).Where(x => x.Student.Id == student.Id).Select(x => x.TermCourse.Term.TermNum).Max();
+            var result = termCourseStudentTable.Select(x => x).Where(x => x.Student.Id == student.Id && x.TermCourse.Term.TermNum == lastTermNum).Select(x=>x.TermCourse);
+            foreach (var course in result)
+            {
+                switch (course.Time)
+                {
+                    case 0:
+                        datas[0].CourseNameTime1 = datas[2].CourseNameTime1 = course.Course.Name;
+                        break;
+                    case 1:
+                        datas[0].CourseNameTime2 = datas[2].CourseNameTime2 = course.Course.Name;
+                        break;
+                    case 2:
+                        datas[0].CourseNameTime3 = datas[2].CourseNameTime3 = course.Course.Name;
+                        break;
+                    case 3:
+                        datas[0].CourseNameTime4 = datas[2].CourseNameTime4 = course.Course.Name;
+                        break;
+                    case 4:
+                        datas[1].CourseNameTime1 = datas[3].CourseNameTime1 = course.Course.Name;
+                        break;
+                    case 5:
+                        datas[1].CourseNameTime2 = datas[3].CourseNameTime2 = course.Course.Name;
+                        break;
+                    case 6:
+                        datas[1].CourseNameTime3 = datas[3].CourseNameTime3 = course.Course.Name;
+                        break;
+                    case 7:
+                        datas[1].CourseNameTime4 = datas[3].CourseNameTime4 = course.Course.Name;
+                        break;
+                }
+            }
+            return datas;
         }
 
         internal static PreQuisite GetRequisite(int courseId)
