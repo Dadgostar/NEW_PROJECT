@@ -17,6 +17,7 @@
         <TextBox x:Name="oldpass_txt" HorizontalAlignment="Left" Height="26" Margin="120,124,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="newpass_txt" HorizontalAlignment="Left" Height="26" Margin="120,150,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="confirm_txt" HorizontalAlignment="Left" Height="30" Margin="120,176,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="apply" Content="Apply" HorizontalAlignment="Left" Margin="21,223,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>

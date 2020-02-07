@@ -85,6 +85,9 @@
     <Compile Include="View\Professor\Proffessor_educational_assist_.xaml.cs">
       <DependentUpon>Proffessor_educational_assist_.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Professor\Registeration_offered _courses_educAssist.xaml.cs">
+      <DependentUpon>Registeration_offered _courses_educAssist.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Student\ExceptionForm.xaml.cs">
       <DependentUpon>ExceptionForm.xaml</DependentUpon>
     </Compile>
@@ -192,6 +195,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Professor\Proffessor_educational_assist_.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Professor\Registeration_offered _courses_educAssist.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
