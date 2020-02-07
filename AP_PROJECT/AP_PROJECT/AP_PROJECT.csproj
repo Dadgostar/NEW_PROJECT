@@ -139,8 +139,8 @@
     <Compile Include="View\Student\Student_user_pass_change.xaml.cs">
       <DependentUpon>Student_user_pass_change.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Student\WeekSchedual.xaml.cs">
-      <DependentUpon>WeekSchedual.xaml</DependentUpon>
+    <Compile Include="View\Student\WeekSchedule.xaml.cs">
+      <DependentUpon>WeekSchedule.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -264,7 +264,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Student\WeekSchedual.xaml">
+    <Page Include="View\Student\WeekSchedule.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
