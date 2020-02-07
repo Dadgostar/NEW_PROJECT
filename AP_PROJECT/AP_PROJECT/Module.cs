@@ -16,6 +16,12 @@ namespace AP_PROJECT
         public static List<TermCourse> termCourseTable = new List<TermCourse>();
         public static List<TermCourseStudent> termCourseStudentTable = new List<TermCourseStudent>();
         public static List<PreQuisite> preQuisiteTable = new List<PreQuisite>();
+
+        internal static Professor_exception_list.Data[] GetExceptionListData(Teacher teacher)
+        {
+            throw new NotImplementedException();
+        }
+
         public static List<Term> TermTable = new List<Term>();
 
         public static Student GetStudent(int student_id)

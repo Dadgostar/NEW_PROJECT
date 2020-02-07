@@ -19,7 +19,9 @@ namespace AP_PROJECT.View.Professor
     /// </summary>
     public partial class Professor_listof_objections : Window
     {
-        private Teacher studentId;
+        // ??????
+        private Teacher teacher;
+
         Data[] objectionData;
 
         public Professor_listof_objections(Teacher teacher)
@@ -27,6 +29,7 @@ namespace AP_PROJECT.View.Professor
             InitializeComponent();
             
             // tracher is just passed, be careful !!!!!
+            // does it need another parameter to be passed ?!
             objectionData = Module.GetObjectionListData(teacher);
             this.list_of_objections.DataContext = objectionData;
         }

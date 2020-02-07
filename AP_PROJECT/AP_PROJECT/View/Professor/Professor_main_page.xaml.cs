@@ -53,8 +53,8 @@ namespace AP_PROJECT.View
 
         private void Exception_response_button_Click(object sender, RoutedEventArgs e)
         {
-            Professor_exception_response except_response = new Professor_exception_response(this.teacher);
-            except_response.Show();
+            Professor_exception_list exception_list = new Professor_exception_list(this.teacher);
+            exception_list.Show();
             //this.Close();
         }
     }
