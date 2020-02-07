@@ -10,15 +10,15 @@ namespace AP_PROJECT
 {
     public class Module
     {
-        private static List<Student> StudentTable = new List<Student>();
-        private static List<Teacher> TeacherTable = new List<Teacher>();
-        private static List<Course>  CourseTable = new List<Course>();
-        private static List<TermCourse> termCourseTable = new List<TermCourse>();
-        private static List<TermCourseStudent> termCourseStudentTable = new List<TermCourseStudent>();
-        private static List<PreQuisite> preQuisiteTable = new List<PreQuisite>();
-        private static List<Term> TermTable = new List<Term>();
+        public static List<Student> StudentTable = new List<Student>();
+        public static List<Teacher> TeacherTable = new List<Teacher>();
+        public static List<Course>  CourseTable = new List<Course>();
+        public static List<TermCourse> termCourseTable = new List<TermCourse>();
+        public static List<TermCourseStudent> termCourseStudentTable = new List<TermCourseStudent>();
+        public static List<PreQuisite> preQuisiteTable = new List<PreQuisite>();
+        public static List<Term> TermTable = new List<Term>();
         
-        public static Professor_exception_list.Data[] GetExceptionListData(Teacher teacher)
+        internal static Professor_exception_list.Data[] GetExceptionListData(Teacher teacher)
         {
             throw new NotImplementedException();
         }
@@ -94,6 +94,11 @@ namespace AP_PROJECT
                 });
             }
             return datas.ToArray();
+        }
+
+        internal static Registeration_offered__courses_educAssist.Data[] GetAddedCourse_byEduAssist(string courseId, string profId, string time_ofCourse, string volume_ofCourse)
+        {
+            throw new NotImplementedException();
         }
 
         public static Professor_courses.Data[] GetProfessorCoursesData(Teacher teacher)

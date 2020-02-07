@@ -15,7 +15,7 @@
         <Button x:Name="evaluation_button" Content="Professor Evaluation" HorizontalAlignment="Left" Margin="10,117,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" Click="ProfEvalClicked"/>
         <Button x:Name="payments_button" Content="Payments" HorizontalAlignment="Left" Margin="10,135,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" Click="PaymentClicked"/>
         <Button x:Name="ChangePass" Content="Change Password" HorizontalAlignment="Left" Margin="10,153,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" Click="ChangePassClicked"/>
-        <Label x:Name="PaymentLable" Content="Label" HorizontalAlignment="Left" Margin="163,135,0,0" VerticalAlignment="Top" Width="83" Height="13"/>
+        <Label x:Name="PaymentLable"  HorizontalAlignment="Left" Margin="163,135,0,0" VerticalAlignment="Top" Width="83" Height="13" Background="{DynamicResource {x:Static SystemColors.InfoBrushKey}}" Foreground="#FF6C6767"/>
 
     </Grid>
 </Window>

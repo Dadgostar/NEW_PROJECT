@@ -20,6 +20,9 @@ namespace AP_PROJECT.View
     {
         Data[] datas;
         private Class.Student student;
+
+        
+
         public WeekSchedule(Class.Student student)
         {
             InitializeComponent();

@@ -85,6 +85,9 @@
     <Compile Include="View\Professor\Proffessor_educational_assist_.xaml.cs">
       <DependentUpon>Proffessor_educational_assist_.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Professor\Registeration_offered _courses_educAssist.xaml.cs">
+      <DependentUpon>Registeration_offered _courses_educAssist.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Student\ExceptionForm.xaml.cs">
       <DependentUpon>ExceptionForm.xaml</DependentUpon>
     </Compile>
@@ -93,6 +96,9 @@
     </Compile>
     <Compile Include="View\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Student\newEvaluationProfessorPage.xaml.cs">
+      <DependentUpon>newEvaluationProfessorPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Student\Objection_to_grade.xaml.cs">
       <DependentUpon>Objection_to_grade.xaml</DependentUpon>
@@ -195,6 +201,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Professor\Registeration_offered _courses_educAssist.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Student\ExceptionForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -204,6 +214,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Student\newEvaluationProfessorPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
