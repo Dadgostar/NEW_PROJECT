@@ -50,5 +50,10 @@ namespace AP_PROJECT.View.Professor
             offeredCoursesData = Module.GetAddedCourse_byEduAssist(courseId, profId, time_ofCourse, volume_ofCourse);
             this.offered_courses.DataContext = offeredCoursesData;
         }
+
+        private void DataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
