@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AP_PROJECT.View.Student;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,6 +38,12 @@ namespace AP_PROJECT.View
             public int Total_Units { set; get; }
             public string Status { set; get; }
         }
-        
+
+        private void DataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            DataGridRow row = sender as DataGridRow;
+            Student_offeredCourses page = new Student_offeredCourses((row.Item as Data).Term,this.student);
+            page.Show();
+        }
     }
 }
