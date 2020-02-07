@@ -18,9 +18,9 @@ namespace AP_PROJECT
         public static List<PreQuisite> preQuisiteTable = new List<PreQuisite>();
         public static List<Term> TermTable = new List<Term>();
 
-        internal static Student GetStudent(int student_id)
+        public static Student GetStudent(int student_id)
         {
-            throw new NotImplementedException();
+            return StudentTable.Select(x => x).Where(x => x.Id == student_id).ToArray()[0];
         }
 
         public static Professor_courses.Data[] GetProfessorCoursesData(Teacher teacher)
@@ -34,16 +34,16 @@ namespace AP_PROJECT
             return results;
         }
 
-<<<<<<< HEAD
         internal static bool SetMark(int course_id, int student_id, Teacher teacher, int mark)
         {
             throw new NotImplementedException();
         }
 
         internal static Course GetCourse(int cours_id)
-=======
+        {
+            return null;
+        }
         internal static List_of_terms.Data[] GetListOfTerms(Student student)
->>>>>>> a034f168ba27477af3c99e5858f0d19e855055c5
         {
             throw new NotImplementedException();
         }

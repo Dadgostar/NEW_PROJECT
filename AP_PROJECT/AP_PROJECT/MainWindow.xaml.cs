@@ -25,9 +25,9 @@ namespace AP_PROJECT
         {
             InitializeComponent();
             //Module.loadData();
-            Professor_courses prof_courses = new Professor_courses(new Teacher()
-            { Id = 1111, FirstName = "GHOLI", LastName = "Gholizadeh", Password = "1234",});
-            prof_courses.Show();
+            //Professor_courses prof_courses = new Professor_courses(new Teacher()
+            //{ Id = 1111, FirstName = "GHOLI", LastName = "Gholizadeh", Password = "1234",});
+            //prof_courses.Show();
         }
     }
 }
