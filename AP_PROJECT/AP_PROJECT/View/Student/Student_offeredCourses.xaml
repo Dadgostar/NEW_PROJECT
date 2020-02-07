@@ -9,12 +9,12 @@
     <Grid>
         <DataGrid HorizontalAlignment="Left" Height="217" Margin="10,10,0,0" VerticalAlignment="Top" Width="274">
             <DataGrid.Columns>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Name"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="ID"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Units"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Prof"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Time"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="M/G"/>
+                <DataGridCheckBoxColumn Binding="{Binding }"  Header="Name"/>
+                <DataGridCheckBoxColumn Binding="{Binding }"  Header="ID"/>
+                <DataGridCheckBoxColumn Binding="{Binding }"  Header="Units"/>
+                <DataGridCheckBoxColumn Binding="{Binding }"  Header="Prof"/>
+                <DataGridCheckBoxColumn Binding="{Binding }"  Header="Time"/>
+                <DataGridCheckBoxColumn Binding="{Binding }"  Header="M/G"/>
             </DataGrid.Columns>
         </DataGrid>
 

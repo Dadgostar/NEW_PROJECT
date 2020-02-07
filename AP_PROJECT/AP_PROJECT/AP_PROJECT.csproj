@@ -94,6 +94,9 @@
     <Compile Include="View\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Student\newEvaluationProfessorPage.xaml.cs">
+      <DependentUpon>newEvaluationProfessorPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Student\Objection_to_grade.xaml.cs">
       <DependentUpon>Objection_to_grade.xaml</DependentUpon>
     </Compile>
@@ -204,6 +207,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Student\newEvaluationProfessorPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
