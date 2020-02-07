@@ -113,7 +113,14 @@ namespace AP_PROJECT
 
         internal static Course_students.Data[] GetStudentsMark(int cours_id, Teacher teacher)
         {
-            throw new NotImplementedException();
+            return termCourseStudentTable.Select(x => x)
+                .Where(x => x.TermCourse.Course.Id == cours_id && x.TermCourse.Teacher.Id == teacher.Id)
+                .Select(x => new Course_students.Data()
+                {
+                    mark = "" + x.Mark,
+                    student_id = "" + x.Student.Id,
+                    student_name = x.Student.FirstName + " " + x.Student.LastName
+                }).ToArray();
         }
 
         public static bool EditPassword(Person user , string newPassword, string oldPassword, string confirm, Person person)
