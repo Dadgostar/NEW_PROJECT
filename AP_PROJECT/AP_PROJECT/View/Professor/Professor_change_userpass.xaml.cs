@@ -33,5 +33,7 @@ namespace AP_PROJECT.View
             else 
                  isPassChanged.Content = "Pass is not Changed!";
         }
+
+        
     }
 }
