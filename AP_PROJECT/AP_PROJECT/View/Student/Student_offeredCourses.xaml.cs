@@ -19,8 +19,8 @@ namespace AP_PROJECT.View.Student
     public partial class Student_offeredCourses : Window
     {
         Data[] datas;
-        Class.Term term;
-        Class.Student student;
+        Class.Term term = new Class.Term();
+        Class.Student student ;
         public Student_offeredCourses(int term, Class.Student student)
         {
             InitializeComponent();
