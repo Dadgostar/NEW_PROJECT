@@ -58,5 +58,6 @@ namespace AP_PROJECT.View.Professor
             Registeration_offered__courses_educAssist reg_off_eduAssis = new Registeration_offered__courses_educAssist();
             reg_off_eduAssis.Show();
         }
+
     }
 }

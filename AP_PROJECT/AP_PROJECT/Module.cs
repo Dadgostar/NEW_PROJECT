@@ -16,14 +16,27 @@ namespace AP_PROJECT
         public static List<TermCourse> termCourseTable = new List<TermCourse>();
         public static List<TermCourseStudent> termCourseStudentTable = new List<TermCourseStudent>();
         public static List<PreQuisite> preQuisiteTable = new List<PreQuisite>();
-        public static List<Term> TermTable = new List<Term>();
 
-        internal static Registeration_offered__courses_educAssist.Data[] GetOfferedCoursesData()
+        internal static Clerk_student_list.Data[] GetStudentsDataClerk(object ckerk)
         {
             throw new NotImplementedException();
         }
 
+        public static List<Term> TermTable = new List<Term>();
+
+        internal static Registeration_offered__courses_educAssist.Data[] GetOfferedCoursesData()
+        {
+           // StudentTable.Remove();
+
+            throw new NotImplementedException();
+        }
+
         internal static object GetStudentOfferedCoursesData(Student student, int term)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static Clerk_student_list.Data[] GetAddedStudentByEducAssist(string newStudentId, string newStudentName)
         {
             throw new NotImplementedException();
         }

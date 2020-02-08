@@ -51,9 +51,5 @@ namespace AP_PROJECT.View.Professor
             this.offered_courses.DataContext = offeredCoursesData;
         }
 
-        private void DataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-
-        }
     }
 }

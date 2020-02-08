@@ -20,6 +20,7 @@ namespace AP_PROJECT.View
     public partial class Clerk_Information : Window
     {
         private Clerk clerk;
+        private Class.Clerk clerk1;
 
         public Clerk_Information(Clerk clerk)
         {
@@ -30,6 +31,11 @@ namespace AP_PROJECT.View
             clerk_idtext_label.Content = clerk.Id;
             clerk_passtext_label.Content = clerk.Password;
 
+        }
+
+        public Clerk_Information(Class.Clerk clerk1)
+        {
+            this.clerk1 = clerk1;
         }
 
         private void clerk_userpass_change_button_Click(object sender, RoutedEventArgs e)

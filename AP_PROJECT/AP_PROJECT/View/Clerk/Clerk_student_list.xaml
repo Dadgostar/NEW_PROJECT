@@ -1,0 +1,29 @@
+﻿<Window x:Class="AP_PROJECT.View.Clerk_student_list"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AP_PROJECT.View"
+        mc:Ignorable="d"
+        Title="Clerk_student_list" Height="300" Width="300">
+    <Grid>
+        <DataGrid x:Name="students_list" HorizontalAlignment="Left" Height="151" Margin="10,0,0,0" VerticalAlignment="Top" Width="274" ItemsSource="{Binding}" AutoGenerateColumns="False">
+            <DataGrid.Resources>
+                <Style TargetType="DataGridRow">
+                    <EventSetter Event="MouseDoubleClick" Handler="DataGridRow_MouseDoubleClick"></EventSetter>
+                </Style>
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding course_name}" Header="Student Name" IsReadOnly="true"/>
+                <DataGridTextColumn Binding="{Binding course_id}" Header="Student ID" IsReadOnly="true"/>
+                <DataGridTextColumn Binding="{Binding type}" Header="GPA" IsReadOnly="true"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="add_stu_button" Content="Add" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Width="75" Click="add_stu_button_Click"/>
+        <Label Content="Student ID" HorizontalAlignment="Left" Margin="149,157,0,0" VerticalAlignment="Top" Width="66" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
+        <Label Content="Student Name" HorizontalAlignment="Left" Margin="10,157,0,0" VerticalAlignment="Top" Width="87" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
+        <TextBox x:Name="new_student_name" HorizontalAlignment="Left" Height="23" Margin="10,188,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
+        <TextBox x:Name="new_student_id" HorizontalAlignment="Left" Height="23" Margin="149,188,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
+
+    </Grid>
+</Window>

@@ -18,7 +18,7 @@ namespace AP_PROJECT.View
     /// </summary>
     public partial class Clerk_deactivate_preq_overlap : Window
     {
-        public Clerk_deactivate_preq_overlap()
+        public Clerk_deactivate_preq_overlap(Class.Clerk clerk)
         {
             InitializeComponent();
         }

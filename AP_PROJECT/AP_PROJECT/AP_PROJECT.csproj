@@ -59,16 +59,19 @@
     <Compile Include="Class\Term.cs" />
     <Compile Include="Class\TermCourse.cs" />
     <Compile Include="Class\TermCourseStudent.cs" />
-    <Compile Include="View\Clerk_deactivate_preq_overlap.xaml.cs">
+    <Compile Include="View\Clerk\Clerk_deactivate_preq_overlap.xaml.cs">
       <DependentUpon>Clerk_deactivate_preq_overlap.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Clerk_Information.xaml.cs">
+    <Compile Include="View\Clerk\Clerk_Information.xaml.cs">
       <DependentUpon>Clerk_Information.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Clerk_student_list.xaml.cs">
+    <Compile Include="View\Clerk\Clerk_main_page.xaml.cs">
+      <DependentUpon>Clerk_main_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Clerk\Clerk_student_list.xaml.cs">
       <DependentUpon>Clerk_student_list.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Clerk_userpass_change.xaml.cs">
+    <Compile Include="View\Clerk\Clerk_userpass_change.xaml.cs">
       <DependentUpon>Clerk_userpass_change.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Professor\Course_students.xaml.cs">
@@ -166,19 +169,23 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\Clerk_deactivate_preq_overlap.xaml">
+    <Page Include="View\Clerk\Clerk_deactivate_preq_overlap.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Clerk_Information.xaml">
+    <Page Include="View\Clerk\Clerk_Information.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Clerk_student_list.xaml">
+    <Page Include="View\Clerk\Clerk_main_page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Clerk_userpass_change.xaml">
+    <Page Include="View\Clerk\Clerk_student_list.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Clerk\Clerk_userpass_change.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
