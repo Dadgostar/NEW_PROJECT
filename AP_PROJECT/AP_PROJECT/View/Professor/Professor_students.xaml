@@ -7,7 +7,13 @@
         mc:Ignorable="d"
         Title="Professor_students" Height="300" Width="300">
     <Grid>
-        <DataGrid HorizontalAlignment="Left" Height="169" Margin="10,16,0,0" VerticalAlignment="Top" Width="274">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FFA3CCFF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DataGrid HorizontalAlignment="Left" Height="232" Margin="10,16,0,0" VerticalAlignment="Top" Width="274" Background="#FFFFCBBD">
             <DataGrid.Columns>
                 <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Student Name"/>
                 <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Student ID"/>

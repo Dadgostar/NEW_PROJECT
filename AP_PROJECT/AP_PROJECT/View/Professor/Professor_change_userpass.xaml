@@ -6,15 +6,14 @@
         xmlns:local="clr-namespace:AP_PROJECT.View"
         mc:Ignorable="d"
         Title="Professor_change_userpass" Height="300" Width="300">
-    <Grid>
-        <Label x:Name="prof_oldpass_label" Content="Old password" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Width="80" FontSize="10"/>
-        <Label x:Name="prof_newpass_label" Content="New password" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" Width="80" FontSize="10"/>
-        <Label x:Name="prof_passconfirm_label" Content="Confirm" HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Width="80" FontSize="10"/>
-        <Button x:Name="prof_userpass_apply_button" Content="Apply" HorizontalAlignment="Left" Margin="95,137,0,0" VerticalAlignment="Top" Width="75" Click="prof_userpass_apply_button_Click"/>
-        <PasswordBox x:Name="prof_oldpass_txt" HorizontalAlignment="Left" Height="23" Margin="95,30,0,0" VerticalAlignment="Top" Width="120"/>
-        <PasswordBox x:Name="prof_newpass_txt" HorizontalAlignment="Left" Height="23" Margin="95,58,0,0" VerticalAlignment="Top" Width="120"/>
-        <PasswordBox x:Name="prof_passconfirm_txt" HorizontalAlignment="Left" Height="23" Margin="95,86,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="isPassChanged" Content="" HorizontalAlignment="Left" Margin="95,175,0,0" VerticalAlignment="Top" Width="120"/>
+    <Grid Background="#FFF4FFCE">
+        <Label x:Name="prof_oldpass_label" Content="Old password" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Width="98"/>
+        <Label x:Name="prof_newpass_label" Content="New password" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" Width="98"/>
+        <Label x:Name="prof_passconfirm_label" Content="Confirm" HorizontalAlignment="Left" Margin="10,93,0,0" VerticalAlignment="Top" Width="60" FontSize="14" Height="30"/>
+        <Button x:Name="prof_userpass_apply_button" Content="Apply" HorizontalAlignment="Left" Margin="62,160,0,0" VerticalAlignment="Top" Width="108" Click="prof_userpass_apply_button_Click" Height="41" FontSize="16" Background="#FFE8EDF0"/>
+        <PasswordBox x:Name="prof_oldpass_txt" HorizontalAlignment="Left" Height="23" Margin="113,30,0,0" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="prof_newpass_txt" HorizontalAlignment="Left" Height="23" Margin="113,58,0,0" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox x:Name="prof_passconfirm_txt" HorizontalAlignment="Left" Height="23" Margin="113,100,0,0" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

@@ -6,21 +6,21 @@
         xmlns:local="clr-namespace:AP_PROJECT.View"
         mc:Ignorable="d"
         Title="Professor_head_evaluation_show" Height="300" Width="300">
-    <Grid>
+    <Grid Background="#FFEAE9CF">
         <Label x:Name="prof_name_label" Content="Professor" HorizontalAlignment="Left" Margin="10,23,0,0" VerticalAlignment="Top" Width="77"/>
-        <Label x:Name="course_label" Content="Course" HorizontalAlignment="Left" Margin="10,54,0,0" VerticalAlignment="Top" Width="77"/>
-        <Label x:Name="prof_nametxt" Content="Label" HorizontalAlignment="Left" Margin="92,23,0,0" VerticalAlignment="Top" Width="114"/>
-        <Label x:Name="prof_coursetxt" Content="Label" HorizontalAlignment="Left" Margin="92,54,0,0" VerticalAlignment="Top" Width="114"/>
-        <Label x:Name="knowledge_grade_label" Content="Knowledge" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" Width="66" FontSize="10"/>
-        <Label x:Name="timing_grade_label" Content="Timing " HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" Width="66" FontSize="10"/>
-        <Label x:Name="instruction_grade_label" Content="Instruction" HorizontalAlignment="Left" Margin="10,156,0,0" VerticalAlignment="Top" Width="66" FontSize="10"/>
-        <Label x:Name="personality_grade_label" Content="Personality" HorizontalAlignment="Left" Margin="10,187,0,0" VerticalAlignment="Top" Width="66" FontSize="10"/>
-        <Label x:Name="fairness_grade_label" Content="Fairness" HorizontalAlignment="Left" Margin="10,218,0,0" VerticalAlignment="Top" Width="66" FontSize="10"/>
-        <Label x:Name="knowledge_gradetxt" Content="Label" HorizontalAlignment="Left" Margin="92,99,0,0" VerticalAlignment="Top" Width="66" FontSize="10"/>
-        <Label x:Name="timing_gradetxt" Content="Label" HorizontalAlignment="Left" Margin="92,125,0,0" VerticalAlignment="Top" Width="66" FontSize="10"/>
-        <Label x:Name="instrunction_gradetxt" Content="Label" HorizontalAlignment="Left" Margin="92,156,0,0" VerticalAlignment="Top" Width="66" FontSize="10"/>
-        <Label x:Name="personality_gradetxt" Content="Label" HorizontalAlignment="Left" Margin="92,187,0,0" VerticalAlignment="Top" Width="66" FontSize="10"/>
-        <Label x:Name="fairness_gradetxt" Content="Label" HorizontalAlignment="Left" Margin="92,218,0,0" VerticalAlignment="Top" Width="66" FontSize="10"/>
+        <Label x:Name="course_label" Content="Course" HorizontalAlignment="Left" Margin="10,54,0,0" VerticalAlignment="Top" Width="77" />
+        <Label x:Name="prof_nametxt" Content="Label" HorizontalAlignment="Left" Margin="92,23,0,0" VerticalAlignment="Top" Width="114" Background="#FFEABEB9"/>
+        <Label x:Name="prof_coursetxt" Content="Label" HorizontalAlignment="Left" Margin="92,54,0,0" VerticalAlignment="Top" Width="114" Background="#FFEABEB9"/>
+        <Label x:Name="knowledge_grade_label" Content="Knowledge" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" Width="77"/>
+        <Label x:Name="timing_grade_label" Content="Timing " HorizontalAlignment="Left" Margin="10,127,0,0" VerticalAlignment="Top" Width="66"/>
+        <Label x:Name="instruction_grade_label" Content="Instruction" HorizontalAlignment="Left" Margin="10,156,0,0" VerticalAlignment="Top" Width="66"/>
+        <Label x:Name="personality_grade_label" Content="Personality" HorizontalAlignment="Left" Margin="10,187,0,0" VerticalAlignment="Top" Width="66"/>
+        <Label x:Name="fairness_grade_label" Content="Fairness" HorizontalAlignment="Left" Margin="10,218,0,0" VerticalAlignment="Top" Width="66"/>
+        <Label x:Name="knowledge_gradetxt" Content="Label" HorizontalAlignment="Left" Margin="92,99,0,0" VerticalAlignment="Top" Width="114" FontSize="10" Background="#FFEABEB9"/>
+        <Label x:Name="timing_gradetxt" Content="Label" HorizontalAlignment="Left" Margin="92,128,0,0" VerticalAlignment="Top" Width="114" FontSize="10" Background="#FFEABEB9"/>
+        <Label x:Name="instrunction_gradetxt" Content="Label" HorizontalAlignment="Left" Margin="92,156,0,0" VerticalAlignment="Top" Width="114" FontSize="10" Background="#FFEABEB9"/>
+        <Label x:Name="personality_gradetxt" Content="Label" HorizontalAlignment="Left" Margin="92,187,0,0" VerticalAlignment="Top" Width="114" FontSize="10" Background="#FFEABEB9"/>
+        <Label x:Name="fairness_gradetxt" Content="Label" HorizontalAlignment="Left" Margin="92,218,0,0" VerticalAlignment="Top" Width="114" FontSize="10" Background="#FFEABEB9"/>
     </Grid>
 </Window>
 

@@ -6,22 +6,22 @@
         xmlns:local="clr-namespace:AP_PROJECT.View"
         mc:Ignorable="d"
         Title="Professor_Information" Height="300" Width="300">
-    <Grid>
-        <Label x:Name="prof_username_label" Content="Username" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="77" FontSize="10"/>
-        <Label x:Name="prof_pass_label" Content="Password" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="77" FontSize="10"/>
-        <Label x:Name="prof_name_label" Content="Name" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Width="77" FontSize="10"/>
-        <Label x:Name="prof_family_label" Content="Family name" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Width="77" FontSize="10"/>
-        <Label x:Name="prof_id_label" Content="ID" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Width="77" FontSize="10"/>
-        <Label x:Name="prof_stud_field_label" Content="Field of study" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top" Width="77" FontSize="10"/>
-        <Label x:Name="prof_usertext_label" Content="Label" HorizontalAlignment="Left" Margin="87,10,0,0" VerticalAlignment="Top" Width="98"/>
-        <Label x:Name="prof_passtext_label" Content="Label" HorizontalAlignment="Left" Margin="87,36,0,0" VerticalAlignment="Top" Width="98"/>
-        <Label x:Name="prof_nametext_label" Content="Label" HorizontalAlignment="Left" Margin="87,62,0,0" VerticalAlignment="Top" Width="98"/>
-        <Label x:Name="prof_familytext_label" Content="Label" HorizontalAlignment="Left" Margin="87,86,0,0" VerticalAlignment="Top" Width="98"/>
-        <Label x:Name="prof_idtext_label" Content="Label" HorizontalAlignment="Left" Margin="87,112,0,0" VerticalAlignment="Top" Width="98"/>
-        <Label x:Name="prof_studfieldtext_label" Content="Label" HorizontalAlignment="Left" Margin="87,137,0,0" VerticalAlignment="Top" Width="98"/>
-        <Button x:Name="prof_userpass_change_button" Click="prof_userpass_change_button_Click" Content="Change" HorizontalAlignment="Left" Margin="10,219,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label x:Name="prof_grade_label" Content="Grade" HorizontalAlignment="Left" Margin="10,168,0,0" VerticalAlignment="Top" Height="24" Width="75" FontSize="10"/>
-        <Label x:Name="prof_grade_labeltxt" Content="Label" HorizontalAlignment="Left" Margin="87,166,0,0" VerticalAlignment="Top" Width="98"/>
+    <Grid Background="#FFE6FFB2">
+        <Label x:Name="prof_username_label" Content="Username" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="77"/>
+        <Label x:Name="prof_pass_label" Content="Password" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" Width="77"/>
+        <Label x:Name="prof_name_label" Content="Name" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Width="77"/>
+        <Label x:Name="prof_family_label" Content="Family name" HorizontalAlignment="Left" Margin="10,93,0,0" VerticalAlignment="Top" Width="77"/>
+        <Label x:Name="prof_id_label" Content="ID" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top" Width="77"/>
+        <Label x:Name="prof_stud_field_label" Content="Field of study" HorizontalAlignment="Left" Margin="10,154,0,0" VerticalAlignment="Top" Width="94"/>
+        <Label x:Name="prof_usertext_label" Content="" HorizontalAlignment="Left" Margin="109,0,0,0" VerticalAlignment="Top" Width="98" Background="#FFC0DDFC"/>
+        <Label x:Name="prof_passtext_label" Content="" HorizontalAlignment="Left" Margin="109,29,0,0" VerticalAlignment="Top" Width="98" Background="#FFC0E8FC"/>
+        <Label x:Name="prof_nametext_label" Content="" HorizontalAlignment="Left" Margin="109,60,0,0" VerticalAlignment="Top" Width="98" Background="#FFC0DBFC"/>
+        <Label x:Name="prof_familytext_label" Content="" HorizontalAlignment="Left" Margin="109,91,0,0" VerticalAlignment="Top" Width="98" Background="#FFC0EAFC"/>
+        <Label x:Name="prof_idtext_label" Content="" HorizontalAlignment="Left" Margin="109,122,0,0" VerticalAlignment="Top" Width="98" Background="#FFC0D8FC"/>
+        <Label x:Name="prof_studfieldtext_label" Content="" HorizontalAlignment="Left" Margin="109,153,0,0" VerticalAlignment="Top" Width="98" Background="#FFC0D0FC"/>
+        <Button x:Name="prof_userpass_change_button" Click="prof_userpass_change_button_Click" Content="Change" HorizontalAlignment="Left" Margin="10,219,0,0" VerticalAlignment="Top" Width="75" />
+        <Label x:Name="prof_grade_label" Content="Grade" HorizontalAlignment="Left" Margin="10,185,0,0" VerticalAlignment="Top" Height="24" Width="75" />
+        <Label x:Name="prof_grade_labeltxt" Content="" HorizontalAlignment="Left" Margin="109,184,0,0" VerticalAlignment="Top" Width="98" Background="#FFC0DBFC"/>
     </Grid>
 </Window>
 
