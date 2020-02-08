@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AP_PROJECT.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,9 +19,23 @@ namespace AP_PROJECT.View
     /// </summary>
     public partial class Clerk_Information : Window
     {
-        public Clerk_Information()
+        private Clerk clerk;
+
+        public Clerk_Information(Clerk clerk)
         {
             InitializeComponent();
+            this.clerk = clerk;
+            clerk_nametext_label.Content = clerk.FirstName;
+            clerk_familytext_label.Content = clerk.LastName;
+            clerk_idtext_label.Content = clerk.Id;
+            clerk_passtext_label.Content = clerk.Password;
+
+        }
+
+        private void clerk_userpass_change_button_Click(object sender, RoutedEventArgs e)
+        {
+            Clerk_userpass_change clrk_usepass_change = new Clerk_userpass_change(this.clerk);
+            clrk_usepass_change.Show();
         }
     }
 }
