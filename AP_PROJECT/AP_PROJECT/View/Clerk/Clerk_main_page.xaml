@@ -9,8 +9,8 @@
     <Grid>
         <Button x:Name="clrk_prsnl_infor_button" Content="Personal Information" HorizontalAlignment="Left" Margin="26,25,0,0" VerticalAlignment="Top" Width="103" FontSize="9" Height="20" Click="clrk_prsnl_infor_button_Click"/>
         <Button x:Name="clrk_stdnt_button" Content="Students" HorizontalAlignment="Left" Margin="26,57,0,0" VerticalAlignment="Top" Width="103" Click="clrk_stdnt_button_Click"/>
-        <Button x:Name="clrk_deact_dect_button" Content="Deactivation prerequisite" HorizontalAlignment="Left" Margin="26,90,0,0" VerticalAlignment="Top" Width="103" FontSize="8" Height="20" Click="clrk_deact_dect_button_Click"/>
-        <Button x:Name="clrk_dect_overlap_button" Content="Deactivating overlap" HorizontalAlignment="Left" Margin="26,124,0,0" VerticalAlignment="Top" Width="103" FontSize="9" Height="20"/>
+        <Button x:Name="clrk_deact_prequis_button" Content="Deactivation prerequisite" HorizontalAlignment="Left" Margin="26,90,0,0" VerticalAlignment="Top" Width="103" FontSize="8" Height="20" Click="clrk_deact_dect_button_Click"/>
+        <Button x:Name="clrk_dect_overlap_button" Content="Deactivating overlap" HorizontalAlignment="Left" Margin="26,124,0,0" VerticalAlignment="Top" Width="103" FontSize="9" Height="20" Click="clrk_dect_overlap_button_Click"/>
         <Button x:Name="clrk_offerdCourse_button" Content="Offered Courses" HorizontalAlignment="Left" Margin="26,157,0,0" VerticalAlignment="Top" Width="103"/>
 
     </Grid>

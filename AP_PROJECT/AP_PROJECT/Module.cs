@@ -17,6 +17,12 @@ namespace AP_PROJECT
         public static List<TermCourse> termCourseTable = new List<TermCourse>();
         public static List<TermCourseStudent> termCourseStudentTable = new List<TermCourseStudent>();
         public static List<PreQuisite> preQuisiteTable = new List<PreQuisite>();
+
+        internal static Clerk_student_list.Data[] GetStudentsDataForClerk(Clerk clerk)
+        {
+            throw new NotImplementedException();
+        }
+
         public static List<Term> TermTable = new List<Term>();
 
         public static bool addStudent(string firstName, string lastName, string password)
@@ -39,6 +45,12 @@ namespace AP_PROJECT
                 return false;
             }
         }
+
+        internal static Clerk_student_list.Data[] GetAddedStudentByEducAssist(string newStudentId, string newStudentName)
+        {
+            throw new NotImplementedException();
+        }
+
         internal static Registeration_offered__courses_educAssist.Data[] GetOfferedCoursesData()
         {
 
