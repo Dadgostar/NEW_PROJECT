@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using AP_PROJECT.View;
 using AP_PROJECT.View.Professor;
+using AP_PROJECT.View.Student;
 
 namespace AP_PROJECT
 {
@@ -12,33 +13,61 @@ namespace AP_PROJECT
     {
         public static List<Student> StudentTable = new List<Student>();
         public static List<Teacher> TeacherTable = new List<Teacher>();
-        public static List<Course>  CourseTable = new List<Course>();
+        public static List<Course> CourseTable = new List<Course>();
         public static List<TermCourse> termCourseTable = new List<TermCourse>();
         public static List<TermCourseStudent> termCourseStudentTable = new List<TermCourseStudent>();
         public static List<PreQuisite> preQuisiteTable = new List<PreQuisite>();
-
-        internal static Clerk_student_list.Data[] GetStudentsDataClerk(object ckerk)
-        {
-            throw new NotImplementedException();
-        }
-
         public static List<Term> TermTable = new List<Term>();
 
+        public static bool addStudent(string firstName, string lastName, string password)
+        {
+            try
+            {
+                int id = StudentTable.Select(x => x.Id).Max() + 1;
+                StudentTable.Add(new Student()
+                {
+                    Id = id,
+                    FirstName = firstName,
+                    LastName = lastName,
+                    Password = password
+                });
+                saveData(StudentTable);
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
         internal static Registeration_offered__courses_educAssist.Data[] GetOfferedCoursesData()
         {
-           // StudentTable.Remove();
 
             throw new NotImplementedException();
         }
 
-        internal static object GetStudentOfferedCoursesData(Student student, int term)
+        public static Teacher getTeacher(int id)
         {
-            throw new NotImplementedException();
+            return TeacherTable.Select(x => x).Where(x => x.Id == id).ToArray()[0];
         }
 
-        internal static Clerk_student_list.Data[] GetAddedStudentByEducAssist(string newStudentId, string newStudentName)
+        public static Student_offeredCourses.Data[] GetStudentOfferedCoursesData(Student student, int term)
         {
-            throw new NotImplementedException();
+            return termCourseStudentTable.Select(x => x).Where(x => x.Student.Id == student.Id && x.TermCourse.Term.TermNum == term)
+            .Select(x => new Student_offeredCourses.Data()
+            {
+                ID = x.TermCourse.Id,
+                ECT = x.TermCourse.Course.ECT,
+                Name = x.TermCourse.Course.Name,
+                Professor = x.TermCourse.Teacher.LastName,
+                Status = x.Status,
+                Time = x.TermCourse.Time,
+                Mark = x.Mark
+            }).ToArray();
+        }
+
+        public static int getLastTerm(Student student)
+        {
+            return termCourseStudentTable.Select(x => x).Where(x => x.Student.Id == student.Id).Select(x => x.TermCourse.Term.TermNum).Max();
         }
 
         internal static Professor_exception_list.Data[] GetExceptionListData(Teacher teacher)
@@ -55,9 +84,9 @@ namespace AP_PROJECT
         {
             WeekSchedule.Data[] datas = new WeekSchedule.Data[4];
             for (int i = 0; i < 4; i++)
-                datas[i] = new WeekSchedule.Data() { Day="day_"+i};
+                datas[i] = new WeekSchedule.Data() { Day = "day_" + i };
             int lastTermNum = termCourseStudentTable.Select(x => x).Where(x => x.Student.Id == student.Id).Select(x => x.TermCourse.Term.TermNum).Max();
-            var result = termCourseStudentTable.Select(x => x).Where(x => x.Student.Id == student.Id && x.TermCourse.Term.TermNum == lastTermNum).Select(x=>x.TermCourse);
+            var result = termCourseStudentTable.Select(x => x).Where(x => x.Student.Id == student.Id && x.TermCourse.Term.TermNum == lastTermNum).Select(x => x.TermCourse);
             foreach (var course in result)
             {
                 switch (course.Time)
@@ -109,11 +138,15 @@ namespace AP_PROJECT
             var objectionList = termCourseStudentTable.Select(x => x).Where(x => x.ObjectionToMark != "null" && x.AnswerToObjection == "null" && x.TermCourse.Teacher.Id == teacher.Id).ToArray();
             foreach (var objection in objectionList)
             {
-                datas.Add(new Professor_listof_objections.Data() { 
-                 course_id = "" + objection.TermCourse.Course.Id
-                 , course_name = "" + objection.TermCourse.Course.Name
-                 , student_id = "" + objection.Student.Id
-                 , student_name = "" + objection.Student.FirstName + " " +objection.Student.LastName
+                datas.Add(new Professor_listof_objections.Data()
+                {
+                    course_id = "" + objection.TermCourse.Course.Id
+                 ,
+                    course_name = "" + objection.TermCourse.Course.Name
+                 ,
+                    student_id = "" + objection.Student.Id
+                 ,
+                    student_name = "" + objection.Student.FirstName + " " + objection.Student.LastName
                 });
             }
             return datas.ToArray();
@@ -155,18 +188,20 @@ namespace AP_PROJECT
 
         public static Course GetCourse(int course_id)
         {
-            var result=termCourseTable.Select(x => x.Course).Where(x => x.Id == course_id).ToArray();
+            var result = termCourseTable.Select(x => x.Course).Where(x => x.Id == course_id).ToArray();
             if (result.Length == 0)
                 return null;
             return result[0];
         }
 
-        public static bool SetMark(int course_id, int student_id, Teacher teacher, int mark)
+        public static bool SetMark(int course_id, int student_id, Teacher teacher, double mark)
         {
             try
             {
-                termCourseStudentTable.Select(x => x).Where(x => x.Student.Id == student_id && x.TermCourse.Teacher.Id == teacher.Id && x.TermCourse.Course.Id == course_id)
-                .ToArray()[0].Mark = mark;
+                var item = termCourseStudentTable.Select(x => x).Where(x => x.Student.Id == student_id && x.TermCourse.Teacher.Id == teacher.Id && x.TermCourse.Course.Id == course_id)
+                .ToArray()[0];
+                item.Mark = mark;
+                item.Status = mark > 10 ? "passed" : "failed";
                 saveData(termCourseStudentTable);
             }
             catch (Exception e)
@@ -188,12 +223,12 @@ namespace AP_PROJECT
                     ,
                     Total_Units = (int)term.Item2
                     ,
-                    Status = term.Item3>12?"passed":"failed"
+                    Status = term.Item3 > 12 ? "passed" : "failed"
                 });
             }
             return datas.ToArray();
         }
-        
+
 
         public static Course_students.Data[] GetStudentsMark(int cours_id, Teacher teacher)
         {
@@ -207,27 +242,64 @@ namespace AP_PROJECT
                 }).ToArray();
         }
 
-        public static bool EditPassword(Person user , string newPassword, string oldPassword, string confirm, Person person)
+        public static bool EditPassword(Person user, string newPassword, string oldPassword, string confirm, Person person)
         {
             if (!AccessTo(person, user, "EditPassword"))
-                return false;        
+                return false;
             if (newPassword != confirm || user.Password != oldPassword)
                 return false;
-            user.Password = newPassword;
+            try
+            {
+                if (user is Teacher)
+                {
+                    TeacherTable.Select(x => x).Where(x => x.Id == user.Id && x.Password == oldPassword).ToArray()[0].Password = newPassword;
+                    saveData(TeacherTable);
+                }
+                if (user is Student)
+                {
+                    StudentTable.Select(x => x).Where(x => x.Id == user.Id && x.Password == oldPassword).ToArray()[0].Password = newPassword;
+                    saveData(StudentTable);
+                }
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
             return true;
         }
 
+        private static void saveData(List<Student> studentTable)
+        {
+            StreamWriter file = new StreamWriter("student.txt");
+            foreach (var item in studentTable)
+            {
+                file.WriteLine("{0}\t{1}\t{2}\t{3}",
+                    item.Id, item.FirstName, item.LastName, item.Password);
+            }
+            file.Close();
+        }
+
+        private static void saveData(List<Teacher> teacherTable)
+        {
+            StreamWriter file = new StreamWriter("teacher.txt");
+            foreach (var item in teacherTable)
+            {
+                file.WriteLine("{0}\t{1}\t{2}\t{3}",
+                    item.Id, item.FirstName, item.LastName, item.Password);
+            }
+            file.Close();
+        }
 
         public static Person Login(string userName, string passWord)
         {
             int Id = -1;
-            int.TryParse(userName,out Id);
+            int.TryParse(userName, out Id);
             var temp1 = StudentTable.Select(x => x).Where(x => x.Id == Id && x.Password == passWord);// checking if the username is a student
-            if(temp1.Count()>0)
+            if (temp1.Count() > 0)
             {
                 return temp1.ToList()[0];
             }
-            
+
             var temp2 = TeacherTable.Select(x => x).Where(x => x.Id == Id && x.Password == passWord);
             if (temp2.Count() > 0)
             {
@@ -236,16 +308,16 @@ namespace AP_PROJECT
             return null;
         }
 
-        public static List<Tuple<Term,double,double>> GetTermAvgGrade(Student student)
+        public static List<Tuple<Term, double, double>> GetTermAvgGrade(Student student)
         {
-            var TermList = termCourseStudentTable.Select(x => x).Where(x => x.Student == student && x.Status == "passed").Select(x => x.TermCourse.Term).OrderBy(x=>x.TermNum).Distinct();
-            List<Tuple<Term, double,double>> result = new List<Tuple<Term, double,double>>();
+            var TermList = termCourseStudentTable.Select(x => x).Where(x => x.Student == student && x.Status == "passed").Select(x => x.TermCourse.Term).OrderBy(x => x.TermNum).Distinct();
+            List<Tuple<Term, double, double>> result = new List<Tuple<Term, double, double>>();
             foreach (var term in TermList)
             {
                 var CoursesInTermList = termCourseStudentTable.Select(x => x).Where(x => x.Student == student && x.TermCourse.Term.TermNum == term.TermNum);
-                var Sum = CoursesInTermList.Select(x=>x.Mark*x.TermCourse.Course.ECT).Sum();
+                var Sum = CoursesInTermList.Select(x => x.Mark * x.TermCourse.Course.ECT).Sum();
                 var Count = CoursesInTermList.Select(x => x.TermCourse.Course.ECT).Sum();
-                result.Add(new Tuple<Term, double,double>(term, Count, Sum/Count));
+                result.Add(new Tuple<Term, double, double>(term, Count, Sum / Count));
             }
             return result;
         }
@@ -277,10 +349,10 @@ namespace AP_PROJECT
             string line = "";
 
             StreamReader studentFile = new StreamReader("student.txt");
-            while((line = studentFile.ReadLine()) != null)
+            while ((line = studentFile.ReadLine()) != null)
             {
                 var items = line.Split('\t');
-                StudentTable.Add(new Student(){Id=int.Parse(items[0]), FirstName = items[1], LastName = items[2], Password = items[3]});
+                StudentTable.Add(new Student() { Id = int.Parse(items[0]), FirstName = items[1], LastName = items[2], Password = items[3] });
             }
             studentFile.Close();
 
@@ -288,7 +360,7 @@ namespace AP_PROJECT
             while ((line = teacherFile.ReadLine()) != null)
             {
                 var items = line.Split('\t');
-                TeacherTable.Add(new Teacher(){Id =int.Parse(items[0]),FirstName = items[1],LastName = items[3],Password = items[3]});
+                TeacherTable.Add(new Teacher() { Id = int.Parse(items[0]), FirstName = items[1], LastName = items[3], Password = items[3] });
             }
             teacherFile.Close();
 
@@ -296,7 +368,7 @@ namespace AP_PROJECT
             while ((line = courseFile.ReadLine()) != null)
             {
                 var items = line.Split('\t');
-                CourseTable.Add(new Course(){Id =int.Parse(items[0]),ECT = int.Parse(items[1]), Name = items[2],type = items[3]});
+                CourseTable.Add(new Course() { Id = int.Parse(items[0]), ECT = int.Parse(items[1]), Name = items[2], type = items[3] });
             }
             courseFile.Close();
 
@@ -304,10 +376,12 @@ namespace AP_PROJECT
             while ((line = termFile.ReadLine()) != null)
             {
                 var items = line.Split('\t');
-                TermTable.Add(new Term() { 
+                TermTable.Add(new Term()
+                {
                     TermNum = int.Parse(items[0])
-                    ,TermName = items[1]
-                    });
+                    ,
+                    TermName = items[1]
+                });
             }
             termFile.Close();
 
@@ -318,8 +392,10 @@ namespace AP_PROJECT
                 preQuisiteTable.Add(new PreQuisite()
                 {
                     Course1 = (CourseTable.Select(x => x).Where(x => x.Id == int.Parse(items[0])).ToArray())[0]
-                    ,Course2 = (CourseTable.Select(x => x).Where(x => x.Id == int.Parse(items[1])).ToArray())[0]
-                    ,Status = items[2]
+                    ,
+                    Course2 = (CourseTable.Select(x => x).Where(x => x.Id == int.Parse(items[1])).ToArray())[0]
+                    ,
+                    Status = items[2]
                 });
             }
             prereQuisiteFile.Close();
@@ -348,7 +424,7 @@ namespace AP_PROJECT
                 var items = line.Split('\t');
                 termCourseStudentTable.Add(new TermCourseStudent()
                 {
-                    Mark = int.Parse(items[0])
+                    Mark = double.Parse(items[0])
                     ,
                     ObjectionToMark = items[1]
                     ,
@@ -359,22 +435,22 @@ namespace AP_PROJECT
                     Student = (StudentTable.Select(x => x).Where(x => x.Id == int.Parse(items[4])).ToArray())[0]
                     ,
                     Status = items[5]
-                }) ;
+                });
             }
             termCourseStudentFile.Close();
         }
         private static void saveData(List<TermCourseStudent> termCourseStudentTable)
         {
             StreamWriter termCourseStudentFile = new StreamWriter("termcoursestudent.txt");
-            foreach(var item in termCourseStudentTable)
+            foreach (var item in termCourseStudentTable)
             {
                 termCourseStudentFile.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}",
-                    item.Mark,item.ObjectionToMark,item.AnswerToObjection,item.TermCourse.Id,item.Student.Id,item.Status
+                    item.Mark, item.ObjectionToMark, item.AnswerToObjection, item.TermCourse.Id, item.Student.Id, item.Status
                     );
             }
             termCourseStudentFile.Close();
         }
     }
-   
+
 }
 

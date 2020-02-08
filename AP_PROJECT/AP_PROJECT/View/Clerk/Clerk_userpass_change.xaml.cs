@@ -1,5 +1,4 @@
-﻿using AP_PROJECT.Class;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,20 +18,9 @@ namespace AP_PROJECT.View
     /// </summary>
     public partial class Clerk_userpass_change : Window
     {
-        private Clerk clerk;
-        public Clerk_userpass_change(Class.Clerk clerk)
+        public Clerk_userpass_change()
         {
             InitializeComponent();
-            this.clerk = clerk;
-        }
-
-        private void apply_button_change_Click(object sender, RoutedEventArgs e)
-        {
-
-            if (Module.EditPassword(this.clerk, clerk_newpasstxt.Text, clerk_oldpasstxt.Text, clerk_confirmtxt.Text, this.clerk))
-                isPassChanged.Content = "Pass Changed";
-            else
-                isPassChanged.Content = "Pass is not Changed!";
         }
     }
 }

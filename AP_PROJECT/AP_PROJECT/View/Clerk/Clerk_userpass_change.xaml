@@ -7,14 +7,16 @@
         mc:Ignorable="d"
         Title="Clerk_userpass_change" Height="300" Width="300">
     <Grid>
-        <Label x:Name="clerk_oldpass_label" Content="Old password" HorizontalAlignment="Left" Margin="16,15,0,0" VerticalAlignment="Top" Width="94"/>
-        <Label x:Name="clerk_newpass_label" Content="New password" HorizontalAlignment="Left" Margin="16,46,0,0" VerticalAlignment="Top" Width="94"/>
-        <Label x:Name="clerk_confirm_label" Content="Confirmation" HorizontalAlignment="Left" Margin="16,84,0,0" VerticalAlignment="Top" Width="94"/>
-        <TextBox x:Name="clerk_oldpasstxt" HorizontalAlignment="Left" Height="26" Margin="116,15,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
-        <TextBox x:Name="clerk_newpasstxt" HorizontalAlignment="Left" Height="26" Margin="116,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
-        <TextBox x:Name="clerk_confirmtxt" HorizontalAlignment="Left" Height="30" Margin="115,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
-        <Button x:Name="apply_button_change" Content="Apply" HorizontalAlignment="Left" Margin="116,132,0,0" VerticalAlignment="Top" Width="75" Click="apply_button_change_Click"/>
-        <Label x:Name="isPassChanged" HorizontalAlignment="Left" Margin="116,169,0,0" VerticalAlignment="Top" Width="98" Height="30"/>
+        <Label x:Name="clerk_olduser_label" Content="Old username" HorizontalAlignment="Left" Margin="21,42,0,0" VerticalAlignment="Top" Width="94"/>
+        <Label x:Name="clerk_newuser_label" Content="New username" HorizontalAlignment="Left" Margin="21,73,0,0" VerticalAlignment="Top" Width="94"/>
+        <Label x:Name="clerk_oldpass_label" Content="Old password" HorizontalAlignment="Left" Margin="21,124,0,0" VerticalAlignment="Top" Width="94"/>
+        <Label x:Name="clerk_newpass_label" Content="New password" HorizontalAlignment="Left" Margin="21,150,0,0" VerticalAlignment="Top" Width="94"/>
+        <Label x:Name="clerk_confirm_label" Content="Confirmation" HorizontalAlignment="Left" Margin="21,181,0,0" VerticalAlignment="Top" Width="94"/>
+        <TextBox x:Name="clerk_oldusertxt" HorizontalAlignment="Left" Height="26" Margin="120,42,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="clerk_newusertxt" HorizontalAlignment="Left" Height="26" Margin="120,73,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="clerk_oldpasstxt" HorizontalAlignment="Left" Height="26" Margin="120,124,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="clerk_newpasstxt" HorizontalAlignment="Left" Height="26" Margin="120,150,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="clerk_confirmtxt" HorizontalAlignment="Left" Height="30" Margin="120,176,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>
