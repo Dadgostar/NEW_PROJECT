@@ -45,8 +45,9 @@ namespace AP_PROJECT.View
 
         private void RegClicked(object sender, RoutedEventArgs e)
         {
-            //Student_offeredCourses student_OfferedCourses = new Student_offeredCourses();
-            //student_OfferedCourses.Show();          
+            int term = Module.getLastTerm(this.student);
+            Student_offeredCourses student_OfferedCourses = new Student_offeredCourses(term,student);
+            student_OfferedCourses.Show();          
         }
 
         private void WeeklyScheduleClicked(object sender, RoutedEventArgs e)
@@ -76,7 +77,7 @@ namespace AP_PROJECT.View
         private void PaymentClicked(object sender, RoutedEventArgs e)
         {
             double payment = Module.GetPayment(this.student);
-                
+            PaymentLable.Text = "" + payment;
         }
 
         private void PersonalInfoClicked(object sender, DependencyPropertyChangedEventArgs e)

@@ -45,7 +45,7 @@ namespace AP_PROJECT.View
 
         private void register_button_Click(object sender, RoutedEventArgs e)
         {
-            int mark = int.Parse(student_marktxt.Text);
+            double mark = double.Parse(student_marktxt.Text);
             bool b = Module.SetMark(course_id, student_id, teacher, mark);
 
             if (b)

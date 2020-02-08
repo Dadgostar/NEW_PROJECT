@@ -7,14 +7,15 @@
         mc:Ignorable="d"
         Title="Student_offeredCourses" Height="300" Width="300">
     <Grid>
-        <DataGrid Name ="OfferedCourses" HorizontalAlignment="Left" Height="217" Margin="10,10,0,0" VerticalAlignment="Top" Width="274">
+        <DataGrid Name ="OfferedCourses" HorizontalAlignment="Left" Height="217" Margin="10,10,0,0" VerticalAlignment="Top" ItemsSource="{Binding}" Width="274" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridCheckBoxColumn Binding="{Binding Name}"  Header="Name" IsReadOnly="True"/>
-                <DataGridCheckBoxColumn Binding="{Binding ID}"  Header="ID" IsReadOnly="True"/>
-                <DataGridCheckBoxColumn Binding="{Binding Units}"  Header="Units" IsReadOnly="True"/>
-                <DataGridCheckBoxColumn Binding="{Binding Professor}"  Header="Prof" IsReadOnly="True"/>
-                <DataGridCheckBoxColumn Binding="{Binding Time}"  Header="Time" IsReadOnly="True"/>
-                <DataGridCheckBoxColumn Binding="{Binding M_or_O}"  Header="M/G" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Name}"  Header="Name" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding ID}"  Header="ID" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding ECT}"  Header="Units" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Professor}"  Header="Prof" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Time}"  Header="Time" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Status}"  Header="Status" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding Mark}"  Header="Mark" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
 

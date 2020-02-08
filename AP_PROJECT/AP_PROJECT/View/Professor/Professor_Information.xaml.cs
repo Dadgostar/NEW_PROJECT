@@ -25,6 +25,12 @@ namespace AP_PROJECT.View
         {
             InitializeComponent();
             this.teacher = teacher;
+            update();
+        }
+
+        public void update()
+        {
+            this.teacher = Module.getTeacher(teacher.Id);
             prof_usertext_label.Content = teacher.Id;
             prof_passtext_label.Content = teacher.Password;
             prof_nametext_label.Content = teacher.FirstName;
@@ -33,10 +39,9 @@ namespace AP_PROJECT.View
             //prof_studfieldtext_label.Content = teacher.
             //prof_grade_label.Content = teacher.
         }
-
         private void prof_userpass_change_button_Click(object sender, RoutedEventArgs e)
         {
-            Professor_change_userpass change_userpass = new Professor_change_userpass(this.teacher);
+            Professor_change_userpass change_userpass = new Professor_change_userpass(this,this.teacher);
             change_userpass.Show();
             //this.Close();
         }

@@ -7,11 +7,9 @@
         mc:Ignorable="d"
         Title="User_pass_change" Height="300" Width="300">
     <Grid>
-        <Label x:Name="olduserlabel" Content="username" HorizontalAlignment="Left" Margin="21,42,0,0" VerticalAlignment="Top" Width="94"/>
         <Label x:Name="oldpasslabel" Content="Old password" HorizontalAlignment="Left" Margin="21,124,0,0" VerticalAlignment="Top" Width="94"/>
         <Label x:Name="newpasslabel" Content="New password" HorizontalAlignment="Left" Margin="21,150,0,0" VerticalAlignment="Top" Width="94"/>
         <Label x:Name="confirmlabel" Content="Confirmation" HorizontalAlignment="Left" Margin="21,181,0,0" VerticalAlignment="Top" Width="94"/>
-        <TextBox x:Name="olduser_txt" HorizontalAlignment="Left" Height="26" Margin="120,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="oldpass_txt" HorizontalAlignment="Left" Height="26" Margin="120,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="newpass_txt" HorizontalAlignment="Left" Height="26" Margin="120,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="confirm_txt" HorizontalAlignment="Left" Height="30" Margin="120,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>

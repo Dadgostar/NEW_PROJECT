@@ -18,7 +18,6 @@ namespace AP_PROJECT.View.Student
     /// </summary>
     public partial class Student_offeredCourses : Window
     {
-        Data[] datas;
         Class.Term term = new Class.Term();
         Class.Student student ;
         public Student_offeredCourses(int term, Class.Student student)
@@ -26,7 +25,7 @@ namespace AP_PROJECT.View.Student
             InitializeComponent();
             this.student = student;
             this.term.TermNum = term;
-            OfferedCourses.DataContext = Module.GetStudentOfferedCoursesData(student, term);
+            OfferedCourses.DataContext = (Data[])Module.GetStudentOfferedCoursesData(student, term);
 
         }
         public class Data
@@ -37,7 +36,7 @@ namespace AP_PROJECT.View.Student
             public String Professor { set; get; }
             public int Time { set; get; }
             public String Status { set; get; }
-
+            public double Mark { set; get; }
         }
     }
 }
