@@ -11,6 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using AP_PROJECT.View.Clerk;
+using System.ComponentModel;
+using System.Diagnostics;
 
 namespace AP_PROJECT.View
 {
@@ -23,10 +26,31 @@ namespace AP_PROJECT.View
         {
             InitializeComponent();
         }
-        
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            BackgroundWorker BW = new BackgroundWorker();
+            BW.DoWork += new DoWorkEventHandler(dowork);
+            BW.RunWorkerCompleted += new RunWorkerCompletedEventHandler(completeEvent);
+            BW.RunWorkerAsync();
+
+//            for (int i = 0; i < 100; i++)
+//               Module.loadData();
+//            MessageBox.Show("completed22");
+        }
+
+        private void completeEvent(object sender, RunWorkerCompletedEventArgs e)
+        {
+            Trace.WriteLine("ssssssss");
+            MessageBox.Show("completed");
+        }
+
+        private void dowork(object sender, DoWorkEventArgs e)
+        {
+            Module.loadData();   
+            for(int i=0; i<1000; i++)
             Module.loadData();
+ 
         }
 
         private void LoginBtnClicked(object sender, RoutedEventArgs e)
@@ -48,6 +72,13 @@ namespace AP_PROJECT.View
                 window.Show();
                 this.Close();
             }
+            if (person is AP_PROJECT.Class.Clerk)
+            {
+                Clerk_main_page window = new Clerk_main_page((AP_PROJECT.Class.Clerk)person);
+                window.Show();
+                this.Close();
+            }
+
         }
     }
 }

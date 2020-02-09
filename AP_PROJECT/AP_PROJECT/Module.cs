@@ -6,9 +6,11 @@ using System.Linq;
 using AP_PROJECT.View;
 using AP_PROJECT.View.Professor;
 using AP_PROJECT.View.Student;
-
+using PlainCrypto.Abstract;
+using PlainCrypto;
 namespace AP_PROJECT
 {
+ 
     public class Module
     {
         public static List<Student> StudentTable = new List<Student>();
@@ -17,14 +19,20 @@ namespace AP_PROJECT
         public static List<TermCourse> termCourseTable = new List<TermCourse>();
         public static List<TermCourseStudent> termCourseStudentTable = new List<TermCourseStudent>();
         public static List<PreQuisite> preQuisiteTable = new List<PreQuisite>();
-        public static List<Clerk> CrelkTable = new List<Clerk>();
+        public static List<Clerk> ClerkTable = new List<Clerk>();
+        public static List<Term> TermTable = new List<Term>(); 
+        static byte[] key = { 158, 23, 64, 96, 57, 225, 36, 85 };
+        static byte[] Iv = { 63, 208, 159, 46, 37, 77, 1, 59 };
+        
+        
 
+        // crypto.SetIV(Iv);
         internal static Clerk_student_list.Data[] GetStudentsDataForClerk(Clerk clerk)
         {
             throw new NotImplementedException();
         }
 
-        public static List<Term> TermTable = new List<Term>();
+       
 
         public static bool addStudent(string firstName, string lastName, string password)
         {
@@ -344,28 +352,6 @@ namespace AP_PROJECT
             return true;
         }
 
-        private static void saveData(List<Student> studentTable)
-        {
-            StreamWriter file = new StreamWriter("student.txt");
-            foreach (var item in studentTable)
-            {
-                file.WriteLine("{0}\t{1}\t{2}\t{3}",
-                    item.Id, item.FirstName, item.LastName, item.Password);
-            }
-            file.Close();
-        }
-
-        private static void saveData(List<Teacher> teacherTable)
-        {
-            StreamWriter file = new StreamWriter("teacher.txt");
-            foreach (var item in teacherTable)
-            {
-                file.WriteLine("{0}\t{1}\t{2}\t{3}",
-                    item.Id, item.FirstName, item.LastName, item.Password);
-            }
-            file.Close();
-        }
-
         public static Person Login(string userName, string passWord)
         {
             int Id = -1;
@@ -375,11 +361,15 @@ namespace AP_PROJECT
             {
                 return temp1.ToList()[0];
             }
-
             var temp2 = TeacherTable.Select(x => x).Where(x => x.Id == Id && x.Password == passWord);
             if (temp2.Count() > 0)
             {
                 return temp2.ToList()[0];
+            }
+           var temp3 = ClerkTable.Select(x => x).Where(x => x.Id == Id && x.Password == passWord);
+            if (temp3.Count() > 0)
+            {
+                return temp3.ToList()[0];
             }
             return null;
         }
@@ -425,32 +415,40 @@ namespace AP_PROJECT
             string line = "";
 
             StreamReader studentFile = new StreamReader("student.txt");
+            CryptoSymmetric crypto = new CryptoDES(new byte[] { 158, 23, 64, 96, 57, 225, 36, 85 });
             while ((line = studentFile.ReadLine()) != null)
             {
+                line = crypto.Decrypt(line);
                 var items = line.Split('\t');
                 StudentTable.Add(new Student() { Id = int.Parse(items[0]), FirstName = items[1], LastName = items[2], Password = items[3] });
             }
             studentFile.Close();
 
             StreamReader teacherFile = new StreamReader("teacher.txt");
+            crypto = new CryptoDES(new byte[] { 158, 23, 64, 96, 57, 225, 36, 85 }); 
             while ((line = teacherFile.ReadLine()) != null)
             {
+                line = crypto.Decrypt(line);
                 var items = line.Split('\t');
                 TeacherTable.Add(new Teacher() { Id = int.Parse(items[0]), FirstName = items[1], LastName = items[3], Password = items[3] });
             }
             teacherFile.Close();
 
             StreamReader courseFile = new StreamReader("course.txt");
+            crypto = new CryptoDES(new byte[] { 158, 23, 64, 96, 57, 225, 36, 85 }); 
             while ((line = courseFile.ReadLine()) != null)
             {
+                line = crypto.Decrypt(line);
                 var items = line.Split('\t');
                 CourseTable.Add(new Course() { Id = int.Parse(items[0]), ECT = int.Parse(items[1]), Name = items[2], type = items[3] });
             }
             courseFile.Close();
 
             StreamReader termFile = new StreamReader("term.txt");
+            crypto = new CryptoDES(new byte[] { 158, 23, 64, 96, 57, 225, 36, 85 });
             while ((line = termFile.ReadLine()) != null)
             {
+                line = crypto.Decrypt(line);
                 var items = line.Split('\t');
                 TermTable.Add(new Term()
                 {
@@ -462,8 +460,10 @@ namespace AP_PROJECT
             termFile.Close();
 
             StreamReader prereQuisiteFile = new StreamReader("prerequisite.txt");
+            crypto = new CryptoDES(new byte[] { 158, 23, 64, 96, 57, 225, 36, 85 });
             while ((line = prereQuisiteFile.ReadLine()) != null)
             {
+                line = crypto.Decrypt(line);
                 var items = line.Split('\t');
                 preQuisiteTable.Add(new PreQuisite()
                 {
@@ -477,8 +477,10 @@ namespace AP_PROJECT
             prereQuisiteFile.Close();
 
             StreamReader termCourseFile = new StreamReader("termcourse.txt");
+            crypto = new CryptoDES(new byte[] { 158, 23, 64, 96, 57, 225, 36, 85 });
             while ((line = termCourseFile.ReadLine()) != null)
             {
+                line = crypto.Decrypt(line);
                 var items = line.Split('\t');
                 termCourseTable.Add(new TermCourse()
                 {
@@ -495,8 +497,10 @@ namespace AP_PROJECT
             termCourseFile.Close();
 
             StreamReader termCourseStudentFile = new StreamReader("termcoursestudent.txt");
+            crypto = new CryptoDES(new byte[] { 158, 23, 64, 96, 57, 225, 36, 85 });
             while ((line = termCourseStudentFile.ReadLine()) != null)
             {
+                line = crypto.Decrypt(line);
                 var items = line.Split('\t');
                 termCourseStudentTable.Add(new TermCourseStudent()
                 {
@@ -515,28 +519,110 @@ namespace AP_PROJECT
             }
             termCourseStudentFile.Close();
         }
-            private static void saveData(List<TermCourse> termCourseTable)
+        public static void saveData(List<Student> studentTable)
+        {
+            StreamWriter file = new StreamWriter("student.txt");
+            CryptoSymmetric crypto = new CryptoDES(new byte[] { 158, 23, 64, 96, 57, 225, 36, 85 });
+            foreach (var item in studentTable)
+            {
+                var tempString = item.Id.ToString() + "\t" + item.FirstName.ToString() + "\t" + item.LastName.ToString() + "\t" + item.Password.ToString();
+                file.WriteLine(crypto.Encrypt(tempString));
+            }
+            file.Close();
+        }
+        
+        public static void saveData(List<Teacher> teacherTable)
+        {
+            StreamWriter file = new StreamWriter("teacher.txt");
+            CryptoSymmetric crypto = new CryptoDES(new byte[] { 158, 23, 64, 96, 57, 225, 36, 85 });
+            foreach (var item in teacherTable)
+            {
+                var tempString = item.Id.ToString() + "\t" + item.FirstName.ToString() + "\t" + item.LastName.ToString() + "\t" + item.Password.ToString();
+                file.WriteLine(crypto.Encrypt(tempString));
+            }
+            file.Close();
+        }
+
+        public static void saveData(List<TermCourse> termCourseTable)
             {
                 StreamWriter file = new StreamWriter("termcourse.txt");
+                CryptoSymmetric crypto = new CryptoDES(new byte[] { 158, 23, 64, 96, 57, 225, 36, 85 });
                 foreach (var item in termCourseTable)
                 {
-                    file.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}",
-                        item.Id, item.Course.Id, item.Term.TermNum, item.Teacher.Id, item.Place, item.Capacity);
+                    var tempString = item.Id.ToString()+"\t"+item.Course.Id.ToString()+"\t"+item.Term.TermNum.ToString()+ "\t"+item.Teacher.Id.ToString()+"\t"+item.Time+"\t"+ item.Place+"\t"+ item.Capacity;
+                    file.WriteLine(crypto.Encrypt(tempString));
                 }
                 file.Close();
             }
 
-            private static void saveData(List<TermCourseStudent> termCourseStudentTable)
-        {
-            StreamWriter termCourseStudentFile = new StreamWriter("termcoursestudent.txt");
-            foreach (var item in termCourseStudentTable)
+            public static void saveData(List<TermCourseStudent> termCourseStudentTable)
             {
-                termCourseStudentFile.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}",
-                    item.Mark, item.ObjectionToMark, item.AnswerToObjection, item.TermCourse.Id, item.Student.Id, item.Status
-                    );
+                StreamWriter termCourseStudentFile = new StreamWriter("termcoursestudent.txt");
+                CryptoSymmetric crypto = new CryptoDES(new byte[]{ 158, 23, 64, 96, 57, 225, 36, 85 });
+                foreach (var item in termCourseStudentTable)
+                {
+                    var tempString = item.Mark.ToString()+"\t"+item.AnswerToObjection.ToString()+"\t"+item.ObjectionToMark.ToString() + "\t" + item.TermCourse.Id.ToString() + "\t" + item.Student.Id.ToString() + "\t" + item.Status.ToString();
+                    termCourseStudentFile.WriteLine(crypto.Encrypt(tempString));
+                }
+                termCourseStudentFile.Close();
             }
-            termCourseStudentFile.Close();
+        public static void saveData(List<Course> CourseTable)
+        {
+            StreamWriter CourseFile = new StreamWriter("course.txt");
+            CryptoSymmetric crypto = new CryptoDES(new byte[] { 158, 23, 64, 96, 57, 225, 36, 85 });
+            foreach (var item in CourseTable)
+            {
+                var tempString = String.Format("{0}\t{1}\t{2}\t{3}", item.Id, item.ECT, item.Name, item.type);
+                CourseFile.WriteLine(crypto.Encrypt(tempString));
+            }
+            CourseFile.Close();
         }
+            public static void saveData(List<Clerk> ClerkTable)
+            {
+                StreamWriter ClerkFile = new StreamWriter("clerk.txt");
+                CryptoSymmetric crypto = new CryptoDES(new byte[] { 158, 23, 64, 96, 57, 225, 36, 85 });
+                foreach (var item in ClerkTable)
+                {
+                    var tempString = item.Id.ToString() + "\t" + item.FirstName.ToString() + "\t" + item.LastName.ToString() + "\t" + item.Password.ToString();
+                    ClerkFile.WriteLine(crypto.Encrypt(tempString));
+                }
+                ClerkFile.Close();
+            }
+        public static void saveData(List<PreQuisite> Table)
+        {
+            StreamWriter PreqFile = new StreamWriter("prerequisite.txt");
+            CryptoSymmetric crypto = new CryptoDES(new byte[] { 158, 23, 64, 96, 57, 225, 36, 85 });
+            foreach (var item in Table)
+            {
+                var tempString = item.Course1.Id.ToString() + "\t" + item.Course2.Id.ToString() + "\t" +item.Status.ToString();
+                PreqFile.WriteLine(crypto.Encrypt(tempString));
+            }
+            PreqFile.Close();
+        }
+        public static void saveData(List<Term> termTable)
+        {
+            StreamWriter termFile = new StreamWriter("term.txt");
+            CryptoSymmetric crypto = new CryptoDES(new byte[] { 158, 23, 64, 96, 57, 225, 36, 85 });
+            foreach (var item in termTable)
+            {
+                var tempString = item.TermNum.ToString() + "\t" + item.TermName.ToString() ;
+                termFile.WriteLine(crypto.Encrypt(tempString));
+            }
+            termFile.Close();
+        }
+        public static void saveData()
+        {
+            saveData(StudentTable);
+            saveData(TeacherTable);
+            saveData(CourseTable);
+            saveData(termCourseTable);
+            saveData(termCourseStudentTable);
+            saveData(preQuisiteTable);
+            saveData(ClerkTable);
+            saveData(TermTable);
+        }
+
+
     }
 
 }

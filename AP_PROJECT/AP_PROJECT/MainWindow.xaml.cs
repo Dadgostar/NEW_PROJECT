@@ -1,7 +1,10 @@
 ﻿using AP_PROJECT.Class;
 using AP_PROJECT.View;
+using PlainCrypto;
+using PlainCrypto.Abstract;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Windows;
