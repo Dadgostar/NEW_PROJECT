@@ -13,18 +13,24 @@
                 <GradientStop Color="#FF9FF1F6" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <DataGrid x:Name="list_of_objections" HorizontalAlignment="Left" Height="219" Margin="10,10,0,0" VerticalAlignment="Top" Width="274" ItemsSource="{Binding}" AutoGenerateColumns="False" Background="#FFFDFFCB" >
+        <DataGrid x:Name="list_of_objections" HorizontalAlignment="Left" Height="219" Margin="10,10,0,0" VerticalAlignment="Top" Width="274" ItemsSource="{Binding}" AutoGenerateColumns="False" >
             <DataGrid.Resources>
                 <Style TargetType="DataGridRow">
                     <EventSetter Event="MouseDoubleClick" Handler="DataGridRow_MouseDoubleClick"></EventSetter>
                 </Style>
             </DataGrid.Resources>
+            <DataGrid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF858458" Offset="0.983"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </DataGrid.Background>
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding student_name}" Header="Student Name" IsReadOnly="true"/>
                 <DataGridTextColumn Binding="{Binding student_id}" Header="Student ID" IsReadOnly="true"/>
                 <DataGridTextColumn Binding="{Binding course_name}" Header="Course Name" IsReadOnly="true"/>
                 <DataGridTextColumn Binding="{Binding course_id}" Header="Course ID" IsReadOnly="true"/>
-                
+
             </DataGrid.Columns>
         </DataGrid>
 
