@@ -43,5 +43,14 @@ namespace AP_PROJECT.View
             studentsData = Module.GetAddedStudentByEducAssist(newStudentId, newStudentName);
             this.students_list.DataContext = studentsData;
         }
+        private void DataGridRow_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            DataGridRow row = sender as DataGridRow;
+            var student = Module.GetStudent(int.Parse((row.Item as Data).student_id));
+            Student.Student_offeredCourses page = new Student.Student_offeredCourses(Module.getLastTerm(student),student);
+            page.Show();
+        }
+
     }
+
 }
