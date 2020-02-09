@@ -6,17 +6,17 @@
         xmlns:local="clr-namespace:AP_PROJECT.View"
         mc:Ignorable="d"
         Title="Clerk_Information" Height="300" Width="300">
-    <Grid>
-        <Label x:Name="clerk_username_label" Content="Username" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="77" FontSize="10"/>
-        <Label x:Name="clerk_pass_label" Content="Password" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="77" FontSize="10"/>
-        <Label x:Name="clerk_name_label" Content="Name" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Width="77" FontSize="10"/>
-        <Label x:Name="clerk_family_label" Content="Family name" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Width="77" FontSize="10"/>
-        <Label x:Name="clerk_id_label" Content="ID" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Width="77" FontSize="10"/>
-        <Label x:Name="clerk_usertext_label" Content="Label" HorizontalAlignment="Left" Margin="87,10,0,0" VerticalAlignment="Top" Width="98"/>
-        <Label x:Name="clerk_passtext_label" Content="Label" HorizontalAlignment="Left" Margin="87,36,0,0" VerticalAlignment="Top" Width="98"/>
-        <Label x:Name="clerk_nametext_label" Content="Label" HorizontalAlignment="Left" Margin="87,62,0,0" VerticalAlignment="Top" Width="98"/>
-        <Label x:Name="clerk_familytext_label" Content="Label" HorizontalAlignment="Left" Margin="87,86,0,0" VerticalAlignment="Top" Width="98"/>
-        <Label x:Name="clerk_idtext_label" Content="Label" HorizontalAlignment="Left" Margin="87,112,0,0" VerticalAlignment="Top" Width="98"/>
-        <Button x:Name="clerk_userpass_change_button" Content="Change" HorizontalAlignment="Left" Margin="10,219,0,0" VerticalAlignment="Top" Width="75"/>
+    <Grid Background="#FFD7D7CB">
+        <Label x:Name="clerk_username_label" Content="Username" HorizontalAlignment="Left" Margin="8,20,0,0" VerticalAlignment="Top" Width="77" Height="26"/>
+        <Label x:Name="clerk_pass_label" Content="Password" HorizontalAlignment="Left" Margin="8,52,0,0" VerticalAlignment="Top" Width="77" Height="26"/>
+        <Label x:Name="clerk_name_label" Content="Name" HorizontalAlignment="Left" Margin="8,83,0,0" VerticalAlignment="Top" Width="77" Height="25"/>
+        <Label x:Name="clerk_family_label" Content="Family name" HorizontalAlignment="Left" Margin="5,114,0,0" VerticalAlignment="Top" Width="77" Height="26"/>
+        <Label x:Name="clerk_id_label" Content="ID" HorizontalAlignment="Left" Margin="10,152,0,0" VerticalAlignment="Top" Width="77" Height="26" FontSize="14"/>
+        <Label x:Name="clerk_usertext_label" Content="" HorizontalAlignment="Left" Margin="85,20,0,0" VerticalAlignment="Top" Width="103" Height="25" Background="White"/>
+        <Label x:Name="clerk_passtext_label" Content="" HorizontalAlignment="Left" Margin="85,52,0,0" VerticalAlignment="Top" Width="103" Height="26" Background="White"/>
+        <Label x:Name="clerk_nametext_label" Content="" HorizontalAlignment="Left" Margin="85,83,0,0" VerticalAlignment="Top" Width="103" Height="25" Background="White"/>
+        <Label x:Name="clerk_familytext_label" Content="" HorizontalAlignment="Left" Margin="85,114,0,0" VerticalAlignment="Top" Width="103" Height="26" Background="White"/>
+        <Label x:Name="clerk_idtext_label" Content="" HorizontalAlignment="Left" Margin="85,152,0,0" VerticalAlignment="Top" Width="103" Height="26" Background="White"/>
+        <Button x:Name="clerk_userpass_change_button" Content="Change" HorizontalAlignment="Left" Margin="85,192,0,0" VerticalAlignment="Top" Width="75" Height="27" FontSize="14" Background="#FF9BABE4"/>
     </Grid>
 </Window>

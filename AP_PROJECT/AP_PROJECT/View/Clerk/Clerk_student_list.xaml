@@ -7,7 +7,13 @@
         mc:Ignorable="d"
         Title="Clerk_student_list" Height="300" Width="300">
     <Grid>
-        <DataGrid x:Name="students_list" HorizontalAlignment="Left" Height="151" Margin="10,0,0,0" VerticalAlignment="Top" Width="274" ItemsSource="{Binding}" AutoGenerateColumns="False">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FF8EB6F9" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DataGrid x:Name="students_list" HorizontalAlignment="Left" Height="151" Margin="10,10,0,0" VerticalAlignment="Top" Width="274" ItemsSource="{Binding}" AutoGenerateColumns="False" Background="#FFFDFFCD">
             <DataGrid.Resources>
                 <Style TargetType="DataGridRow">
                     <EventSetter Event="MouseDoubleClick" Handler="DataGridRow_MouseDoubleClick"></EventSetter>
@@ -19,11 +25,11 @@
                 <DataGridTextColumn Binding="{Binding type}" Header="GPA" IsReadOnly="true"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="add_stu_button" Content="Add" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Width="75" Click="add_stu_button_Click"/>
-        <Label Content="Student ID" HorizontalAlignment="Left" Margin="149,157,0,0" VerticalAlignment="Top" Width="100"/>
-        <Label Content="Student Name" HorizontalAlignment="Left" Margin="10,157,0,0" VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="new_student_name" HorizontalAlignment="Left" Height="23" Margin="10,188,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
-        <TextBox x:Name="new_student_id" HorizontalAlignment="Left" Height="23" Margin="149,188,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
+        <Button x:Name="add_stu_button" Content="Add" HorizontalAlignment="Left" Margin="10,231,0,0" VerticalAlignment="Top" Width="75" Click="add_stu_button_Click"/>
+        <Label Content="Student ID" HorizontalAlignment="Left" Margin="149,172,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Student Name" HorizontalAlignment="Left" Margin="10,172,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="new_student_name" HorizontalAlignment="Left" Height="23" Margin="10,203,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
+        <TextBox x:Name="new_student_id" HorizontalAlignment="Left" Height="23" Margin="149,203,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
 
     </Grid>
 </Window>
