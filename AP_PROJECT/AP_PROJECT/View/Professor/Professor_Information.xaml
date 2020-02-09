@@ -4,24 +4,30 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AP_PROJECT.View"
-        mc:Ignorable="d"
+        mc:Ignorable="d" ResizeMode="NoResize"
         Title="Professor_Information" Height="300" Width="300">
-    <Grid Background="#FFE6FFB2">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF7C8B99" Offset="0.293"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Label x:Name="prof_username_label" Content="Username" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="77"/>
         <Label x:Name="prof_pass_label" Content="Password" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" Width="77"/>
         <Label x:Name="prof_name_label" Content="Name" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Width="77"/>
         <Label x:Name="prof_family_label" Content="Family name" HorizontalAlignment="Left" Margin="10,93,0,0" VerticalAlignment="Top" Width="77"/>
         <Label x:Name="prof_id_label" Content="ID" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top" Width="77"/>
         <Label x:Name="prof_stud_field_label" Content="Field of study" HorizontalAlignment="Left" Margin="10,154,0,0" VerticalAlignment="Top" Width="94"/>
-        <Label x:Name="prof_usertext_label" Content="" HorizontalAlignment="Left" Margin="109,0,0,0" VerticalAlignment="Top" Width="98" Background="#FFC0DDFC"/>
-        <Label x:Name="prof_passtext_label" Content="" HorizontalAlignment="Left" Margin="109,29,0,0" VerticalAlignment="Top" Width="98" Background="#FFC0E8FC"/>
-        <Label x:Name="prof_nametext_label" Content="" HorizontalAlignment="Left" Margin="109,60,0,0" VerticalAlignment="Top" Width="98" Background="#FFC0DBFC"/>
-        <Label x:Name="prof_familytext_label" Content="" HorizontalAlignment="Left" Margin="109,91,0,0" VerticalAlignment="Top" Width="98" Background="#FFC0EAFC"/>
-        <Label x:Name="prof_idtext_label" Content="" HorizontalAlignment="Left" Margin="109,122,0,0" VerticalAlignment="Top" Width="98" Background="#FFC0D8FC"/>
-        <Label x:Name="prof_studfieldtext_label" Content="" HorizontalAlignment="Left" Margin="109,153,0,0" VerticalAlignment="Top" Width="98" Background="#FFC0D0FC"/>
+        <Label x:Name="prof_usertext_label" Content="" HorizontalAlignment="Left" Margin="109,0,0,0" VerticalAlignment="Top" Width="98" Background="#FFCFFFE8"/>
+        <Label x:Name="prof_passtext_label" Content="" HorizontalAlignment="Left" Margin="109,29,0,0" VerticalAlignment="Top" Width="98" Background="#FFCFFFE8"/>
+        <Label x:Name="prof_nametext_label" Content="" HorizontalAlignment="Left" Margin="109,60,0,0" VerticalAlignment="Top" Width="98" Background="#FFCFFFE8"/>
+        <Label x:Name="prof_familytext_label" Content="" HorizontalAlignment="Left" Margin="109,91,0,0" VerticalAlignment="Top" Width="98" Background="#FFCFFFE8"/>
+        <Label x:Name="prof_idtext_label" Content="" HorizontalAlignment="Left" Margin="109,122,0,0" VerticalAlignment="Top" Width="98" Background="#FFCFFFE8"/>
+        <Label x:Name="prof_studfieldtext_label" Content="" HorizontalAlignment="Left" Margin="109,153,0,0" VerticalAlignment="Top" Width="98" Background="#FFCFFFE8"/>
         <Button x:Name="prof_userpass_change_button" Click="prof_userpass_change_button_Click" Content="Change" HorizontalAlignment="Left" Margin="10,219,0,0" VerticalAlignment="Top" Width="75" />
         <Label x:Name="prof_grade_label" Content="Grade" HorizontalAlignment="Left" Margin="10,185,0,0" VerticalAlignment="Top" Height="24" Width="75" />
-        <Label x:Name="prof_grade_labeltxt" Content="" HorizontalAlignment="Left" Margin="109,184,0,0" VerticalAlignment="Top" Width="98" Background="#FFC0DBFC"/>
+        <Label x:Name="prof_grade_labeltxt" Content="" HorizontalAlignment="Left" Margin="109,184,0,0" VerticalAlignment="Top" Width="98" Background="#FFCFFFE8"/>
     </Grid>
 </Window>
 

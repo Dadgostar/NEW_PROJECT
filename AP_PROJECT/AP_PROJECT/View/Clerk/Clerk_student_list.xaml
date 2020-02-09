@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AP_PROJECT.View"
-        mc:Ignorable="d"
+        mc:Ignorable="d" ResizeMode="NoResize"
         Title="Clerk_student_list" Height="300" Width="300">
     <Grid>
         <Grid.Background>
@@ -13,12 +13,21 @@
                 <GradientStop Color="#FF8EB6F9" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <DataGrid x:Name="students_list" HorizontalAlignment="Left" Height="151" Margin="10,10,0,0" VerticalAlignment="Top" Width="274" ItemsSource="{Binding}" AutoGenerateColumns="False" Background="#FFFDFFCD">
+        <DataGrid x:Name="students_list" HorizontalAlignment="Left" Height="151" Margin="10,10,0,0" VerticalAlignment="Top" Width="274" ItemsSource="{Binding}" AutoGenerateColumns="False">
             <DataGrid.Resources>
                 <Style TargetType="DataGridRow">
                     <EventSetter Event="MouseDoubleClick" Handler="DataGridRow_MouseDoubleClick"></EventSetter>
                 </Style>
             </DataGrid.Resources>
+            <DataGrid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FFFFF7F2"/>
+                    <GradientStop Color="#FF232221" Offset="0.994"/>
+                    <GradientStop Color="#FF201F1E" Offset="1"/>
+                    <GradientStop Color="#FFE7D095" Offset="0.664"/>
+                </LinearGradientBrush>
+            </DataGrid.Background>
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding course_name}" Header="Student Name" IsReadOnly="true"/>
                 <DataGridTextColumn Binding="{Binding course_id}" Header="Student ID" IsReadOnly="true"/>
