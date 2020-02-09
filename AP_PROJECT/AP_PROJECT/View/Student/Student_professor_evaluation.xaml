@@ -4,9 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AP_PROJECT.View"
-    mc:Ignorable="d"
+    mc:Ignorable="d" ResizeMode="NoResize"
         Title="Professor_evaluation" Height="343.701" Width="327.165">
-    <Grid Margin="0,0,-5,0.5" Background="#FFF1F4DF">
+    <Grid Margin="0,0,-5,0.5">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="White" Offset="0.473"/>
+                <GradientStop Color="#FF304A77"/>
+                <GradientStop Color="#FFEBEBEB" Offset="0.749"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Label x:Name="knowledgelabel" Content="Knowledge" HorizontalAlignment="Left" Margin="25,107,0,0" VerticalAlignment="Top" Width="66" FontSize="11"/>
         <Label x:Name="timinglabel" Content="Timing " HorizontalAlignment="Left" Margin="25,144,0,0" VerticalAlignment="Top" Width="66" FontSize="11"/>
         <Label x:Name="instructionlabel" Content="Instruction" HorizontalAlignment="Left" Margin="25,178,0,0" VerticalAlignment="Top" Width="66" FontSize="11"/>
