@@ -7,13 +7,19 @@
         mc:Ignorable="d"
         Title="Evaluation Page" Height="450" Width="633.465">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FFAFC7FF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="8*"/>
             <ColumnDefinition Width="110*"/>
             <ColumnDefinition Width="677*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid HorizontalAlignment="Left" Height="277" Margin="0.5,69,0,0" VerticalAlignment="Top" Width="396" Grid.Column="2"/>
-        <Button Content="Button" Grid.Column="2" HorizontalAlignment="Left" Margin="412.5,372,0,0" VerticalAlignment="Top" Width="75"/>
+        <DataGrid HorizontalAlignment="Left" Height="336" Margin="9.6,10,0,0" VerticalAlignment="Top" Width="601" Grid.Column="1" Grid.ColumnSpan="2" Background="#FFFAFDCC"/>
+        <Button Content="Button" Grid.Column="2" HorizontalAlignment="Left" Margin="354.2,351,0,0" VerticalAlignment="Top" Width="133" Height="40" FontSize="20"/>
 
     </Grid>
 </Window>

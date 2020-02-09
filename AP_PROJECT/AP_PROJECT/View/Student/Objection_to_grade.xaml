@@ -7,11 +7,17 @@
         mc:Ignorable="d"
         Title="Objection_to_grade" Height="300" Width="300">
     <Grid>
-        <TextBox x:Name="objection_textbox" HorizontalAlignment="Left" Height="110" Margin="38,88,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="221"/>
-        <Label x:Name="proflabel" Content="Professor name" HorizontalAlignment="Left" Margin="38,10,0,0" VerticalAlignment="Top" Width="73" Height="22" FontSize="8"/>
-        <Label x:Name="courselabel" Content="Course" HorizontalAlignment="Left" Margin="38,37,0,0" VerticalAlignment="Top" Height="22" Width="73" FontSize="8"/>
-        <TextBox x:Name="prof_textbox" HorizontalAlignment="Left" Height="23" Margin="116,9,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="course_textbox" HorizontalAlignment="Left" Height="23" Margin="116,37,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FFD1DCFA" Offset="0.28"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox x:Name="objection_textbox" HorizontalAlignment="Left" Height="139" Margin="10,121,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="274" Background="#FFD6E8F1"/>
+        <Label x:Name="proflabel" Content="Professor name" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="101" Height="35"/>
+        <Label x:Name="courselabel" Content="Course" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top" Height="33" Width="101" FontSize="14"/>
+        <TextBox x:Name="prof_textbox" HorizontalAlignment="Left" Height="31" Margin="159,39,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="125" Background="#FFCDEAF9"/>
+        <TextBox x:Name="course_textbox" HorizontalAlignment="Left" Height="33" Margin="159,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="125" Background="#FFC8E7F7"/>
 
     </Grid>
 </Window>

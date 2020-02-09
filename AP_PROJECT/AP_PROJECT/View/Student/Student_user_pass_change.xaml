@@ -6,15 +6,15 @@
         xmlns:local="clr-namespace:AP_PROJECT.View"
         mc:Ignorable="d"
         Title="User_pass_change" Height="300" Width="300">
-    <Grid>
-        <Label x:Name="oldpasslabel" Content="Old password" HorizontalAlignment="Left" Margin="21,124,0,0" VerticalAlignment="Top" Width="94"/>
-        <Label x:Name="newpasslabel" Content="New password" HorizontalAlignment="Left" Margin="21,150,0,0" VerticalAlignment="Top" Width="94"/>
-        <Label x:Name="confirmlabel" Content="Confirmation" HorizontalAlignment="Left" Margin="21,181,0,0" VerticalAlignment="Top" Width="94"/>
-        <TextBox x:Name="oldpass_txt" HorizontalAlignment="Left" Height="26" Margin="120,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="newpass_txt" HorizontalAlignment="Left" Height="26" Margin="120,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="confirm_txt" HorizontalAlignment="Left" Height="30" Margin="120,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="ChangePassword" Content="change" HorizontalAlignment="Left" Margin="207,239,0,0" VerticalAlignment="Top" Width="75" Click="ChangePasswordClicked"/>
-        <Label x:Name="CheckPassChange" Content="" HorizontalAlignment="Left" Margin="61,236,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.015,0.294" Width="83" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
+    <Grid Background="#FFE5EECA">
+        <Label x:Name="oldpasslabel" Content="Old password" HorizontalAlignment="Left" Margin="21,56,0,0" VerticalAlignment="Top" Width="94" FontSize="14"/>
+        <Label x:Name="newpasslabel" Content="New password" HorizontalAlignment="Left" Margin="21,96,0,0" VerticalAlignment="Top" Width="108" FontSize="14"/>
+        <Label x:Name="confirmlabel" Content="Confirmation" HorizontalAlignment="Left" Margin="21,136,0,0" VerticalAlignment="Top" Width="108" FontSize="14"/>
+        <TextBox x:Name="oldpass_txt" HorizontalAlignment="Left" Height="38" Margin="134,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" Background="#FFBDC3CB"/>
+        <TextBox x:Name="newpass_txt" HorizontalAlignment="Left" Height="32" Margin="134,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" Background="#FFBDC3CB"/>
+        <TextBox x:Name="confirm_txt" HorizontalAlignment="Left" Height="30" Margin="134,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" Background="#FFBDC3CB"/>
+        <Button x:Name="ChangePassword" Content="change" HorizontalAlignment="Left" Margin="134,171,0,0" VerticalAlignment="Top" Width="86" Click="ChangePasswordClicked" Height="29" FontSize="14"/>
+        <Label x:Name="CheckPassChange" Content="" HorizontalAlignment="Left" Margin="134,205,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.015,0.294" Width="125" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Height="37" />
 
     </Grid>
 </Window>
