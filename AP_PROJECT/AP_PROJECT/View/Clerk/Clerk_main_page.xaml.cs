@@ -38,17 +38,15 @@ namespace AP_PROJECT.View.Clerk
             Clerk_student_list clrk_stud_list = new Clerk_student_list(this.clerk);
             clrk_stud_list.Show();
         }
-
-        private void clrk_deact_requis_button_Click(object sender, RoutedEventArgs e)
-        {
-            Clerk_deactivate_preq_overlap clrk_deact_preq_over = new Clerk_deactivate_preq_overlap(this.clerk);
-            clrk_deact_preq_over.Show();
-        }
-
         private void clrk_dect_overlap_button_Click(object sender, RoutedEventArgs e)
         {
             Clerk_deactivate_preq_overlap clrk_deac_over = new Clerk_deactivate_preq_overlap(this.clerk);
             clrk_deac_over.Show();
+        }
+        private void clrk_deact_dect_button_Click(object sender, RoutedEventArgs e)
+        {
+            Clerk_deactivate_preq_overlap clrk_deact_preq_over = new Clerk_deactivate_preq_overlap(this.clerk);
+            clrk_deact_preq_over.Show();
         }
     }
 }

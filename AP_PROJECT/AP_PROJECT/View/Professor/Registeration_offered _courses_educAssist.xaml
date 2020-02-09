@@ -6,17 +6,16 @@
         xmlns:local="clr-namespace:AP_PROJECT.View.Professor"
         mc:Ignorable="d"
         Title="Registeration_offered__courses_educAssist" Height="300" Width="359.2">
-    <Grid>
+    <Grid Margin="0,0,-66,0.5">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black" Offset="0"/>
                 <GradientStop Color="#FFADDCFD" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <DataGrid x:Name="offered_courses" HorizontalAlignment="Left" Height="142" Margin="10,17,0,0" VerticalAlignment="Top" Width="322" ItemsSource="{Binding}" AutoGenerateColumns="False" Background="#FFFFCACA">
+        <DataGrid x:Name="offered_courses" HorizontalAlignment="Left" Height="142" Margin="10,17,0,0" VerticalAlignment="Top" Width="354" ItemsSource="{Binding}" AutoGenerateColumns="False" Background="#FFFFCACA">
             <DataGrid.Resources>
                 <Style TargetType="DataGridRow">
-                    <EventSetter Event="MouseDoubleClick" Handler="DataGridRow_MouseDoubleClick"></EventSetter>
                 </Style>
             </DataGrid.Resources>
             <DataGrid.Columns>
@@ -29,23 +28,45 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="add_butt" Content="Add" HorizontalAlignment="Left" Margin="12,236,0,0" VerticalAlignment="Top" Width="42" Click="add_butt_Click"/>
-        <TextBox x:Name="couresId_txt" HorizontalAlignment="Left" Height="23" Margin="12,201,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="64" Background="#FFFFDCDC"/>
-        <TextBox x:Name="prof_name" HorizontalAlignment="Left" Height="23" Margin="96,201,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="69" Background="#FFFFDCDC"/>
-        <TextBox x:Name="time" HorizontalAlignment="Left" Height="23" Margin="185,201,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="62" RenderTransformOrigin="0.092,0.441" Background="#FFFFDCDC"/>
-        <TextBox x:Name="volume" HorizontalAlignment="Left" Height="23" Margin="261,200,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="71" RenderTransformOrigin="3.789,0.371" Background="#FFFFDCDC"/>
-        <Label Content="Course ID" HorizontalAlignment="Left" Margin="12,171,0,0" VerticalAlignment="Top" Width="64" FontSize="10"/>
-        <Label Content="Professor ID" HorizontalAlignment="Left" Margin="105,173,0,0" VerticalAlignment="Top" Width="60" FontSize="9"/>
-        <Label Content="Time" HorizontalAlignment="Left" Margin="185,171,0,0" VerticalAlignment="Top" Width="53" FontSize="10"/>
-        <Label Content="Volume" HorizontalAlignment="Left" Margin="261,169,0,0" VerticalAlignment="Top" Width="57" FontSize="10" RenderTransformOrigin="0.5,0.5">
+        <TextBox x:Name="couresId_txt" HorizontalAlignment="Left" Height="23" Margin="0,201,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="64" Background="#FFFFDCDC"/>
+        <TextBox x:Name="prof_name" HorizontalAlignment="Left" Height="23" Margin="69,201,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="69" Background="#FFFFDCDC"/>
+        <TextBox x:Name="term_num" HorizontalAlignment="Left" Height="23" Margin="147,201,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="34" RenderTransformOrigin="0.092,0.441" Background="#FFFFDCDC"/>
+        <TextBox x:Name="volume" HorizontalAlignment="Left" Height="23" Margin="186,201,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="52" RenderTransformOrigin="3.789,0.371" Background="#FFFFDCDC"/>
+        <Label Content="Course ID" HorizontalAlignment="Left" Margin="0,172,0,0" VerticalAlignment="Top" Width="64" FontSize="10"/>
+        <Label Content="Professor ID" HorizontalAlignment="Left" Margin="69,171,0,0" VerticalAlignment="Top" Width="60" FontSize="9"/>
+        <Label Content="Term num" HorizontalAlignment="Left" Margin="134,172,0,0" VerticalAlignment="Top" Width="53" FontSize="10"/>
+        <Label Content="Volume" HorizontalAlignment="Left" Margin="186,170,0,0" VerticalAlignment="Top" Width="57" FontSize="10" RenderTransformOrigin="0.29,0.559">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
                     <RotateTransform Angle="0.637"/>
-                    <TranslateTransform/>
+                    <TranslateTransform X="-0.014" Y="-0.133"/>
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
+        <Label Content="Place" HorizontalAlignment="Left" Margin="245,171,0,0" VerticalAlignment="Top" Width="57" FontSize="10" RenderTransformOrigin="0.29,0.559">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.637"/>
+                    <TranslateTransform X="-0.014" Y="-0.133"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="Place_textbox" HorizontalAlignment="Left" Height="23" Margin="243,201,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="52" RenderTransformOrigin="3.789,0.371" Background="#FFFFDCDC"/>
+        <Label Content="Time" HorizontalAlignment="Left" Margin="302,171,0,0" VerticalAlignment="Top" Width="57" FontSize="10" RenderTransformOrigin="0.29,0.559">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.637"/>
+                    <TranslateTransform X="-0.014" Y="-0.133"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="Time_textbox" HorizontalAlignment="Left" Height="23" Margin="300,201,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="52" RenderTransformOrigin="3.789,0.371" Background="#FFFFDCDC"/>
 
     </Grid>
 </Window>

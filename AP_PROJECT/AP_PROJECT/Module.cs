@@ -164,12 +164,75 @@ namespace AP_PROJECT
             return datas.ToArray();
         }
 
-        internal static Registeration_offered__courses_educAssist.Data[] GetAddedCourse_byEduAssist(string courseId, string profId, string time_ofCourse, string volume_ofCourse)
+        internal static Registeration_offered__courses_educAssist.Data[] GetAddedCourse_byEduAssist(string courseId, string profId, string term_of_course, string place,string volume,string Time)
         {
-            throw new NotImplementedException();
-        }
+            //List<TermCourse> datas = new List<TermCourse>();
+            //var termcourses
+            List<Registeration_offered__courses_educAssist.Data> datas = new List<Registeration_offered__courses_educAssist.Data>();
+            if (AddToCourseTermTable(courseId, profId, term_of_course, place, volume, Time))
+                {
+                    
+                    var termcourse = termCourseTable.Select(x => x).ToList();
+                    foreach (var termcours in termcourse)
+                    {
+                        datas.Add(new Registeration_offered__courses_educAssist.Data()
+                        {
+                            course_id = termcours.Course.Id + "",
+                            course_name = GetCourse(termcours.Course.Id).Name,
 
-        public static Professor_courses.Data[] GetProfessorCoursesData(Teacher teacher)
+                            teacher = termcours.Teacher.Id + "",
+                            units = termcours.Course.ECT + "",
+                            volume = termcours.Capacity + "",
+                            time = termcours.Time + ""
+                        });
+                    }
+                }
+                else
+                {
+                    var termcourse = termCourseTable.Select(x => x).ToList();
+                    foreach (var termcours in termcourse)
+                    {
+                        datas.Add(new Registeration_offered__courses_educAssist.Data()
+                        {
+                            course_id = termcours.Course.Id + "",
+                            course_name = GetCourse(termcours.Course.Id).Name,
+
+                            teacher = termcours.Teacher.Id + "",
+                            units = termcours.Course.ECT + "",
+                            volume = termcours.Capacity + "",
+                            time = termcours.Time + ""
+                        });
+                    }
+                }
+            return datas.ToArray();
+        }
+        //public static Course GetCourse(int id)
+       // {
+          //return CourseTable.Select(x => x).Where(x => x.Id == id).ToArray()[0];
+        //}
+        public static bool AddToCourseTermTable(string courseId, string profId, string term_of_course, string place, string volume, string Time)
+        {
+            try
+            {
+                int id = termCourseTable.Select(x => x.Id).Max() + 1;
+                var item = new TermCourse();
+                item.Id = id;
+                item.Course.Id = CourseTable.Select(x => x).Where(x => x.Id == int.Parse(courseId)).Select(x => x.Id).ToArray()[0];
+                item.Term.TermNum = int.Parse(term_of_course);
+                item.Teacher.Id = int.Parse(profId);
+                item.Time = int.Parse(Time);
+                item.Place = place;
+                item.Capacity = int.Parse(volume);
+                termCourseTable.Add(item);
+                saveData(termCourseTable);
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+}
+            public static Professor_courses.Data[] GetProfessorCoursesData(Teacher teacher)
         {
             List<Professor_courses.Data> datas = new List<Professor_courses.Data>();
             var courses = termCourseTable.Select(x => x).Where(x => x.Teacher.Id == teacher.Id).ToList();
@@ -451,7 +514,18 @@ namespace AP_PROJECT
             }
             termCourseStudentFile.Close();
         }
-        private static void saveData(List<TermCourseStudent> termCourseStudentTable)
+            private static void saveData(List<TermCourse> termCourseTable)
+            {
+                StreamWriter file = new StreamWriter("termcourse.txt");
+                foreach (var item in termCourseTable)
+                {
+                    file.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}",
+                        item.Id, item.Course.Id, item.Term.TermNum, item.Teacher.Id, item.Place, item.Capacity);
+                }
+                file.Close();
+            }
+
+            private static void saveData(List<TermCourseStudent> termCourseStudentTable)
         {
             StreamWriter termCourseStudentFile = new StreamWriter("termcoursestudent.txt");
             foreach (var item in termCourseStudentTable)
