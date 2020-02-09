@@ -42,14 +42,18 @@ namespace AP_PROJECT.View.Professor
             // sending required informaion to module 
             string courseId = this.couresId_txt.Text;
             string profId = this.prof_name.Text;
-            string time_ofCourse = this.time.Text;
+            string term_of_course = this.term_num.Text;
             string volume_ofCourse = this.volume.Text;
+            string place = this.Place_textbox.Text;
+            string Time = this.Time_textbox.Text;
+
 
             // in nakone dataye ghabli ro pak kone va jadid ro benevise?
             // chon mikham dataye jadid ezafe she, na inke ja datahaye ghabli biad
-            offeredCoursesData = Module.GetAddedCourse_byEduAssist(courseId, profId, time_ofCourse, volume_ofCourse);
+            offeredCoursesData = Module.GetAddedCourse_byEduAssist(courseId,  profId,  term_of_course,  place,  volume_ofCourse, Time);
             this.offered_courses.DataContext = offeredCoursesData;
         }
 
+       
     }
 }

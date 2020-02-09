@@ -19,10 +19,10 @@ namespace AP_PROJECT.View
     /// </summary>
     public partial class Clerk_Information : Window
     {
-        private Clerk clerk;
+        private Class.Clerk clerk;
         private Class.Clerk clerk1;
 
-        public Clerk_Information(Clerk clerk)
+        public Clerk_Information(Class.Clerk clerk)
         {
             InitializeComponent();
             this.clerk = clerk;

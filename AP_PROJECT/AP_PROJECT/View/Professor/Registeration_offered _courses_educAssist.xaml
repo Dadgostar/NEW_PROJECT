@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AP_PROJECT.View.Professor"
         mc:Ignorable="d"
-        Title="Registeration_offered__courses_educAssist" Height="300" Width="359.2">
-    <Grid>
+        Title="Registeration_offered__courses_educAssist" Height="300" Width="512.2">
+    <Grid Margin="0,0,-131,0.5" HorizontalAlignment="Left" Width="485">
         <DataGrid x:Name="offered_courses" HorizontalAlignment="Left" Height="142" Margin="10,17,0,0" VerticalAlignment="Top" Width="322" ItemsSource="{Binding}" AutoGenerateColumns="False">
             <DataGrid.Resources>
                 <Style TargetType="DataGridRow">
@@ -24,13 +24,13 @@
         </DataGrid>
         <Button x:Name="add_butt" Content="Add" HorizontalAlignment="Left" Margin="12,236,0,0" VerticalAlignment="Top" Width="42" Click="add_butt_Click"/>
         <TextBox x:Name="couresId_txt" HorizontalAlignment="Left" Height="23" Margin="12,201,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="54"/>
-        <TextBox x:Name="prof_name" HorizontalAlignment="Left" Height="23" Margin="81,200,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="54"/>
-        <TextBox x:Name="time" HorizontalAlignment="Left" Height="23" Margin="146,201,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="53" RenderTransformOrigin="0.092,0.441"/>
-        <TextBox x:Name="volume" HorizontalAlignment="Left" Height="23" Margin="212,200,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="57" RenderTransformOrigin="3.789,0.371"/>
+        <TextBox x:Name="prof_name" HorizontalAlignment="Left" Height="23" Margin="71,202,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="54"/>
+        <TextBox x:Name="term_num" HorizontalAlignment="Left" Height="23" Margin="130,201,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="53" RenderTransformOrigin="0.092,0.441"/>
+        <TextBox x:Name="volume" HorizontalAlignment="Left" Height="23" Margin="188,201,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="57" RenderTransformOrigin="3.789,0.371"/>
         <Label Content="Course ID" HorizontalAlignment="Left" Margin="12,171,0,0" VerticalAlignment="Top" Width="54" FontSize="10"/>
-        <Label Content="Professor ID" HorizontalAlignment="Left" Margin="81,174,0,0" VerticalAlignment="Top" Width="54" FontSize="8"/>
-        <Label Content="Time" HorizontalAlignment="Left" Margin="146,169,0,0" VerticalAlignment="Top" Width="53" FontSize="10"/>
-        <Label Content="Volume" HorizontalAlignment="Left" Margin="212,169,0,0" VerticalAlignment="Top" Width="57" FontSize="10" RenderTransformOrigin="0.5,0.5">
+        <Label Content="Professor ID" HorizontalAlignment="Left" Margin="71,174,0,0" VerticalAlignment="Top" Width="54" FontSize="8"/>
+        <Label Content="Term Num" HorizontalAlignment="Left" Margin="130,171,0,0" VerticalAlignment="Top" Width="53" FontSize="10"/>
+        <Label Content="Volume" HorizontalAlignment="Left" Margin="190,171,0,0" VerticalAlignment="Top" Width="57" FontSize="10" RenderTransformOrigin="0.5,0.5">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -40,6 +40,28 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
+        <Label Content="Place" HorizontalAlignment="Left" Margin="251,169,0,0" VerticalAlignment="Top" Width="57" FontSize="10" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.637"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="Place_textbox" HorizontalAlignment="Left" Height="23" Margin="250,201,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="57" RenderTransformOrigin="3.789,0.371"/>
+        <Label Content="Time" Name="Time_label" HorizontalAlignment="Left" Margin="313,168,0,0" VerticalAlignment="Top" Width="57" FontSize="10" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.637"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBox x:Name="Time_textbox" HorizontalAlignment="Left" Height="23" Margin="312,201,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="57" RenderTransformOrigin="3.789,0.371" />
 
     </Grid>
 </Window>

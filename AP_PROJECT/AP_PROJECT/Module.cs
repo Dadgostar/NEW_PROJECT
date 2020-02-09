@@ -13,11 +13,16 @@ namespace AP_PROJECT
     {
         public static List<Student> StudentTable = new List<Student>();
         public static List<Teacher> TeacherTable = new List<Teacher>();
-        public static List<Course> CourseTable = new List<Course>();
+        public static List<Course> termcourses = new List<Course>();
         public static List<TermCourse> termCourseTable = new List<TermCourse>();
         public static List<TermCourseStudent> termCourseStudentTable = new List<TermCourseStudent>();
         public static List<PreQuisite> preQuisiteTable = new List<PreQuisite>();
         public static List<Term> TermTable = new List<Term>();
+
+        internal static Registeration_offered__courses_educAssist.Data[] GetOfferedCoursesData()
+        {
+            throw new NotImplementedException();
+        }
 
         public static bool addStudent(string firstName, string lastName, string password)
         {
@@ -39,17 +44,15 @@ namespace AP_PROJECT
                 return false;
             }
         }
-        internal static Registeration_offered__courses_educAssist.Data[] GetOfferedCoursesData()
-        {
-
-            throw new NotImplementedException();
-        }
-
+ 
         public static Teacher getTeacher(int id)
         {
             return TeacherTable.Select(x => x).Where(x => x.Id == id).ToArray()[0];
         }
-
+      //  public static Course GetCourse(int id)
+        //{
+          //  return termcourses.Select(x => x).Where(x => x.Id == id).ToArray()[0];
+        //}
         public static Student_offeredCourses.Data[] GetStudentOfferedCoursesData(Student student, int term)
         {
             return termCourseStudentTable.Select(x => x).Where(x => x.Student.Id == student.Id && x.TermCourse.Term.TermNum == term)
@@ -152,11 +155,73 @@ namespace AP_PROJECT
             return datas.ToArray();
         }
 
-        internal static Registeration_offered__courses_educAssist.Data[] GetAddedCourse_byEduAssist(string courseId, string profId, string time_ofCourse, string volume_ofCourse)
+        internal static Registeration_offered__courses_educAssist.Data[] GetAddedCourse_byEduAssist(string courseId, string profId, string term_of_course, string place, string volume, string Time)
         {
-            throw new NotImplementedException();
-        }
+            //List<TermCourse> datas = new List<TermCourse>();
+            //var termcourses
+            if (AddToCourseTermTable(courseId, profId, term_of_course, place, volume, Time))
+            {
+                List<Registeration_offered__courses_educAssist.Data> datas = new List<Registeration_offered__courses_educAssist.Data>();
+                var termcourse = termCourseTable.Select(x => x).ToList();
+                foreach (var termcours in termcourse)
+                {
+                    datas.Add(new Registeration_offered__courses_educAssist.Data()
+                    {
+                        course_id = termcours.Course.Id + "",
+                        course_name = GetCourse(termcours.Course.Id).Name,
 
+                        teacher = termcours.Teacher.Id + "",
+                        units = termcours.Course.ECT + "",
+                        volume = termcours.Capacity + "",
+                        time = termcours.Time + ""
+                    });
+                }
+            }
+            else
+            {
+                List<Registeration_offered__courses_educAssist.Data> datas = new List<Registeration_offered__courses_educAssist.Data>();
+                var termcourse = termCourseTable.Select(x => x).ToList();
+                foreach (var termcours in termcourse)
+                {
+                    datas.Add(new Registeration_offered__courses_educAssist.Data()
+                    {
+                        course_id = termcours.Course.Id + "",
+                        course_name = GetCourse(termcours.Course.Id).Name,
+
+                        teacher = termcours.Teacher.Id + "",
+                        units = termcours.Course.ECT + "",
+                        volume = termcours.Capacity + "",
+                        time = termcours.Time + ""
+                    });
+                }
+
+            }
+
+ 
+         }
+        public static bool AddToCourseTermTable(string courseId, string profId, string term_of_course, string place, string volume,string Time)
+        {
+            try
+            {
+                int id = termCourseTable.Select(x => x.Id).Max() + 1;
+                var item = new TermCourse();
+                item.Id = id;
+                item.Course.Id = termcourses.Select(x => x).Where(x => x.Id == int.Parse(courseId)).Select(x => x.Id).ToArray()[0];
+                item.Term.TermNum = int.Parse(term_of_course);
+                item.Teacher.Id = int.Parse(profId);
+                item.Time = int.Parse(Time);
+                item.Place = place;
+                item.Capacity = int.Parse(volume);
+                termCourseTable.Add(item);
+                saveData(termCourseTable);
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+
+        }
         public static Professor_courses.Data[] GetProfessorCoursesData(Teacher teacher)
         {
             List<Professor_courses.Data> datas = new List<Professor_courses.Data>();
@@ -289,6 +354,16 @@ namespace AP_PROJECT
             }
             file.Close();
         }
+        private static void saveData(List<TermCourse> termCourseTable)
+        {
+            StreamWriter file = new StreamWriter("termcourse.txt");
+            foreach (var item in termCourseTable)
+            {
+                file.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}\t{5}",
+                    item.Id, item.Course.Id, item.Term.TermNum, item.Teacher.Id, item.Place, item.Capacity);
+            }
+            file.Close();
+        }
 
         public static Person Login(string userName, string passWord)
         {
@@ -368,7 +443,7 @@ namespace AP_PROJECT
             while ((line = courseFile.ReadLine()) != null)
             {
                 var items = line.Split('\t');
-                CourseTable.Add(new Course() { Id = int.Parse(items[0]), ECT = int.Parse(items[1]), Name = items[2], type = items[3] });
+                termcourses.Add(new Course() { Id = int.Parse(items[0]), ECT = int.Parse(items[1]), Name = items[2], type = items[3] });
             }
             courseFile.Close();
 
@@ -391,9 +466,9 @@ namespace AP_PROJECT
                 var items = line.Split('\t');
                 preQuisiteTable.Add(new PreQuisite()
                 {
-                    Course1 = (CourseTable.Select(x => x).Where(x => x.Id == int.Parse(items[0])).ToArray())[0]
+                    Course1 = (termcourses.Select(x => x).Where(x => x.Id == int.Parse(items[0])).ToArray())[0]
                     ,
-                    Course2 = (CourseTable.Select(x => x).Where(x => x.Id == int.Parse(items[1])).ToArray())[0]
+                    Course2 = (termcourses.Select(x => x).Where(x => x.Id == int.Parse(items[1])).ToArray())[0]
                     ,
                     Status = items[2]
                 });
@@ -407,7 +482,7 @@ namespace AP_PROJECT
                 termCourseTable.Add(new TermCourse()
                 {
                     Id = int.Parse(items[0]),
-                    Course = (CourseTable.Select(x => x).Where(x => x.Id == int.Parse(items[1])).ToArray())[0],
+                    Course = (termcourses.Select(x => x).Where(x => x.Id == int.Parse(items[1])).ToArray())[0],
                     Term = (TermTable.Select(x => x).Where(x => x.TermNum == int.Parse(items[2])).ToArray())[0],
                     Teacher = (TeacherTable.Select(x => x).Where(x => x.Id == int.Parse(items[3])).ToArray())[0],
                     Time = int.Parse(items[4]),
