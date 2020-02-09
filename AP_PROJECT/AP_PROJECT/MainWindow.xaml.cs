@@ -28,8 +28,6 @@ namespace AP_PROJECT
         {
 
             InitializeComponent();
-            //Module.loadData();
-           // Module.saveData();
             Login page = new Login();
             page.Show();
             this.Close();

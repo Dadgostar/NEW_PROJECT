@@ -42,6 +42,7 @@ namespace AP_PROJECT
                     FirstName = firstName,
                     LastName = lastName,
                     Password = password
+                   
                 });
                 saveData(StudentTable);
                 return true;
@@ -420,7 +421,7 @@ namespace AP_PROJECT
             {
                 line = crypto.Decrypt(line);
                 var items = line.Split('\t');
-                StudentTable.Add(new Student() { Id = int.Parse(items[0]), FirstName = items[1], LastName = items[2], Password = items[3] ,EntranceYear = items[4]});
+                StudentTable.Add(new Student() { Id = int.Parse(items[0]), FirstName = items[1], LastName = items[2], Password = items[3] ,EntranceYear = items[4].ToString()});
             }
             studentFile.Close();
             StreamReader teacherFile = new StreamReader("teacher.txt");
@@ -516,7 +517,27 @@ namespace AP_PROJECT
                     Status = items[5]
                 });
             }
+
             termCourseStudentFile.Close();
+            StreamReader clerkFile = new StreamReader("clerk.txt");
+            crypto = new CryptoDES(new byte[] { 158, 23, 64, 96, 57, 225, 36, 85 });
+            while ((line = clerkFile.ReadLine()) != null)
+            {
+                line = crypto.Decrypt(line);
+                var items = line.Split('\t');
+                ClerkTable.Add(new Clerk()
+                {
+                    Id = int.Parse(items[0])
+                    ,
+                    FirstName = items[1]
+                    ,
+                    LastName = items[2]
+                    ,
+                    Password = items[3]
+                });
+            }
+            clerkFile.Close();
+
         }
         public static void saveData(List<Student> studentTable)
         {
