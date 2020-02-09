@@ -24,7 +24,7 @@ namespace AP_PROJECT.View
         public Clerk_student_list(Class.Clerk clerk)
         {
             InitializeComponent();
-            studentsData = Module.GetStudentsDataClerk(clerk);
+            studentsData = Module.GetStudentsDataForClerk(clerk);
             this.students_list.DataContext = studentsData;
         }
 

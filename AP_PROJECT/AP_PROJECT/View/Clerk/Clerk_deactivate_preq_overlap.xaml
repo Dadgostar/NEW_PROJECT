@@ -13,9 +13,10 @@
         <Label x:Name="student_name" Content="Label" HorizontalAlignment="Left" Margin="116,25,0,0" VerticalAlignment="Top" Height="26" Width="79"/>
         <Label x:Name="student_id" Content="Label" HorizontalAlignment="Left" Margin="116,56,0,0" VerticalAlignment="Top" Height="26" Width="79"/>
         <Label x:Name="course_name" Content="Label" HorizontalAlignment="Left" Margin="116,87,0,0" VerticalAlignment="Top" Height="26" Width="79"/>
-        <RadioButton x:Name="deactive_radio_button" Content="Deactive" HorizontalAlignment="Left" Margin="24,168,0,0" VerticalAlignment="Top" Width="103" RenderTransformOrigin="0.284,0.578"/>
+        <RadioButton x:Name="deactive_radio_button" Content="Deactive Overlap" HorizontalAlignment="Left" Margin="24,168,0,0" VerticalAlignment="Top" Width="171" RenderTransformOrigin="0.284,0.578" Checked="deactive_radio_button_Checked"/>
         <Label x:Name="course_ID_label" Content="Course ID" HorizontalAlignment="Left" Margin="24,118,0,0" VerticalAlignment="Top" Height="26" Width="57" FontSize="11"/>
         <Label x:Name="course_id" Content="Label" HorizontalAlignment="Left" Margin="116,118,0,0" VerticalAlignment="Top" Width="79" Height="26"/>
+        <RadioButton Content="Deactive Prerequisite" HorizontalAlignment="Left" Margin="24,188,0,0" VerticalAlignment="Top" Width="171"/>
 
     </Grid>
 </Window>

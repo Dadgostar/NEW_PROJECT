@@ -30,7 +30,7 @@ namespace AP_PROJECT.View
 
         private void prof_userpass_apply_button_Click(object sender, RoutedEventArgs e)
         {
-            if (Module.EditPassword(this.teacher, prof_newpass_txt.Password, prof_oldpass_txt.Password, prof_passconfirm_txt.Password, this.teacher))
+            if (Module.EditPassword(this.teacher, prof_newpass_txt.Text, prof_oldpass_txt.Text, prof_passconfirm_txt.Text, this.teacher))
             {
                 isPassChanged.Content = "Pass Changed";
                 page.update();

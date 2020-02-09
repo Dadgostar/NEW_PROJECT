@@ -33,11 +33,6 @@ namespace AP_PROJECT.View
 
         }
 
-        public Clerk_Information(Class.Clerk clerk1)
-        {
-            this.clerk1 = clerk1;
-        }
-
         private void clerk_userpass_change_button_Click(object sender, RoutedEventArgs e)
         {
             Clerk_userpass_change clrk_usepass_change = new Clerk_userpass_change(this.clerk);

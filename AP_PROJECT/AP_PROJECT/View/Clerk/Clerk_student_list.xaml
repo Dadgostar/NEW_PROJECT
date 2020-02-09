@@ -20,8 +20,8 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="add_stu_button" Content="Add" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" Width="75" Click="add_stu_button_Click"/>
-        <Label Content="Student ID" HorizontalAlignment="Left" Margin="149,157,0,0" VerticalAlignment="Top" Width="66" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
-        <Label Content="Student Name" HorizontalAlignment="Left" Margin="10,157,0,0" VerticalAlignment="Top" Width="87" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
+        <Label Content="Student ID" HorizontalAlignment="Left" Margin="149,157,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Student Name" HorizontalAlignment="Left" Margin="10,157,0,0" VerticalAlignment="Top" Width="100"/>
         <TextBox x:Name="new_student_name" HorizontalAlignment="Left" Height="23" Margin="10,188,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
         <TextBox x:Name="new_student_id" HorizontalAlignment="Left" Height="23" Margin="149,188,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
 

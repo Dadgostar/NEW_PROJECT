@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:AP_PROJECT.View"
         mc:Ignorable="d"
         Title="Professor_educationalassist_registrationform" Height="300" Width="300">
-    <Grid>
-        <DataGrid HorizontalAlignment="Left" Height="109" Margin="10,37,0,0" VerticalAlignment="Top" Width="274">
+    <Grid Background="#FFBAD9EE">
+        <DataGrid HorizontalAlignment="Left" Height="109" Margin="10,42,0,0" VerticalAlignment="Top" Width="274" Background="#FFFFFEEA">
             <DataGrid.Columns>
                 <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Course"/>
                 <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="ID"/>
@@ -18,7 +18,7 @@
                 <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Professor"/>
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid HorizontalAlignment="Left" Height="82" Margin="10,178,0,0" VerticalAlignment="Top" Width="274">
+        <DataGrid HorizontalAlignment="Left" Height="82" Margin="10,178,0,0" VerticalAlignment="Top" Width="274" Background="#FFFFFCD5">
             <DataGrid.Columns>
                 <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Course"/>
                 <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="ID"/>
@@ -29,8 +29,8 @@
                 <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Professor"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Label x:Name="represented_courses_label" Content="Represented Courses" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Width="94" FontSize="9"/>
-        <Label x:Name="available_courses_label" Content="Available Courses" HorizontalAlignment="Left" Margin="10,151,0,0" VerticalAlignment="Top" Height="22" Width="94" FontSize="9"/>
+        <Label x:Name="represented_courses_label" Content="Represented Courses" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Width="115" FontSize="11" Height="31"/>
+        <Label x:Name="available_courses_label" Content="Available Courses" HorizontalAlignment="Left" Margin="10,151,0,0" VerticalAlignment="Top" Height="22" Width="100" FontSize="11"/>
 
     </Grid>
 </Window>    

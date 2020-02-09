@@ -18,9 +18,20 @@ namespace AP_PROJECT.View
     /// </summary>
     public partial class Clerk_userpass_change : Window
     {
-        public Clerk_userpass_change()
+        private Class.Clerk clerk;
+
+        public Clerk_userpass_change(Class.Clerk clerk)
         {
             InitializeComponent();
+            this.clerk = clerk;
+        }
+
+        private void apply_button_Click(object sender, RoutedEventArgs e)
+        {
+            if (Module.EditPassword(this.clerk, clerk_newpasstxt.Text, clerk_oldpasstxt.Text, clerk_confirmtxt.Text, this.clerk))
+                CheckPassChange.Content = "Password changed";
+            else
+                CheckPassChange.Content = "Password not changed yet";
         }
     }
 }

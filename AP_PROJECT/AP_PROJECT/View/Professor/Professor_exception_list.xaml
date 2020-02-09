@@ -7,7 +7,13 @@
         mc:Ignorable="d"
         Title="Professor_exception_list" Height="300" Width="300">
     <Grid>
-        <DataGrid x:Name="list_of_exceptions" HorizontalAlignment="Left" Height="231" Margin="10,10,0,0" VerticalAlignment="Top" Width="274" ItemsSource="{Binding}" AutoGenerateColumns="False">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FFB8DBF4" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DataGrid x:Name="list_of_exceptions" HorizontalAlignment="Left" Height="231" Margin="10,10,0,0" VerticalAlignment="Top" Width="274" ItemsSource="{Binding}" AutoGenerateColumns="False" Background="#FFF8FFD1">
             <DataGrid.Resources>
                 <Style TargetType="DataGridRow">
                     <EventSetter Event="MouseDoubleClick" Handler="DataGridRow_MouseDoubleClick"></EventSetter>
