@@ -10,10 +10,16 @@
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black" Offset="0"/>
-                <GradientStop Color="White" Offset="1"/>
+                <GradientStop Color="#FFB1D4FF" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <DataGrid HorizontalAlignment="Left" Height="188" VerticalAlignment="Top" Width="274" Margin="10,10,0,0" Background="#FFF8FFCA">
+        <DataGrid HorizontalAlignment="Left" Height="188" VerticalAlignment="Top" Width="274" Margin="10,10,0,0">
+            <DataGrid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFD4BD76" Offset="0.957"/>
+                    <GradientStop Color="White" Offset="0.023"/>
+                </LinearGradientBrush>
+            </DataGrid.Background>
             <DataGrid.Columns>
                 <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Course name"/>
                 <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Course ID"/>

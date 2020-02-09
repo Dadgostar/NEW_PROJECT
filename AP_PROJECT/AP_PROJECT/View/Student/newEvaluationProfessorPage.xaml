@@ -18,7 +18,16 @@
             <ColumnDefinition Width="110*"/>
             <ColumnDefinition Width="677*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid HorizontalAlignment="Left" Height="336" Margin="9.6,10,0,0" VerticalAlignment="Top" Width="601" Grid.Column="1" Grid.ColumnSpan="2" Background="#FFFAFDCC"/>
+        <DataGrid HorizontalAlignment="Left" Height="336" Margin="9.6,10,0,0" VerticalAlignment="Top" Width="601" Grid.Column="1" Grid.ColumnSpan="2">
+            <DataGrid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FFC4FFFA"/>
+                    <GradientStop Color="#FFA8DAD6" Offset="0.305"/>
+                    <GradientStop Color="#FF181F1E" Offset="0.983"/>
+                </LinearGradientBrush>
+            </DataGrid.Background>
+        </DataGrid>
         <Button Content="Button" Grid.Column="2" HorizontalAlignment="Left" Margin="354.2,351,0,0" VerticalAlignment="Top" Width="133" Height="40" FontSize="20"/>
 
     </Grid>
