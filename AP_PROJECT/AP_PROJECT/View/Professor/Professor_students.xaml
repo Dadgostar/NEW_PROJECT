@@ -13,7 +13,7 @@
                 <GradientStop Color="#FFA3CCFF" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <DataGrid HorizontalAlignment="Left" Height="232" Margin="10,16,0,0" VerticalAlignment="Top" Width="274" Background="#FFFFCBBD">
+        <DataGrid HorizontalAlignment="Left" Height="232" Margin="10,16,0,0" VerticalAlignment="Top" Width="274" Background="#FFFFFBDF">
             <DataGrid.Columns>
                 <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Student Name"/>
                 <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Student ID"/>

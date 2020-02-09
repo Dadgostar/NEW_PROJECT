@@ -13,7 +13,7 @@
                 <GradientStop Color="#FFD1DCFA" Offset="0.28"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBox x:Name="objection_textbox" HorizontalAlignment="Left" Height="139" Margin="10,121,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="274" Background="#FFD6E8F1"/>
+        <TextBox x:Name="objection_textbox" HorizontalAlignment="Left" Height="139" Margin="10,121,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="274" Background="#FFFEFFE5"/>
         <Label x:Name="proflabel" Content="Professor name" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="101" Height="35"/>
         <Label x:Name="courselabel" Content="Course" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top" Height="33" Width="101" FontSize="14"/>
         <TextBox x:Name="prof_textbox" HorizontalAlignment="Left" Height="31" Margin="159,39,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="125" Background="#FFCDEAF9"/>

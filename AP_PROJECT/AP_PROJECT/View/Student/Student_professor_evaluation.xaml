@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AP_PROJECT.View"
     mc:Ignorable="d"
         Title="Professor_evaluation" Height="343.701" Width="327.165">
-    <Grid Margin="0,0,-5,0.5" Background="#FF88826D">
+    <Grid Margin="0,0,-5,0.5" Background="#FFF1F4DF">
         <Label x:Name="knowledgelabel" Content="Knowledge" HorizontalAlignment="Left" Margin="25,107,0,0" VerticalAlignment="Top" Width="66" FontSize="11"/>
         <Label x:Name="timinglabel" Content="Timing " HorizontalAlignment="Left" Margin="25,144,0,0" VerticalAlignment="Top" Width="66" FontSize="11"/>
         <Label x:Name="instructionlabel" Content="Instruction" HorizontalAlignment="Left" Margin="25,178,0,0" VerticalAlignment="Top" Width="66" FontSize="11"/>
