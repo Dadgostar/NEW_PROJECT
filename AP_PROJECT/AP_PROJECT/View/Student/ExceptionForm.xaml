@@ -7,17 +7,23 @@
         mc:Ignorable="d"
         Title="ExceptionForm" Height="300" Width="300">
     <Grid>
-        <RadioButton x:Name="examoverlapradiobutton" Content="Exam overlap" HorizontalAlignment="Left" Margin="170,141,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="overlapradiobutton" Content="Overlap" HorizontalAlignment="Left" Margin="170,125,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="prerequisiteradiobutton" Content="Prerequisite" HorizontalAlignment="Left" Margin="170,157,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="classvolumeradiobutton" Content="Class capacity" HorizontalAlignment="Left" Margin="170,173,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
-        <TextBox x:Name="explanation_txt" HorizontalAlignment="Left" Height="103" Margin="10,123,0,0" TextWrapping="Wrap" Text="Enter the detail of your request!" VerticalAlignment="Top" Width="155" TextChanged="explanation_txt_TextChanged"/>
-        <Label x:Name="profnamelabel" Content="Professor name" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top" Width="75" FontSize="9" Background="#FFE6E6E6"/>
-        <Label x:Name="courselabel" Content="Course" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Width="75" FontSize="9" Background="#FFE4E4E4"/>
-        <Label x:Name="termlabe" Content="Term" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Width="75" FontSize="9" Background="#FFE6E6E6"/>
-        <TextBlock x:Name="professor" HorizontalAlignment="Left" Margin="90,19,0,0" VerticalAlignment="Top" Width="86" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}"/>
-        <TextBlock x:Name="course" HorizontalAlignment="Left" Margin="90,45,0,0" VerticalAlignment="Top" Width="86" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}"/>
-        <TextBlock x:Name="term" HorizontalAlignment="Left" Margin="90,76,0,0" VerticalAlignment="Top" Width="86" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FFB2C6FF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <RadioButton x:Name="examoverlapradiobutton" Content="Exam overlap" HorizontalAlignment="Left" Margin="170,155,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="overlapradiobutton" Content="Overlap" HorizontalAlignment="Left" Margin="170,139,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="prerequisiteradiobutton" Content="Prerequisite" HorizontalAlignment="Left" Margin="170,171,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="classvolumeradiobutton" Content="Class capacity" HorizontalAlignment="Left" Margin="170,187,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox x:Name="explanation_txt" HorizontalAlignment="Left" Height="121" Margin="10,105,0,0" TextWrapping="Wrap" Text="Enter the detail of your request!" VerticalAlignment="Top" Width="155" TextChanged="explanation_txt_TextChanged"/>
+        <Label x:Name="profnamelabel" Content="Professor name" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top" Width="75" Background="#FFE6E6E6"/>
+        <Label x:Name="courselabel" Content="Course" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Width="75" Background="#FFE4E4E4"/>
+        <Label x:Name="termlabe" Content="Term" HorizontalAlignment="Left" Margin="10,74,0,0" VerticalAlignment="Top" Width="75" Background="#FFE6E6E6"/>
+        <TextBlock x:Name="professor" HorizontalAlignment="Left" Margin="90,12,0,0" VerticalAlignment="Top" Width="141" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" Height="26"/>
+        <TextBlock x:Name="course" HorizontalAlignment="Left" Margin="90,43,0,0" VerticalAlignment="Top" Width="141" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Height="26"/>
+        <TextBlock x:Name="term" HorizontalAlignment="Left" Margin="90,74,0,0" VerticalAlignment="Top" Width="141" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" Height="26"/>
         <Button x:Name="SaveChangesBtn" Content="Save changes" HorizontalAlignment="Left" Margin="183,231,0,0" VerticalAlignment="Top" Width="90" Click="SaveChangesClicked"/>
 
     </Grid>

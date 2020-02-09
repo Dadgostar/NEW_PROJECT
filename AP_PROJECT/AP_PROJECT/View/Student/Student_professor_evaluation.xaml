@@ -6,23 +6,23 @@
         xmlns:local="clr-namespace:AP_PROJECT.View"
     mc:Ignorable="d"
         Title="Professor_evaluation" Height="343.701" Width="327.165">
-    <Grid Margin="0,0,-5,0.5">
-        <Label x:Name="knowledgelabel" Content="Knowledge" HorizontalAlignment="Left" Margin="25,90,0,0" VerticalAlignment="Top" Width="66" FontSize="10"/>
-        <Label x:Name="timinglabel" Content="Timing " HorizontalAlignment="Left" Margin="25,116,0,0" VerticalAlignment="Top" Width="66" FontSize="10"/>
-        <Label x:Name="instructionlabel" Content="Instruction" HorizontalAlignment="Left" Margin="25,147,0,0" VerticalAlignment="Top" Width="66" FontSize="10"/>
-        <Label x:Name="personalitylabel" Content="Personality" HorizontalAlignment="Left" Margin="25,178,0,0" VerticalAlignment="Top" Width="66" FontSize="10"/>
-        <Label x:Name="fairnesslabel" Content="Fairness" HorizontalAlignment="Left" Margin="25,209,0,0" VerticalAlignment="Top" Width="66" FontSize="10"/>
-        <Slider HorizontalAlignment="Left" Margin="91,90,0,0" VerticalAlignment="Top" Width="106"/>
-        <Slider HorizontalAlignment="Left" Margin="91,121,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.656,-0.061" Width="106"/>
-        <Slider HorizontalAlignment="Left" Margin="91,155,0,0" VerticalAlignment="Top" Width="106"/>
-        <Slider HorizontalAlignment="Left" Margin="91,186,0,0" VerticalAlignment="Top" Width="106"/>
-        <Slider HorizontalAlignment="Left" Margin="91,217,0,0" VerticalAlignment="Top" Width="106"/>
+    <Grid Margin="0,0,-5,0.5" Background="#FF88826D">
+        <Label x:Name="knowledgelabel" Content="Knowledge" HorizontalAlignment="Left" Margin="25,107,0,0" VerticalAlignment="Top" Width="66" FontSize="11"/>
+        <Label x:Name="timinglabel" Content="Timing " HorizontalAlignment="Left" Margin="25,144,0,0" VerticalAlignment="Top" Width="66" FontSize="11"/>
+        <Label x:Name="instructionlabel" Content="Instruction" HorizontalAlignment="Left" Margin="25,178,0,0" VerticalAlignment="Top" Width="66" FontSize="11"/>
+        <Label x:Name="personalitylabel" Content="Personality" HorizontalAlignment="Left" Margin="25,208,0,0" VerticalAlignment="Top" Width="66" FontSize="11"/>
+        <Label x:Name="fairnesslabel" Content="Fairness" HorizontalAlignment="Left" Margin="25,245,0,0" VerticalAlignment="Top" Width="66" FontSize="11"/>
+        <Slider HorizontalAlignment="Left" Margin="96,113,0,0" VerticalAlignment="Top" Width="106"/>
+        <Slider HorizontalAlignment="Left" Margin="96,150,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.656,-0.061" Width="106"/>
+        <Slider HorizontalAlignment="Left" Margin="96,184,0,0" VerticalAlignment="Top" Width="106"/>
+        <Slider HorizontalAlignment="Left" Margin="96,215,0,0" VerticalAlignment="Top" Width="106"/>
+        <Slider HorizontalAlignment="Left" Margin="96,245,0,0" VerticalAlignment="Top" Width="106" Height="24"/>
         <Button x:Name="apply_button" Content="Apply" HorizontalAlignment="Left" Margin="223,283
                 ,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.666,2.014"/>
-        <Label x:Name="prof_name_label" Content="Professor" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top" Width="66"/>
-        <Label x:Name="prof_nametxt" Content="Label" HorizontalAlignment="Left" Margin="96,10,0,0" VerticalAlignment="Top" Width="101"/>
-        <Label x:Name="prof_course_label" Content="Course" HorizontalAlignment="Left" Margin="25,41,0,0" VerticalAlignment="Top" Width="66"/>
-        <Label x:Name="prof_courstxt" Content="Label" HorizontalAlignment="Left" Margin="96,41,0,0" VerticalAlignment="Top" Width="101"/>
+        <Label x:Name="prof_name_label" Content="Professor" HorizontalAlignment="Left" Margin="26,39,0,0" VerticalAlignment="Top" Width="66"/>
+        <Label x:Name="prof_nametxt" Content="" HorizontalAlignment="Left" Margin="97,39,0,0" VerticalAlignment="Top" Width="101" Background="#FFC3D1E2"/>
+        <Label x:Name="prof_course_label" Content="Course" HorizontalAlignment="Left" Margin="26,70,0,0" VerticalAlignment="Top" Width="66"/>
+        <Label x:Name="prof_courstxt" Content="" HorizontalAlignment="Left" Margin="97,70,0,0" VerticalAlignment="Top" Width="101" Background="#FFC3D1E2"/>
 
     </Grid>
 </Window>

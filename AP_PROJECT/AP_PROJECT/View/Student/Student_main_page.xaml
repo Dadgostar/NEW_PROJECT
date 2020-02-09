@@ -7,15 +7,30 @@
        mc:Ignorable="d"
         Title="Student_main_page" Height="300" Width="300">
     <Grid x:Name="term_list_button">
-        <Button x:Name="PersonalInfo" Content="Personal information" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Width="81" FontSize="8" Click="PersonalInformationClicked" IsMouseCapturedChanged="PersonalInfoClicked"/>
-        <Button x:Name="terms_button" Content="List of terms" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" Click="ListOfTermClicked"/>
-        <Button x:Name="Register_button" Content="Registeration" HorizontalAlignment="Left" Margin="10,63,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" Click="RegClicked"/>
-        <Button x:Name="schedule_button" Content="Weekly schedule" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" Click="WeeklyScheduleClicked"/>
-        <Button x:Name="Exceptoin_button" Content="Exception form" HorizontalAlignment="Left" Margin="10,99,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" Click="ExcepForm"/>
-        <Button x:Name="evaluation_button" Content="Professor Evaluation" HorizontalAlignment="Left" Margin="10,117,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" Click="ProfEvalClicked"/>
-        <Button x:Name="payments_button" Content="Payments" HorizontalAlignment="Left" Margin="10,135,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" Click="PaymentClicked"/>
-        <Button x:Name="ChangePass" Content="Change Password" HorizontalAlignment="Left" Margin="10,153,0,0" VerticalAlignment="Top" Width="81" Height="13" FontSize="8" Click="ChangePassClicked"/>
-        <TextBox x:Name="PaymentLable" FontSize="9" IsReadOnly="True" Text="1000" HorizontalAlignment="Left" Margin="163,135,0,0" VerticalAlignment="Top" Width="83" Height="13" Foreground="#FF6C6767" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FF95C0FF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="PersonalInfo" Content="Personal information" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="109" Click="PersonalInformationClicked" IsMouseCapturedChanged="PersonalInfoClicked" Height="25" FontSize="11"/>
+        <Button x:Name="terms_button" Content="List of terms" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="109" Height="25" Click="ListOfTermClicked"/>
+        <Button x:Name="Register_button" Content="Registeration" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" Width="109" Height="25" Click="RegClicked"/>
+        <Button x:Name="schedule_button" Content="Weekly schedule" HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top" Width="109" Height="26" Click="WeeklyScheduleClicked"/>
+        <Button x:Name="Exceptoin_button" Content="Exception form" HorizontalAlignment="Left" Margin="10,132,0,0" VerticalAlignment="Top" Width="109" Height="26" Click="ExcepForm"/>
+        <Button x:Name="evaluation_button" Content="Professor Evaluation" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top" Width="109" Height="26" Click="ProfEvalClicked" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.064"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="payments_button" Content="Payments" HorizontalAlignment="Left" Margin="10,196,0,0" VerticalAlignment="Top" Width="109" Height="26" Click="PaymentClicked"/>
+        <Button x:Name="ChangePass" Content="Change Password" HorizontalAlignment="Left" Margin="10,227,0,0" VerticalAlignment="Top" Width="109" Height="25" Click="ChangePassClicked"/>
+        <TextBox x:Name="PaymentLable" IsReadOnly="True" Text="1000" HorizontalAlignment="Left" Margin="135,132,0,0" VerticalAlignment="Top" Width="41" Height="26" Foreground="#FF6C6767" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
 
     </Grid>
 </Window>

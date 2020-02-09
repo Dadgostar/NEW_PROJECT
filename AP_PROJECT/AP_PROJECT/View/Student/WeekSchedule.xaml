@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:AP_PROJECT.View"
         mc:Ignorable="d"
         Title="WeekSchedual" Height="300" Width="300">
-    <DataGrid x:Name="WeekScheduleDG" HorizontalAlignment="Left" Height="170" Margin="10,25,0,0" VerticalAlignment="Top" Width="271" RenderTransformOrigin="0.542,0.498" ItemsSource="{Binding}" AutoGenerateColumns="False">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="0"/>
+            <GradientStop Color="#FFA3C5F6" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <DataGrid x:Name="WeekScheduleDG" HorizontalAlignment="Left" Height="205" Margin="10,25,0,0" VerticalAlignment="Top" Width="271" RenderTransformOrigin="0.542,0.498" ItemsSource="{Binding}" AutoGenerateColumns="False" Background="#FFF6F5CF">
         <DataGrid.Columns>
             <DataGridTextColumn Binding="{Binding Day}"   Header="Day"/>
             <DataGridTextColumn Binding="{Binding CourseNameTime1}"  Header="8 - 9:30"/>

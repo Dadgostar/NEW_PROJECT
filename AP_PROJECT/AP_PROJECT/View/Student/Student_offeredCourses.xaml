@@ -7,7 +7,13 @@
         mc:Ignorable="d"
         Title="Student_offeredCourses" Height="300" Width="300">
     <Grid>
-        <DataGrid Name ="OfferedCourses" HorizontalAlignment="Left" Height="217" Margin="10,10,0,0" VerticalAlignment="Top" ItemsSource="{Binding}" Width="274" AutoGenerateColumns="False">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FF99C0FA" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DataGrid Name ="OfferedCourses" HorizontalAlignment="Left" Height="237" Margin="10,10,0,0" VerticalAlignment="Top" ItemsSource="{Binding}" Width="274" AutoGenerateColumns="False" Background="#FFFFFFE6">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Name}"  Header="Name" IsReadOnly="True"/>
                 <DataGridTextColumn Binding="{Binding ID}"  Header="ID" IsReadOnly="True"/>

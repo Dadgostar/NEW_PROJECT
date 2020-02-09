@@ -7,11 +7,20 @@
        mc:Ignorable="d"
         Title="Login" Height="300" Width="300" Loaded="Window_Loaded">
     <Grid>
-        <Label x:Name="usernamelabel" Content="Username" HorizontalAlignment="Left" Margin="35,49,0,0" VerticalAlignment="Top" Width="79" Height="23" FontSize="9"/>
-        <TextBox x:Name="username_txt" HorizontalAlignment="Left" Height="23" Margin="142,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="passwordlabel" Content="Password" HorizontalAlignment="Left" Margin="35,92,0,0" VerticalAlignment="Top" Width="79" Height="23" FontSize="9"/>
-        <PasswordBox x:Name="password_txt" HorizontalAlignment="Left" Height="23" Margin="142,92,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="login_button" Content="Login" HorizontalAlignment="Left" Margin="86,153,0,0" VerticalAlignment="Top" Width="75" Click="LoginBtnClicked"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FFBDDFFA" Offset="1"/>
+                <GradientStop Color="#FFABC9E2" Offset="0.905"/>
+                <GradientStop Color="#FFA6C3DC" Offset="0.836"/>
+                <GradientStop Color="#FF9FBAD2" Offset="0.752"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label x:Name="usernamelabel" Content="Username" HorizontalAlignment="Left" Margin="35,92,0,0" VerticalAlignment="Top" Width="79" Height="33" FontSize="14"/>
+        <TextBox x:Name="username_txt" HorizontalAlignment="Left" Height="33" Margin="142,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFFAFDD0"/>
+        <Label x:Name="passwordlabel" Content="Password" HorizontalAlignment="Left" Margin="35,143,0,0" VerticalAlignment="Top" Width="79" Height="33" FontSize="14"/>
+        <PasswordBox x:Name="password_txt" HorizontalAlignment="Left" Height="33" Margin="142,143,0,0" VerticalAlignment="Top" Width="120" Background="#FFFAFAC2"/>
+        <Button x:Name="login_button" Content="Login" HorizontalAlignment="Left" Margin="142,189,0,0" VerticalAlignment="Top" Width="75" Click="LoginBtnClicked" Height="32" FontSize="14"/>
 
     </Grid>
 </Window>
