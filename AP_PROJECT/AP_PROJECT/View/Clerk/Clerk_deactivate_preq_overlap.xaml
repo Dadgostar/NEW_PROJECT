@@ -6,17 +6,17 @@
         xmlns:local="clr-namespace:AP_PROJECT.View"
         mc:Ignorable="d"
         Title="Clerk_deactivate_preq_overlap" Height="300" Width="300">
-    <Grid>
-        <Label x:Name="student_label" Content="Student" HorizontalAlignment="Left" Margin="24,25,0,0" VerticalAlignment="Top" Height="26" Width="57"/>
-        <Label x:Name="ID_label" Content="ID" HorizontalAlignment="Left" Margin="24,56,0,0" VerticalAlignment="Top" Width="57" Height="26"/>
-        <Label x:Name="course_label" Content="Course" HorizontalAlignment="Left" Margin="24,87,0,0" VerticalAlignment="Top" Width="57" Height="26"/>
-        <Label x:Name="student_name" Content="Label" HorizontalAlignment="Left" Margin="116,25,0,0" VerticalAlignment="Top" Height="26" Width="79"/>
-        <Label x:Name="student_id" Content="Label" HorizontalAlignment="Left" Margin="116,56,0,0" VerticalAlignment="Top" Height="26" Width="79"/>
-        <Label x:Name="course_name" Content="Label" HorizontalAlignment="Left" Margin="116,87,0,0" VerticalAlignment="Top" Height="26" Width="79"/>
-        <RadioButton x:Name="deactive_radio_button" Content="Deactive Overlap" HorizontalAlignment="Left" Margin="24,168,0,0" VerticalAlignment="Top" Width="171" RenderTransformOrigin="0.284,0.578" />
-        <Label x:Name="course_ID_label" Content="Course ID" HorizontalAlignment="Left" Margin="24,118,0,0" VerticalAlignment="Top" Height="26" Width="57" FontSize="11"/>
-        <Label x:Name="course_id" Content="Label" HorizontalAlignment="Left" Margin="116,118,0,0" VerticalAlignment="Top" Width="79" Height="26"/>
-        <RadioButton Content="Deactive Prerequisite" HorizontalAlignment="Left" Margin="24,188,0,0" VerticalAlignment="Top" Width="171"/>
+    <Grid Background="#FFEBEDCE">
+        <Label x:Name="student_label" Content="Student" HorizontalAlignment="Left" Margin="24,25,0,0" VerticalAlignment="Top" Height="26" Width="87" FontSize="14"/>
+        <Label x:Name="ID_label" Content="ID" HorizontalAlignment="Left" Margin="24,56,0,0" VerticalAlignment="Top" Width="87" Height="26" FontSize="14"/>
+        <Label x:Name="course_label" Content="Course" HorizontalAlignment="Left" Margin="24,87,0,0" VerticalAlignment="Top" Width="87" Height="26" FontSize="14"/>
+        <Label x:Name="student_name" Content="" HorizontalAlignment="Left" Margin="116,25,0,0" VerticalAlignment="Top" Height="26" Width="100" Background="#FFB7BEBF"/>
+        <Label x:Name="student_id" Content="" HorizontalAlignment="Left" Margin="116,56,0,0" VerticalAlignment="Top" Height="26" Width="100" Background="#FFB7BEBF" />
+        <Label x:Name="course_name" Content="" HorizontalAlignment="Left" Margin="116,87,0,0" VerticalAlignment="Top" Height="26" Width="100" Background="#FFB7BEBF"/>
+        <RadioButton x:Name="deactive_radio_button" Content="Deactive Overlap" HorizontalAlignment="Left" Margin="24,168,0,0" VerticalAlignment="Top" Width="171" RenderTransformOrigin="0.284,0.578" Height="23" FontSize="14" />
+        <Label x:Name="course_ID_label" Content="Course ID" HorizontalAlignment="Left" Margin="24,118,0,0" VerticalAlignment="Top" Height="26" Width="87" FontSize="14"/>
+        <Label x:Name="course_id" Content="" HorizontalAlignment="Left" Margin="116,118,0,0" VerticalAlignment="Top" Width="100" Height="26" Background="#FFB7BEBF"/>
+        <RadioButton Content="Deactive Prerequisite" HorizontalAlignment="Left" Margin="24,201,0,0" VerticalAlignment="Top" Width="171" Height="23" FontSize="14" />
 
     </Grid>
 </Window>

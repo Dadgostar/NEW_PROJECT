@@ -7,14 +7,20 @@
         mc:Ignorable="d"
         Title="Clerk_userpass_change" Height="300" Width="300">
     <Grid>
-        <Label x:Name="clerk_oldpass_label" Content="Old password" HorizontalAlignment="Left" Margin="21,14,0,0" VerticalAlignment="Top" Width="94"/>
-        <Label x:Name="clerk_newpass_label" Content="New password" HorizontalAlignment="Left" Margin="21,52,0,0" VerticalAlignment="Top" Width="94"/>
-        <Label x:Name="clerk_confirm_label" Content="Confirmation" HorizontalAlignment="Left" Margin="21,96,0,0" VerticalAlignment="Top" Width="94"/>
-        <TextBox x:Name="clerk_oldpasstxt" HorizontalAlignment="Left" Height="26" Margin="120,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
-        <TextBox x:Name="clerk_newpasstxt" HorizontalAlignment="Left" Height="26" Margin="120,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
-        <TextBox x:Name="clerk_confirmtxt" HorizontalAlignment="Left" Height="30" Margin="120,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
-        <Button x:Name="apply_button" Content="Apply" HorizontalAlignment="Left" Margin="120,141,0,0" VerticalAlignment="Top" Width="99" Height="29" Click="apply_button_Click"/>
-        <Label x:Name="CheckPassChange" Content="" HorizontalAlignment="Left" Margin="120,193,0,0" VerticalAlignment="Top" Width="120" Height="37"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FFC0D8F7"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label x:Name="clerk_oldpass_label" Content="Old password" HorizontalAlignment="Left" Margin="31,18,0,0" VerticalAlignment="Top" Width="105" FontSize="14"/>
+        <Label x:Name="clerk_newpass_label" Content="New password" HorizontalAlignment="Left" Margin="31,56,0,0" VerticalAlignment="Top" Width="105" FontSize="14"/>
+        <Label x:Name="clerk_confirm_label" Content="Confirmation" HorizontalAlignment="Left" Margin="31,100,0,0" VerticalAlignment="Top" Width="105" FontSize="14"/>
+        <TextBox x:Name="clerk_oldpasstxt" HorizontalAlignment="Left" Height="29" Margin="141,19,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
+        <TextBox x:Name="clerk_newpasstxt" HorizontalAlignment="Left" Height="29" Margin="141,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
+        <TextBox x:Name="clerk_confirmtxt" HorizontalAlignment="Left" Height="30" Margin="141,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
+        <Button x:Name="apply_button" Content="Apply" HorizontalAlignment="Left" Margin="141,145,0,0" VerticalAlignment="Top" Width="99" Height="29" Click="apply_button_Click"/>
+        <Label x:Name="CheckPassChange" Content="" HorizontalAlignment="Left" Margin="141,197,0,0" VerticalAlignment="Top" Width="120" Height="37"/>
 
     </Grid>
 </Window>
