@@ -23,9 +23,6 @@ namespace AP_PROJECT
         public static List<Term> TermTable = new List<Term>(); 
         static byte[] key = { 158, 23, 64, 96, 57, 225, 36, 85 };
         static byte[] Iv = { 63, 208, 159, 46, 37, 77, 1, 59 };
-        
-        
-
         // crypto.SetIV(Iv);
         internal static Clerk_student_list.Data[] GetStudentsDataForClerk(Clerk clerk)
         {
@@ -388,9 +385,11 @@ namespace AP_PROJECT
             return result;
         }
 
-        public static double GetPayment(Student student)
+        public static string GetPayment(Student student)
         {
-            return 1001;
+            var CoursesInTermList = termCourseStudentTable.Select(x => x).Where(x => x.Student == student); 
+            var Count = CoursesInTermList.Select(x => x.TermCourse.Course.ECT).Sum();
+            return ""+Count*50+"Toman";
         }
 
         public static double GetAvgGrade(Student student)
@@ -416,14 +415,14 @@ namespace AP_PROJECT
 
             StreamReader studentFile = new StreamReader("student.txt");
             CryptoSymmetric crypto = new CryptoDES(new byte[] { 158, 23, 64, 96, 57, 225, 36, 85 });
+
             while ((line = studentFile.ReadLine()) != null)
             {
                 line = crypto.Decrypt(line);
                 var items = line.Split('\t');
-                StudentTable.Add(new Student() { Id = int.Parse(items[0]), FirstName = items[1], LastName = items[2], Password = items[3] });
+                StudentTable.Add(new Student() { Id = int.Parse(items[0]), FirstName = items[1], LastName = items[2], Password = items[3] ,EntranceYear = items[4]});
             }
             studentFile.Close();
-
             StreamReader teacherFile = new StreamReader("teacher.txt");
             crypto = new CryptoDES(new byte[] { 158, 23, 64, 96, 57, 225, 36, 85 }); 
             while ((line = teacherFile.ReadLine()) != null)
@@ -525,7 +524,7 @@ namespace AP_PROJECT
             CryptoSymmetric crypto = new CryptoDES(new byte[] { 158, 23, 64, 96, 57, 225, 36, 85 });
             foreach (var item in studentTable)
             {
-                var tempString = item.Id.ToString() + "\t" + item.FirstName.ToString() + "\t" + item.LastName.ToString() + "\t" + item.Password.ToString();
+                var tempString = item.Id.ToString() + "\t" + item.FirstName.ToString() + "\t" + item.LastName.ToString() + "\t" + item.Password.ToString() + "\t" + item.EntranceYear;
                 file.WriteLine(crypto.Encrypt(tempString));
             }
             file.Close();

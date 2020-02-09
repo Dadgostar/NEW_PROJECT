@@ -76,8 +76,8 @@ namespace AP_PROJECT.View
 
         private void PaymentClicked(object sender, RoutedEventArgs e)
         {
-            double payment = Module.GetPayment(this.student);
-            PaymentLable.Text = "" + payment;
+            string payment = Module.GetPayment(this.student);
+            PaymentLable.Text = payment;
         }
 
         private void PersonalInfoClicked(object sender, DependencyPropertyChangedEventArgs e)

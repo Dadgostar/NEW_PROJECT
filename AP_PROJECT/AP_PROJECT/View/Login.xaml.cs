@@ -48,7 +48,7 @@ namespace AP_PROJECT.View
         private void dowork(object sender, DoWorkEventArgs e)
         {
             Module.loadData();   
-            for(int i=0; i<1000; i++)
+            for(int i=0; i<10; i++)
             Module.loadData();
  
         }

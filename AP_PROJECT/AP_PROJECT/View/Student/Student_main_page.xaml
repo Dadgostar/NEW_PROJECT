@@ -30,7 +30,7 @@
         </Button>
         <Button x:Name="payments_button" Content="Payments" HorizontalAlignment="Left" Margin="10,196,0,0" VerticalAlignment="Top" Width="109" Height="26" Click="PaymentClicked"/>
         <Button x:Name="ChangePass" Content="Change Password" HorizontalAlignment="Left" Margin="10,227,0,0" VerticalAlignment="Top" Width="109" Height="25" Click="ChangePassClicked"/>
-        <TextBox x:Name="PaymentLable" IsReadOnly="True" Text="1000" HorizontalAlignment="Left" Margin="135,132,0,0" VerticalAlignment="Top" Width="41" Height="26" Foreground="#FF6C6767" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
+        <TextBox x:Name="PaymentLable" IsReadOnly="True"  HorizontalAlignment="Left" Margin="138,196,0,0" VerticalAlignment="Top" Width="121" Height="26" Foreground="#FF6C6767" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}"/>
 
     </Grid>
 </Window>

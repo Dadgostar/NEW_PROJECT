@@ -26,7 +26,10 @@ namespace AP_PROJECT
     {
         public MainWindow()
         {
+
             InitializeComponent();
+            //Module.loadData();
+           // Module.saveData();
             Login page = new Login();
             page.Show();
             this.Close();
