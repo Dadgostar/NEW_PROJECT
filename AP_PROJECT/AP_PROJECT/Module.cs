@@ -17,6 +17,7 @@ namespace AP_PROJECT
         public static List<TermCourse> termCourseTable = new List<TermCourse>();
         public static List<TermCourseStudent> termCourseStudentTable = new List<TermCourseStudent>();
         public static List<PreQuisite> preQuisiteTable = new List<PreQuisite>();
+        public static List<Clerk> CrelkTable = new List<Clerk>();
 
         internal static Clerk_student_list.Data[] GetStudentsDataForClerk(Clerk clerk)
         {
